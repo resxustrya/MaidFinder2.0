@@ -39,20 +39,11 @@ class HelperController extends BaseController {
     public function application_view($id) {
         $application = Applications::find($id);
         $applicant = Applicants::find($application->appid);
-        $location = Regions::find($application->regionid);
-        $jobtype = JobTypes::find($application->jobtypeid);
-        $app_skill = ApplicantSkills::where('applicationid', '=', $application->applicationid)->first();
-        $salary = Salaries::find($application->salaryid);
-        $duties = Duties::find($app_skill->dutyid);
         $subscribe = Subscriptions::where('empid', '=', $this->emp->empid)->first();
         return View::make('helpers.subscribed.applicant-application')
             ->with('emp', $this->emp)
             ->with('application', $application)
-            ->with('jobtype', $jobtype->description)
-            ->with('location', $location)
-            ->with('duties', $duties)
             ->with('applicant', $applicant)
-            ->with('salary', $salary)
             ->with('subscribe', $subscribe);
     }
 

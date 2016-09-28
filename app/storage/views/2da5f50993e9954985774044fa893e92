@@ -1,4 +1,3 @@
-
 <?php
     $available = true;
     $hirelist = HireLists::where('appid', '=', $applicant->appid)->first();
@@ -8,9 +7,9 @@
         }
     }
 ?>
-@extends('helpers.subscribed.layout')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -20,7 +19,7 @@
                         <div class="row">
                             <div class="col s12 m12 l2">
                                 <div class="row">
-                                    <img id="editpicture" class="responsive-img right-align circle" src="{{ asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )) }}" />
+                                    <img id="editpicture" class="responsive-img right-align circle" src="<?php echo asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )); ?>" />
                                 </div>
                             </div>
                             <div class="col s12 m12 l3">
@@ -28,16 +27,16 @@
                                     <table>
                                         <tr>
                                             <td><span class="grey-text text-darken-4 name"><i class="material-icons">perm_identity</i> </span> </td>
-                                            <td><span class="grey-text text-darken-4 name">{{ $applicant->fname}}</span></td>
+                                            <td><span class="grey-text text-darken-4 name"><?php echo $applicant->fname; ?></span></td>
                                         </tr>
                                         <tr>
                                             <td><span class="grey-text text-darken-4"><i class="material-icons">location_on</i></span></td>
                                             <?php $location = Regions::find($applicant->regionid); ?>
-                                            <td><span class="grey-text text-darken-4">{{ $location->location }}</span></td>
+                                            <td><span class="grey-text text-darken-4"><?php echo $location->location; ?></span></td>
                                         </tr>
                                         <tr>
                                             <td><span class="grey-text text-darken-4"><i class="material-icons">supervisor_account</i> </span> </td>
-                                            <td><span class="grey-text text-darken-4">{{ $applicant->gender }}</span></td>
+                                            <td><span class="grey-text text-darken-4"><?php echo $applicant->gender; ?></span></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -49,22 +48,22 @@
                                         <table class="other_info">
                                             <tr>
                                                 <td><span class="grey-text text-darken-4">Age :</span> </td>
-                                                <td><span class="grey-text text-darken-4">{{ 21}}</span></td>
+                                                <td><span class="grey-text text-darken-4"><?php echo 21; ?></span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
                                                 <?php $n = Nationalities::find($applicant->nationality); ?>
-                                                <td><span class="grey-text text-darken-4">{{ $n->nationality }}</span></td>
+                                                <td><span class="grey-text text-darken-4"><?php echo $n->nationality; ?></span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4">Religion :</span> </td>
                                                 <?php $n = Religions::find($applicant->religion); ?>
-                                                <td><span class="grey-text text-darken-4">{{ $n->religion }}</span></td>
+                                                <td><span class="grey-text text-darken-4"><?php echo $n->religion; ?></span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4">Civil Status :</span> </td>
                                                 <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                                <td><span class="grey-text text-darken-4">{{ $status[$applicant->civilstatus] }}</span></td>
+                                                <td><span class="grey-text text-darken-4"><?php echo $status[$applicant->civilstatus]; ?></span></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -73,7 +72,7 @@
                         </div>
                     </li>
                     <li class="collection-item">
-                        @if($emp->subscribe == 1)
+                        <?php if($emp->subscribe == 1): ?>
                             <div class="row">
                                 <div class="col s12 m12 l3">
                                     <strong style="font-size: 1.2em;" class="grey-text">Contact information</strong>
@@ -83,29 +82,29 @@
                                         <table>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4 name"><i class="material-icons">perm_identity</i> </span> </td>
-                                                <td><span class="grey-text text-darken-4 name">{{ $applicant->fname ." ". $applicant->lname }}</span></td>
+                                                <td><span class="grey-text text-darken-4 name"><?php echo $applicant->fname ." ". $applicant->lname; ?></span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4"><i class="material-icons">email</i> </span> </td>
-                                                <td><span class="grey-text text-darken-4">{{ $applicant->email }}</span></td>
+                                                <td><span class="grey-text text-darken-4"><?php echo $applicant->email; ?></span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4"><i class="material-icons">phone</i></span></td>
-                                                <td><span class="grey-text text-darken-4">{{ $applicant->contactno }}</span></td>
+                                                <td><span class="grey-text text-darken-4"><?php echo $applicant->contactno; ?></span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="grey-text text-darken-4"><i class="material-icons">location_on</i> </span> </td>
-                                                <td><span class="grey-text text-darken-4">{{ $applicant->address }}</span> </td>
+                                                <td><span class="grey-text text-darken-4"><?php echo $applicant->address; ?></span> </td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
                             </div>
-                        @else
+                        <?php else: ?>
                             <div class="row center">
-                                <a class="btn blue" href="{{ asset('/subscription') }}"><strong>Hire applicant</strong></a>
+                                <a class="btn blue" href="<?php echo asset('/subscription'); ?>"><strong>Hire applicant</strong></a>
                             </div>
-                        @endif
+                        <?php endif; ?>
                     </li>
                     <li class="collection-item">
                         <div class="row">
@@ -119,24 +118,24 @@
                                     <div class="valign-wrapper">
                                         <span>Applying for a : </span>
                                         <?php $jobtype = JobTypes::where('jobtypeid', '=', $application->jobtypeid)->first(); ?>
-                                        <strong class="tab1">{{ $jobtype->description }}</strong>
+                                        <strong class="tab1"><?php echo $jobtype->description; ?></strong>
                                     </div>
                                     <br />
                                     <div class="valign-wrapper">
                                         <span>Preferred salary: </span>
-                                        <strong class="tab1"> ₱ {{ sprintf("%.2f",$application->salaryid) }} PHP</strong>
+                                        <strong class="tab1"> ₱ <?php echo sprintf("%.2f",$application->salaryid); ?> PHP</strong>
                                     </div>
                                     <br />
                                     <div class="valign-wrapper">
                                         <span>Preferred job location :</span>
                                         <?php $location = Regions::find($application->regionid); ?>
-                                        <strong class="tab1">{{ $location->location }}</strong>
+                                        <strong class="tab1"><?php echo $location->location; ?></strong>
                                     </div>
                                     <br />
                                     <div class="valign-wrapper">
                                         <span>Employment :</span>
                                         <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                        <strong class="tab1">{{ $capacity[$application->capacity] }}</strong>
+                                        <strong class="tab1"><?php echo $capacity[$application->capacity]; ?></strong>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +146,8 @@
                             <div class="col s12 m12 l6 z-depth-0">
                                 <strong style="font-size: 1.2em;" class="grey-text">About</strong>
                                 <p>
-                                    {{ nl2br($application->pitch) }}
+                                    <?php echo nl2br($application->pitch); ?>
+
                                 </p>
                             </div>
                         </div>
@@ -158,17 +158,17 @@
                         </div>
                         <div class="row">
                             <?php $duties = AppDuties::where('applicationid', '=', $application->applicationid)->get(); ?>
-                            @if(isset($duties) and count($duties) > 0)
+                            <?php if(isset($duties) and count($duties) > 0): ?>
                                 <ul>
-                                    @foreach($duties as $duty)
+                                    <?php foreach($duties as $duty): ?>
                                         <?php $d = Duties::find($duty->duties); ?>
                                         <li class="valign-wrapper">
                                             <i class="material-icons">done_all</i>
-                                            <strong class="tab1">{{ $d->description }}</strong>
+                                            <strong class="tab1"><?php echo $d->description; ?></strong>
                                         </li>
-                                    @endforeach
+                                    <?php endforeach; ?>
                                 </ul>
-                            @endif
+                            <?php endif; ?>
                         </div>
                     </li>
                     <li class="collection-item">
@@ -176,21 +176,21 @@
                             <div class="col s12 m12 l6 z-depth-0">
                                 <h5 class="grey-text">Previous employer feedback</h5>
                                 <?php $rating = AppRatings::where('appid', '=', $applicant->appid)->get();?>
-                                @if(isset($rating) and count($rating) > 0)
-                                    @foreach($rating as $r)
+                                <?php if(isset($rating) and count($rating) > 0): ?>
+                                    <?php foreach($rating as $r): ?>
                                         <blockquote class="valign-wrapper">
                                             <?php $employer = Employers::find($r->empid); ?>
-                                                <img style="width:30px;height: 30px;" class="responsive-img right-align circle" src="{{ asset('public/uploads/profile/'.(($employer->profilepic) != null ? $employer->profilepic :'facebook.jpg' )) }}" />
-                                                <strong class="tab1">{{ $r->feedback }}</strong>
+                                                <img style="width:30px;height: 30px;" class="responsive-img right-align circle" src="<?php echo asset('public/uploads/profile/'.(($employer->profilepic) != null ? $employer->profilepic :'facebook.jpg' )); ?>" />
+                                                <strong class="tab1"><?php echo $r->feedback; ?></strong>
                                         </blockquote>
-                                    @endforeach
-                                @else
+                                    <?php endforeach; ?>
+                                <?php else: ?>
                                     <h6>No previous employer feedback</h6>
-                                @endif
+                                <?php endif; ?>
                             </div>
                         </div>
                     </li>
-                    @if($emp->subscribe == 0)
+                    <?php if($emp->subscribe == 0): ?>
                         <li class="collection-item">
                             <div class="row">
                                 <div class="container">
@@ -205,7 +205,7 @@
                                 </div>
                             </div>
                         </li>
-                    @endif
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -218,7 +218,7 @@
                 <div class="divider"></div>
                 <div class="row">
                     <div class="cols 12 m12 l20">
-                        <form action="{{ asset('/applicant/apply/ad') }}" class="pitch" method="POST">
+                        <form action="<?php echo asset('/applicant/apply/ad'); ?>" class="pitch" method="POST">
                             <div class="input-field col s12">
                                 <textarea id="textarea1" class="materialize-textarea pitch-msg" rows="20" name="pitch-msg"></textarea>
                                 <label for="textarea1" class="grey-text">Send applicant a message notifaction.</label>
@@ -249,11 +249,11 @@
     <div class="container-fluid">
         <?php  $ad = Ads::where('empid', '=', $emp->empid)->first(); ?>
         <div class="row">
-            @if(isset($ad) and count($ad) > 0)
+            <?php if(isset($ad) and count($ad) > 0): ?>
                 <h5 class="tab3">Auto suggested job applicant based on your latest job ad preference. </h5>
-            @else
+            <?php else: ?>
                 <h5 class="tab3">Auto suggested job applicant near you. </h5>
-            @endif
+            <?php endif; ?>
         </div>
         <div class="row" style="padding: 20px;">
             <div class="col s12 m12 l12">
@@ -268,7 +268,7 @@
                                         ->paginate(6);
                     }
                 ?>
-                @if(isset($application_auto) and count($application_auto) > 0)
+                <?php if(isset($application_auto) and count($application_auto) > 0): ?>
                     <?php foreach($application_auto as $app_auto) : ?>
                     <?php
                     $location = Regions::find($app_auto->regionid);
@@ -276,12 +276,12 @@
                     $jobtype = JobTypes::find($app_auto->jobtypeid);
                     ?>
                     <div class="col s12 m6 l4 hoverable" style="margin-top: 10px;">
-                        <a target="_blank" href="{{ asset('application/view/'. $app_auto->applicationid) }}" class="grey-text">
+                        <a target="_blank" href="<?php echo asset('application/view/'. $app_auto->applicationid); ?>" class="grey-text">
                             <div class="card-panel" style="padding: 3px;">
                                 <div class="row">
                                     <div class="profile-img col s12 m12 l4">
                                         <div class="center-align" style="padding-top: 10px;">
-                                            <img class="image circle" src="{{ asset('public/uploads/profile/'.(($applicant_auto->profilepic) != null ? $applicant_auto->profilepic :'facebook.jpg' )) }}">
+                                            <img class="image circle" src="<?php echo asset('public/uploads/profile/'.(($applicant_auto->profilepic) != null ? $applicant_auto->profilepic :'facebook.jpg' )); ?>">
                                         </div>
                                     </div>
                                     <div class="col s12 m12 l1 hide-on-med-and-down">
@@ -292,15 +292,15 @@
                                         <table class="black-text info">
                                             <tr>
                                                 <td><i class="material-icons">perm_identity</i></td>
-                                                <td><span class="name">{{ $applicant_auto->fname }}</span> </td>
+                                                <td><span class="name"><?php echo $applicant_auto->fname; ?></span> </td>
                                             </tr>
                                             <tr>
                                                 <td><i class="material-icons">room</i> </td>
-                                                <td>{{ $location->location }}</td>
+                                                <td><?php echo $location->location; ?></td>
                                             </tr>
                                             <tr>
                                                 <td><i class="material-icons">work</i> </td>
-                                                <td>{{ $jobtype->description }}</td>
+                                                <td><?php echo $jobtype->description; ?></td>
                                             </tr>
                                         </table>
                                         </p>
@@ -310,7 +310,7 @@
                                 <div class="row">
                                     <div class="col s12 m12 l5">
                                         <p>
-                                            <a href="{{ asset('application/view/'. $app_auto->applicationid) }}">View helper profile</a>
+                                            <a href="<?php echo asset('application/view/'. $app_auto->applicationid); ?>">View helper profile</a>
                                         </p>
                                     </div>
                                     <div class="col s12 m12 l6 right">
@@ -326,37 +326,38 @@
                                                 $year = $date[0];
                                                 $day = $date[2];
                                                 ?>
-                                                <span>{{ $month ."-" . $day ."-" .$year }}</span>
+                                                <span><?php echo $month ."-" . $day ."-" .$year; ?></span>
                                             </span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div id="modal{{$count}}" class="modal modal-fixed-footer fade ql-modal" role="dialog">
+                    <div id="modal<?php echo $count; ?>" class="modal modal-fixed-footer fade ql-modal" role="dialog">
                         <div class="modal-content">
                             <div class="row">
                                 <div class="col s12 m12 l4">
                                     <div class="card-panel">
                                         <div class="row">
-                                            <img class="img-fluid square employer-image col s12 m12 l12" src="{{ asset('public/uploads/profile/'.(($applicant->profilepic) != null ? $applicant->profilepic :'facebook.jpg' )) }}">
+                                            <img class="img-fluid square employer-image col s12 m12 l12" src="<?php echo asset('public/uploads/profile/'.(($applicant->profilepic) != null ? $applicant->profilepic :'facebook.jpg' )); ?>">
                                         </div>
                                         <table class="info">
                                             <tr>
                                                 <td><i class="material-icons">perm_identity</i></td>
-                                                <td><span class="name">{{ $applicant_auto->fname ." ". $applicant_auto->lname }}</span> </td>
+                                                <td><span class="name"><?php echo $applicant_auto->fname ." ". $applicant_auto->lname; ?></span> </td>
                                             </tr>
                                             <tr>
                                                 <td><i class="material-icons">room</i> </td>
-                                                <td>{{ $location->location }}</td>
+                                                <td><?php echo $location->location; ?></td>
                                             </tr>
                                             <tr>
                                                 <td><i class="material-icons">work</i> </td>
-                                                <td>{{ $jobtype->description }}</td>
+                                                <td><?php echo $jobtype->description; ?></td>
                                             </tr>
                                         </table>
                                         <p>
-                                            {{ $applicant_auto->pitch }}
+                                            <?php echo $applicant_auto->pitch; ?>
+
                                         </p>
                                     </div>
                                 </div>
@@ -380,26 +381,27 @@
                     </div>
                     <?php $count++ ?>
                     <?php endforeach; ?>
-                @else
+                <?php else: ?>
                     <div class="row">
                         <h5>No results found.</h5>
                     </div>
-                @endif
+                <?php endif; ?>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            @if($application_auto->count() < $application_auto->getTotal())
+            <?php if($application_auto->count() < $application_auto->getTotal()): ?>
                 <ul class="pagination center-align">
-                    {{ $application_auto->links() }}
+                    <?php echo $application_auto->links(); ?>
+
                 </ul>
-            @endif
+            <?php endif; ?>
         </div>
     </div>
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('css')
+<?php $__env->startSection('css'); ?>
     @parent
     <style>
         .profile-pic {
@@ -426,7 +428,7 @@
             mex-height: 100% !important;
         }
     </style>
-@stop
+<?php $__env->stopSection(); ?>
 <?php
     $hired = HireLists::where('empid', $emp->empid)
                         ->where('appid', $applicant->appid)
@@ -443,10 +445,10 @@
         $isListed = 'true';
     }
 ?>
-@section('js')
+<?php $__env->startSection('js'); ?>
     @parent
     <script>
-        var hire = {{ $isHired }};
+        var hire = <?php echo $isHired; ?>;
         $(document).ready(function() {
             $('.hire_btn').click(function() {
                 if(hire == true) {
@@ -462,11 +464,11 @@
                     $('.error').html('<span>Should not be empty</span>');
                 } else {
                     var data = {
-                        "appid" : {{ $applicant->appid }},
-                        "empid" : {{ $emp->empid }},
+                        "appid" : <?php echo $applicant->appid; ?>,
+                        "empid" : <?php echo $emp->empid; ?>,
                         "pitch" : $('#textarea1').val()
                     };
-                    var url =  {{ "'". asset('/employer/hire') ."'"}};
+                    var url =  <?php echo "'". asset('/employer/hire') ."'"; ?>;
                     $.post(url, data, function(response){
                         var result = JSON.parse(response);
                         if(result.ok == 'ok') {
@@ -481,15 +483,15 @@
         });
 
         function addShortlist() {
-            var listed = {{ $isListed }};
+            var listed = <?php echo $isListed; ?>;
             var data = {
-                "appid": {{ $applicant->appid }},
-                "empid": {{ $emp->empid }},
+                "appid": <?php echo $applicant->appid; ?>,
+                "empid": <?php echo $emp->empid; ?>,
             };
             if(listed == true) {
                 alert("Applicant is already in your shorlist.");
             } else {
-                var url = {{ "'". asset('/employer/add/shortlist') ."'"}};
+                var url = <?php echo "'". asset('/employer/add/shortlist') ."'"; ?>;
                 $.post(url, data,function(response) {
                     var res = JSON.parse(response);
                     if(res.status == "ok") {
@@ -501,4 +503,6 @@
             }
         }
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('helpers.subscribed.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

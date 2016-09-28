@@ -12,7 +12,7 @@
             <strong>Latest job application</strong>
         </div>
         <div class="row">
-            <div class="col s12 m12 l10">
+            <div class="col s12 m12 l12">
                 @foreach($application as $a)
                     @if(isset($a))
                         <div class="card-panel">
@@ -44,19 +44,15 @@
                                 <i class="material-icons">offline_pin</i>
                                 <?php $days = array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday'); ?>
                                 <span class="tab1">Preferred dayoff :</span>
-                                <?php 
-                                
-                                    $dayoffs = explode(',', $a->dayof);
-                                    
+                                <?php
+                                $dayoffs = explode(',', $a->dayof);
                                 ?>
-
                                 <strong class="col l9">
-                    
-                                        @foreach($dayoffs as $off)
-                                            <span>{{ "," .$days[$off]}} </span>
-                                        @endforeach    
-                                    </ul>
-                                
+                                    @foreach($dayoffs as $off)
+                                        <span>{{ "," .$days[$off]}} </span>
+                                        @endforeach
+                                        </ul>
+
                                 </strong>
                             </div>
                             <div class="divider">
@@ -90,7 +86,7 @@
                     <h5 class="center-align">Over {{ $ad_count }} job ads are now available</h5>
                     <h6 class="center-align">Create and post your job availavibility now and find your match employer that matches your job preference.</h6>
                     <div class="center-align">
-                       <a class="btn blue" href="{{ asset('/applicant/job/type/') }}">Create job availability</a>
+                        <a class="btn blue" href="{{ asset('/applicant/job/type/') }}">Create job availability</a>
                     </div>
                 </div>
             </div>

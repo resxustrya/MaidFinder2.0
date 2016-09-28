@@ -264,8 +264,7 @@
                                    <span class="valign-wrapper">
                                        <i class="material-icons">label</i>
                                        <span>Salary :</span>
-                                       <?php $salary = Salaries::find($aud->salaryid); ?>
-                                       <strong class="tab2"><?php echo $salary->amount_range; ?> - Pesos</strong>
+                                       <strong class="tab2"><?php echo $aud->salary; ?> - Pesos</strong>
                                    </span>
                                    <span class="valign-wrapper">
                                        <i class="material-icons">label</i>
@@ -284,52 +283,16 @@
                                                 <strong style="font-size: 1.2em;">Expected duties</strong>
                                             </div>
                                             <div class="row">
-                                                <?php $duties = Duties::where('adid', '=', $aud->adid)->first(); ?>
-                                                <?php if($duties and count($duties) > 0): ?>
-                                                    <?php if($duties->cooking != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->laundry != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->gardening != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->grocery != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->cleaning != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->tuturing != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->driving != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <?php if($duties->pet != null): ?>
-                                                        <div class="col s12 m12 l4">
-                                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                    <p>
-                                                        <?php echo $duties->other; ?>
-
-                                                    </p>
+                                                <?php $duties = ExpDuties::where('adid', '=', $aud->adid)->get(); ?>
+                                                <?php if(isset($duties) and count($duties) >0): ?>
+                                                    <ul>
+                                                        <?php foreach($duties as $duty): ?>
+                                                            <li class="valign-wrapper">
+                                                                <i class="material-icons">done_all</i>
+                                                                <span class="tab1"><?php echo $duty->description; ?></span>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
                                                 <?php endif; ?>
                                             </div>
                                         </div>

@@ -52,8 +52,7 @@
                                        <span class="valign-wrapper">
                                            <i class="material-icons">label</i>
                                            <span>Salary :</span>
-                                           <?php $salary = Salaries::find($ads->salaryid); ?>
-                                           <strong class="tab2">{{ $salary->amount_range }} - Pesos</strong>
+                                           <strong class="tab2">{{ $ads->salaryid }} - Pesos</strong>
                                        </span>
                                        <span class="valign-wrapper">
                                            <i class="material-icons">label</i>

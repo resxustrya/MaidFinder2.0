@@ -14,7 +14,6 @@
                 <span class="badge white-text grey">{{ $count}} </span>
             @endif
         </a>
-        <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 4) ? 'active white-text' : '' }}" href="{{ asset('/hired/job') }}">Employment history</a>
         <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 5) ? 'active white-text' : '' }}" href="{{ asset('/applicant/shortlist') }}">Shortlist
             <?php
                 $shortlist_count = 0;
@@ -27,7 +26,7 @@
                 <span class="badge white-text grey">{{ $shortlist_count }}</span>
             @endif
         </a>
-        <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 6) ? 'active white-text' : '' }}" href="{{ asset('/applicant/employer/job/request') }}">Hiring request
+        <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 6) ? 'active white-text' : '' }}" href="{{ asset('/applicant/employer/job/request') }}">Hire list
             <?php
                 $hirelist_count = 0;
                $hirelist = HireLists::where('appid', '=', $app->appid)
@@ -41,6 +40,6 @@
                 <span class="badge white-text grey"> {{ $hirelist_count }}</span>
             @endif
         </a>
-       
+        <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 4) ? 'active white-text' : '' }}" href="{{ asset('/hired/job') }}">Employment history</a>
     </div>
 </div>
