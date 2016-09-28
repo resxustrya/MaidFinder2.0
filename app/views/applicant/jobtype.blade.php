@@ -5,7 +5,7 @@
 @section('content')
  <div class="row"> 
     <div class="col s12 m12 l6 offset-l2">
-        <h4>Create job availability</h4>
+        <h4>Create Job</h4>
         <div class="card-panel">
             <form action="{{ asset('/applicant/crate/job')}}" method="GET" id="job-form">
                 <div class="row">

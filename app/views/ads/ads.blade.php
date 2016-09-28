@@ -82,6 +82,7 @@
                             $emp = Employers::find($ad->empid);
                         ?>
                         @if($emp->isVerified)
+                            <br>
                             <a href="{{ asset('employer/ad/profile/'.$ad->adid)  }}" class="hoverable waves-green black-text">
                                 <?php
                                 $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
@@ -96,41 +97,40 @@
                                             <br />
                                             <br />
                                             <div class="valign-wrapper">
-                                                <i class="material-icons">location_on</i>
-                                                <span class="tab1">Preferred location :</span>
-                                                <strong class="tab2">{{ $location->location }}</strong>
+                                                <span class="">Preferred location :</span>
+                                                <strong class="col l10">{{ $location->location }}</strong>
                                             </div>
                                             <div class="valign=wrapper">
-                                                <i class="material-icons">work</i>
-                                                <span class="tab1">Employment type :</span>
+                                                <span class="">Employment type :</span>
                                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
                                                 <strong class="tab1">{{ $capacity[$ad->capacity] }}</strong>
                                             </div>
                                             <div class="valign-wrapper">
-                                                <i class="material-icons">supervisor_account</i>
-                                                <span class="tab1">Gender :</span>
+                                                <span class="">Gender :</span>
                                                 <?php $gender = array('Male', 'Female', 'Any'); ?>
-                                                <strong class="tab1">{{ $gender[$ad->gender] }}</strong>
+                                                <strong class="col l10">{{ $gender[$ad->gender] }}</strong>
                                             </div>
                                             <br />
-                                            <span>Experience :</span>
-                                            <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
-                                            <strong class="tab1">{{ $exp[$ad->yearexp] }}</strong>
+                                            <div class="valign-wrapper">
+                                                 <span>Experience :</span>
+                                                <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
+                                                <strong class="col l10">{{ $exp[$ad->yearexp] }}</strong>
+                                            </div>
+                                                <span>Education level :</span>
+                                                <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
+                                                <strong class="tab2"> {{ $edlevel[$ad->edlevel] }}</strong>
                                             <br />
-                                            <span>Education level :</span>
-                                            <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
-                                            <strong class="tab1"> {{ $edlevel[$ad->edlevel] }}</strong>
-                                            <br />
-                                            <span>Salary :</span>
-                                            <strong class="tab1"> {{ sprintf("%.2f" ,$ad->salaryid) }}</strong>
-                                            <br />
+                                            <div class="valign-wrapper">
+                                                <span>Salary :</span>
+                                                <strong class="col l10"> {{ sprintf("%.2f" ,$ad->salaryid) }}</strong>
+                                            </div>
                                             <br />
                                             <?php
                                             $date = explode("-" ,$ad->startdate);
                                             $months = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December");
                                             ?>
                                             <span>Start date :</span>
-                                            <strong class="tab1">{{ $months[$date[1]] ."/" . $date[2] ."/" .$date[0] }} </strong>
+                                            <strong class="tab2">{{ $months[$date[1]] ."/" . $date[2] ."/" .$date[0] }} </strong>
                                             <br />
                                             <br />
                                             <div class="valign-wrapper">

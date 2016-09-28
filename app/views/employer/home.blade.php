@@ -24,21 +24,18 @@
                             <br />
                             <br />
                             <div class="valign-wrapper">
-                                <i class="material-icons">location_on</i>
                                 <span class="tab1">Preferred location :</span>
-                                <strong class="tab2">{{ $location->location }}</strong>
+                                <strong class="col l9">{{ $location->location }}</strong>
                             </div>
                             <div class="valign=wrapper">
-                                <i class="material-icons">work</i>
                                 <span class="tab1">Employment type :</span>
                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                <strong class="tab1">{{ $capacity[$ad->capacity] }}</strong>
+                                <strong class="tab3">{{ $capacity[$ad->capacity] }}</strong>
                             </div>
                             <div class="valign-wrapper">
-                                <i class="material-icons">supervisor_account</i>
                                 <span class="tab1">Gender :</span>
                                 <?php $gender = array('Male', 'Female', 'Any'); ?>
-                                <strong class="tab1">{{ $gender[$ad->gender] }}</strong>
+                                <strong class="col l9">{{ $gender[$ad->gender] }}</strong>
                             </div>
                         </div>
                     </div>

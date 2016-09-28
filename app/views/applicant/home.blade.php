@@ -20,31 +20,44 @@
                             <div class="valign-wrapper">
                                 <i class="material-icons">work</i>
                                 <span class="tab1" style="font-size: 1.2em;">Applying for :</span>
-                                <strong class="tab1">{{ $jobtype->description }}</strong>
+                                <strong class="col l9">{{ $jobtype->description }}</strong>
                             </div>
                             <div class="divider"></div>
                             <div class="valign-wrapper">
                                 <i class="material-icons">location_on</i>
                                 <span class="tab1">Prefered location : </span>
                                 <?php $loc = Regions::where('regionid', '=', $a->regionid)->first(); ?>
-                                <strong class="tab1"> {{ $loc->location }}</strong>
+                                <strong class="col l9"> {{ $loc->location }}</strong>
                             </div>
                             <div class="valign-wrapper">
                                 <i class="material-icons">view_stream</i>
                                 <span class="tab1">Capacity :</span>
                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                <strong class="tab1">{{ $capacity[$a->capacity] }}</strong>
+                                <strong class="col l9">{{ $capacity[$a->capacity] }}</strong>
                             </div>
                             <div class="valign-wrapper">
                                 <i class="material-icons">loyalty</i>
                                 <span class="tab1">Preferred Salary :</span>
-                                <strong class="tab1">{{ $a->salaryid }}</strong>
+                                <strong class="col l9">{{ $a->salaryid }}</strong>
                             </div>
                             <div class="valign-wrapper">
                                 <i class="material-icons">offline_pin</i>
                                 <?php $days = array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday'); ?>
                                 <span class="tab1">Preferred dayoff :</span>
-                                <strong class="tab1">{{ $days[$a->dayof] }}</strong>
+                                <?php 
+                                
+                                    $dayoffs = explode(',', $a->dayof);
+                                    
+                                ?>
+
+                                <strong class="col l9">
+                    
+                                        @foreach($dayoffs as $off)
+                                            <span>{{ "," .$days[$off]}} </span>
+                                        @endforeach    
+                                    </ul>
+                                
+                                </strong>
                             </div>
                             <div class="divider">
                             </div>
@@ -102,6 +115,7 @@
             @if(isset($ads) and count($ads) > 0)
                 <div class="col s12 m12 l12">
                     @foreach($ads as $ad)
+                        <br>
                         <?php
                         $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
                         $edlevel = array("Elementary", "High School", "College graduate");
@@ -115,34 +129,34 @@
                                     <br />
                                     <br />
                                     <div class="valign-wrapper">
-                                        <i class="material-icons">location_on</i>
-                                        <span class="tab1">Preferred location :</span>
-                                        <strong class="tab2">{{ $location->location }}</strong>
+                                        <span class="">Preferred location :</span>
+                                        <strong class="col l10">{{ $location->location }}</strong>
                                     </div>
                                     <div class="valign=wrapper">
-                                        <i class="material-icons">work</i>
-                                        <span class="tab1">Employment type :</span>
+                                        <span class="">Employment type :</span>
                                         <?php $capacity = array('Full Time', 'Part Time'); ?>
                                         <strong class="tab1">{{ $capacity[$ad->capacity] }}</strong>
                                     </div>
                                     <div class="valign-wrapper">
-                                        <i class="material-icons">supervisor_account</i>
-                                        <span class="tab1">Gender :</span>
+                                        <span class="">Gender :</span>
                                         <?php $gender = array('Male', 'Female', 'Any'); ?>
-                                        <strong class="tab1">{{ $gender[$ad->gender] }}</strong>
+                                        <strong class="col l10">{{ $gender[$ad->gender] }}</strong>
                                     </div>
                                     <br />
-                                    <span>Experience :</span>
-                                    <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
-                                    <strong class="tab1">{{ $exp[$ad->yearexp] }}</strong>
-                                    <br />
-                                    <span>Education level :</span>
-                                    <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
-                                    <strong class="tab1"> {{ $edlevel[$ad->edlevel] }}</strong>
-                                    <br />
-                                    <span>Salary :</span>
-                                    <strong class="tab1"> {{ sprintf("%.2f" ,$ad->salaryid) }}</strong>
-                                    <br />
+                                    <div class="valign-wrapper">
+                                        <span>Experience :</span>
+                                        <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
+                                        <strong class="col l10">{{ $exp[$ad->yearexp] }}</strong>
+                                    </div>
+                                    <div class="valign-wrapper">
+                                        <span>Education level :</span>
+                                        <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
+                                        <strong class="col l10"> {{ $edlevel[$ad->edlevel] }}</strong>
+                                    </div>
+                                    <div class="valign-wrapper">
+                                        <span>Salary :</span>
+                                        <strong class="col l10"> {{ sprintf("%.2f" ,$ad->salaryid) }}</strong>
+                                    </div>
                                     <br />
                                     <?php
                                     $date = explode("-" ,$ad->startdate);

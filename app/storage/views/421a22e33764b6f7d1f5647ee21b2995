@@ -3,8 +3,7 @@
     <div class="row">
         <span class="valign-wrapper">
             <h4>Your profile</h4>
-            <a class="tab2 btn green" href="<?php echo asset('/applicant/profile/edit'); ?>">Edit Profile</a>
-        </span>
+              </span>
     </div>
     <div class="tab2 container-fluid">
         <div class="row" style="margin-top: 10px;">
@@ -24,53 +23,55 @@
                         <div class="col s12 m12 l9">
                             <h5>Basic information</h5>
                             <div class="divider"></div><br />
-                            <span class="valign-wrapper">
+                            <div class="valign-wrapper">
                                 <i class="material-icons">perm_identity</i><span>Name :</span>
-                                <strong class="tab1"><?php echo $app->fname ." ". $app->lname; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"><?php echo $app->fname ." ". $app->lname; ?></strong>
+                            </div>
+                            <br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">location_on</i><span>Location :</span>
-                                <strong class="tab1"><?php echo $location->location; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"><?php echo $location->location; ?></strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">location_on</i><span>Complete address :</span>
-                                <strong class="tab1"><?php echo $app->address; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l8"><?php echo $app->address; ?></strong>
+                            </div>
+                            <br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">group_work</i><span>Gender :</span>
-                                <strong class="tab1"> <?php echo $app->gender; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"> <?php echo $app->gender; ?></strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">picture_in_picture</i><span>Birthday :</span>
                                 <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
                                 <?php $bdate = explode('-', $app->birth); ?>
-                                <strong class="tab1"><?php echo $month[$bdate[1]].'/' . $bdate[2] .'/' . $bdate[0]; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"><?php echo $month[$bdate[1]].'/' . $bdate[2] .'/' . $bdate[0]; ?></strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">label</i><span>Civil status :</span>
                                 <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                <strong class="tab1"> <?php echo $status[$app->civilstatus]; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"> <?php echo $status[$app->civilstatus]; ?></strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">polymer</i><span>Nationality :</span>
                                 <?php $n = Nationalities::find($app->nationality); ?>
-                                <strong class="tab1"><?php echo $n->nationality; ?></strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"><?php echo $n->nationality; ?></strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">toc</i><span>Religion :</span>
                                 <?php $n = Religions::find($app->religion); ?>
-                                <strong class="tab1"><?php echo $n->religion; ?></strong>
-                            </span>
+                                <strong class="col l9"><?php echo $n->religion; ?></strong>
+                            </div>
                             <br />
                             <h5>Contact Information</h5>
                             <div class="divider"></div><br />
-                            <span class="valign-wrapper">
+                            <div class="valign-wrapper">
                                 <i class="material-icons">phone</i><span>Mobile phone :</span>
-                                <strong class="tab1"><?php echo $app->contactno; ?></strong>
-                            </span>
+                                <strong class="col l9"><?php echo $app->contactno; ?></strong>
+                            </div><br>
                             <span class="valign-wrapper">
                                 <i class="material-icons">email</i><span>Email :</span>
-                                <strong class="tab1"><?php echo $app->email; ?></strong>
+                                <strong class="col l9"><?php echo $app->email; ?></strong>
                             </span>
                             <br />
                             <h5>NBI Credentials</h5>
@@ -91,136 +92,17 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
+                            <br />
+                            <div class="row">
+                                <a class="col l9 btn green" href="<?php echo asset('/applicant/profile/edit'); ?>">Edit Profile</a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-<div class="divider"></div>
-<?php if($application != null and count($application) >0 ): ?>
-    <?php
-    $salary = Salaries::find($application->salaryid);
-    $location = Regions::find($application->regionid);
-    $jobtype = JobTypes::find($application->jobtypeid);
-    $edlevel = array('Elementary', 'High School', 'College');
-    $skills = ApplicantSkills::where('applicationid', '=', $application->applicationid)->first();
-    $duties = Duties::find($skills->dutyid);
-    ?>
-    <div class="row">
-        <div class="col s12 m12 l10">
-            <div class="card-panel">
-                <div class="row">
-                    <div class="col s12 m12 l2">
-                        <?php echo $application->created_at; ?>
-
-                    </div>
-                    <div class="col s12 m12 l8">
-                        <div class="row">
-                            <h5 class="center-align">Basic job information</h5>
-                            <table>
-                                <tr>
-                                    <td>Job Title : </td>
-                                    <td><strong style="text-decoration: underline"><?php echo $jobtype->description; ?></strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Contact :</td>
-                                    <td><?php echo $app->contactno; ?></td>
-                                </tr>
-                                <tr>
-                                    <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                    <td>Capacity : </td>
-                                    <td><?php echo $capacity[$application->capacity]; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Exptected salary :</td>
-                                    <td><?php echo $salary->amount_range; ?> (pesos)</td>
-                                </tr>
-                                <tr>
-                                    <td>Helper gender :</td>
-                                    <td><?php echo $app->gender; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Education level :</td>
-                                    <td><?php echo $edlevel[$application->edlevel]; ?></td>
-                                </tr>
-                            </table>
-                            <p>
-                            <h6><strong>Job description</strong></h6>
-                            <?php echo $application->pitch; ?>
-
-                            </p>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="row">
-                            <div class="col s12 m12 l12">
-                                <h6><strong>Performed duties</strong></h6>
-                                <?php if(isset($duties)): ?>
-                                    <?php if($duties->cooking != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->laundry != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->gardening != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->grocery != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->cleaning != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->tuturing != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->driving != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($duties->pet != null): ?>
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <p>
-                                        <?php echo $duties->other; ?>
-
-                                    </p>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l2">
-                        <div class="center-align">
-                            <div class="row">
-                                <a class="btn grey lighten-4 col s12 m12 l12" href="<?php echo asset ('/applicant/job/application/edit/'. $application->applicationid); ?>"><i class="material-icons black-text">mode_edit</i></a>
-                            </div>
-                            <div class="row">
-                                <a class="btn grey lighten-4 black-text col s12 m12 l12" href="<?php echo asset ('/applicant/job/application/delete/'. $application->applicationid); ?>"><i class="material-icons">delete</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!--MODAL -->
     <div id="modalnbi" class="modal ">
@@ -265,7 +147,6 @@
             </div>
         </div>
     </div>
-<?php endif; ?>
 
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('js'); ?>

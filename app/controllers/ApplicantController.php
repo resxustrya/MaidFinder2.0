@@ -321,28 +321,18 @@ class ApplicantController extends BaseController {
         $application = Applications::where('appid', '=', $this->app->appid)->get();
         if(isset($application) and count($application) > 0) {
             $ad = Ads::find($id);
-            $profile = Employers::find($ad->empid);
-            $location = Regions::find($ad->regionid);
-            $jobtype = JobTypes::find($ad->jobtypeid);
             $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
             $edlevel = array("Elementary", "High School", "College graduate");
-            $duties = Duties::where('adid', '=', $ad->adid)->first();
-            $salary = Salaries::find($ad->salaryid);
+            $profile = Employers::find($ad->adid);
             $bdate = explode('-', $profile->bdate);
             $age = date('Y') - $bdate[0];
-            $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
             return View::make('ads.employer-ads-profile')
                 ->with('app', $this->app)
                 ->with('emp', $profile)
-                ->with('location', $location)
                 ->with('ads',$ad)
                 ->with('age', $age)
-                ->with('salary', $salary)
-                ->with('jobtype', $jobtype)
                 ->with('dayof', $dayof[$ad['dayof']])
-                ->with('edlevel' ,$edlevel[$ad['edlevel']])
-                ->with('duties', $duties)
-                ->with('job_desc', $job_desc);
+                ->with('edlevel' ,$edlevel[$ad['edlevel']]);
         }
         return Redirect::to('/applicant/create/application')
                             ->with('message', 'You haven\'t created your job availability yet.');

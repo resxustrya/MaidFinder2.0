@@ -5,8 +5,7 @@
     <div class="row">
         <span class="valign-wrapper">
             <h4>Your profile</h4>
-            <a class="tab2 btn green" href="{{ asset('/applicant/profile/edit') }}">Edit Profile</a>
-        </span>
+              </span>
     </div>
     <div class="tab2 container-fluid">
         <div class="row" style="margin-top: 10px;">
@@ -26,53 +25,55 @@
                         <div class="col s12 m12 l9">
                             <h5>Basic information</h5>
                             <div class="divider"></div><br />
-                            <span class="valign-wrapper">
+                            <div class="valign-wrapper">
                                 <i class="material-icons">perm_identity</i><span>Name :</span>
-                                <strong class="tab1">{{ $app->fname ." ". $app->lname }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9">{{ $app->fname ." ". $app->lname }}</strong>
+                            </div>
+                            <br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">location_on</i><span>Location :</span>
-                                <strong class="tab1">{{ $location->location }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9">{{ $location->location }}</strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">location_on</i><span>Complete address :</span>
-                                <strong class="tab1">{{ $app->address }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l8">{{ $app->address }}</strong>
+                            </div>
+                            <br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">group_work</i><span>Gender :</span>
-                                <strong class="tab1"> {{ $app->gender }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"> {{ $app->gender }}</strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">picture_in_picture</i><span>Birthday :</span>
                                 <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
                                 <?php $bdate = explode('-', $app->birth); ?>
-                                <strong class="tab1">{{ $month[$bdate[1]].'/' . $bdate[2] .'/' . $bdate[0]  }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9">{{ $month[$bdate[1]].'/' . $bdate[2] .'/' . $bdate[0]  }}</strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">label</i><span>Civil status :</span>
                                 <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                <strong class="tab1"> {{ $status[$app->civilstatus] }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9"> {{ $status[$app->civilstatus] }}</strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">polymer</i><span>Nationality :</span>
                                 <?php $n = Nationalities::find($app->nationality); ?>
-                                <strong class="tab1">{{ $n->nationality }}</strong>
-                            </span>
-                            <span class="valign-wrapper">
+                                <strong class="col l9">{{ $n->nationality }}</strong>
+                            </div><br>
+                            <div class="valign-wrapper">
                                 <i class="material-icons">toc</i><span>Religion :</span>
                                 <?php $n = Religions::find($app->religion); ?>
-                                <strong class="tab1">{{ $n->religion }}</strong>
-                            </span>
+                                <strong class="col l9">{{ $n->religion }}</strong>
+                            </div>
                             <br />
                             <h5>Contact Information</h5>
                             <div class="divider"></div><br />
-                            <span class="valign-wrapper">
+                            <div class="valign-wrapper">
                                 <i class="material-icons">phone</i><span>Mobile phone :</span>
-                                <strong class="tab1">{{ $app->contactno }}</strong>
-                            </span>
+                                <strong class="col l9">{{ $app->contactno }}</strong>
+                            </div><br>
                             <span class="valign-wrapper">
                                 <i class="material-icons">email</i><span>Email :</span>
-                                <strong class="tab1">{{ $app->email }}</strong>
+                                <strong class="col l9">{{ $app->email }}</strong>
                             </span>
                             <br />
                             <h5>NBI Credentials</h5>
@@ -93,133 +94,17 @@
                                     @endif
                                 </div>
                             </div>
+                            <br />
+                            <div class="row">
+                                <a class="col l9 btn green" href="{{ asset('/applicant/profile/edit') }}">Edit Profile</a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-<div class="divider"></div>
-@if($application != null and count($application) >0 )
-    <?php
-    $salary = Salaries::find($application->salaryid);
-    $location = Regions::find($application->regionid);
-    $jobtype = JobTypes::find($application->jobtypeid);
-    $edlevel = array('Elementary', 'High School', 'College');
-    $skills = ApplicantSkills::where('applicationid', '=', $application->applicationid)->first();
-    $duties = Duties::find($skills->dutyid);
-    ?>
-    <div class="row">
-        <div class="col s12 m12 l10">
-            <div class="card-panel">
-                <div class="row">
-                    <div class="col s12 m12 l2">
-                        {{ $application->created_at }}
-                    </div>
-                    <div class="col s12 m12 l8">
-                        <div class="row">
-                            <h5 class="center-align">Basic job information</h5>
-                            <table>
-                                <tr>
-                                    <td>Job Title : </td>
-                                    <td><strong style="text-decoration: underline">{{ $jobtype->description }}</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Contact :</td>
-                                    <td>{{ $app->contactno }}</td>
-                                </tr>
-                                <tr>
-                                    <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                    <td>Capacity : </td>
-                                    <td>{{ $capacity[$application->capacity] }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Exptected salary :</td>
-                                    <td>{{ $salary->amount_range }} (pesos)</td>
-                                </tr>
-                                <tr>
-                                    <td>Helper gender :</td>
-                                    <td>{{ $app->gender }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Education level :</td>
-                                    <td>{{ $edlevel[$application->edlevel] }}</td>
-                                </tr>
-                            </table>
-                            <p>
-                            <h6><strong>Job description</strong></h6>
-                            {{ $application->pitch }}
-                            </p>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="row">
-                            <div class="col s12 m12 l12">
-                                <h6><strong>Performed duties</strong></h6>
-                                @if(isset($duties))
-                                    @if($duties->cooking != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cooking }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->laundry != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->laundry }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->gardening != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->gardening }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->grocery != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->grocery }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->cleaning != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cleaning }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->tuturing != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->tuturing }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->driving != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->driving }}</strong>
-                                        </div>
-                                    @endif
-                                    @if($duties->pet != null)
-                                        <div class="col s12 m12 l4">
-                                            <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->pet }}</strong>
-                                        </div>
-                                    @endif
-                                    <p>
-                                        {{ $duties->other }}
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l2">
-                        <div class="center-align">
-                            <div class="row">
-                                <a class="btn grey lighten-4 col s12 m12 l12" href="{{asset ('/applicant/job/application/edit/'. $application->applicationid)}}"><i class="material-icons black-text">mode_edit</i></a>
-                            </div>
-                            <div class="row">
-                                <a class="btn grey lighten-4 black-text col s12 m12 l12" href="{{asset ('/applicant/job/application/delete/'. $application->applicationid)}}"><i class="material-icons">delete</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!--MODAL -->
     <div id="modalnbi" class="modal ">
@@ -264,7 +149,6 @@
             </div>
         </div>
     </div>
-@endif
 
 @stop
 @section('js')
