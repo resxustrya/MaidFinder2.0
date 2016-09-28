@@ -3,7 +3,7 @@
     <div class="row">
         <div class="row valign-wrapper">
             <h4>Your job application</h4>
-            <a class="add_new btn green tab3" href="<?php echo asset('/applicant/create/application'); ?>">
+            <a class="add_new btn green tab3" href="<?php echo asset('/applicant/job/type/'); ?>">
                 <b>Create new</b>
             </a>
         </div>
@@ -18,8 +18,7 @@
                    $location = Regions::find($a->regionid);
                    $jobtype = JobTypes::find($a->jobtypeid);
                    $edlevel = array('Elementary', 'High School', 'College');
-                   $skills = ApplicantSkills::where('applicationid', '=', $a->applicationid)->first();
-                   $duties = Duties::find($skills->dutyid);
+
                    ?>
                        <div class="row card-panel">
                            <div class="col s12 m12 l2">
@@ -47,7 +46,7 @@
                                        </tr>
                                        <tr>
                                            <td>Exptected salary :</td>
-                                           <td><?php echo $salary->amount_range; ?> (pesos)</td>
+                                           <td><?php echo $a->salaryid; ?> (pesos)</td>
                                        </tr>
                                        <tr>
                                            <td>Helper gender :</td>
@@ -68,53 +67,23 @@
 
                                <div class="row">
                                    <div class="col s12 m12 l12">
-                                       <h6><strong>Perfurmed duties</strong></h6>
-                                       <?php if(isset($duties)): ?>
-                                           <?php if($duties->cooking != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->laundry != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->gardening != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->grocery != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->cleaning != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->tuturing != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->driving != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <?php if($duties->pet != null): ?>
-                                               <div class="col s12 m12 l4">
-                                                   <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
-                                               </div>
-                                           <?php endif; ?>
-                                           <p>
-                                               <?php echo $duties->other; ?>
-
-                                           </p>
-                                       <?php endif; ?>
+                                       <div class="row">
+                                           <h6><strong>Performed duties</strong></h6>
+                                       </div>
+                                       <div class="row">
+                                           <?php $appduties = AppDuties::where('applicationid', '=', $a->applicationid)->get(); ?>
+                                           <ul>
+                                               <?php if(isset($appduties) and count($appduties) > 0): ?>
+                                                   <?php foreach($appduties as $d): ?>
+                                                       <li class="valign-wrapper">
+                                                           <i class="material-icons">done_all</i>
+                                                           <?php $duty = Duties::find($d->duties); ?>
+                                                           <span class="tab1"><?php echo $duty->description; ?></span>
+                                                       </li>
+                                                   <?php endforeach; ?>
+                                               <?php endif; ?>
+                                           </ul>
+                                       </div>
                                    </div>
                                </div>
                            </div>

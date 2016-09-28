@@ -4,7 +4,7 @@
 @section('content')
     <div class="row" style="padding: 0px;">
         <div class="row">
-            <h4 class="black-text">Job application</h4>
+            <h4 class="black-text">Job application availability</h4>
         </div>
         <div class="card-panel">
             <div class="row">

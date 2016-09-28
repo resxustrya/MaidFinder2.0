@@ -8,7 +8,7 @@
 @section('content')
     @if(isset($application) and count($application) > 0)
         <div class="row">
-            <h4>Your current job application</h4>
+            <h4>Current job application</h4>
             <strong>Latest job application</strong>
         </div>
         <div class="row">
@@ -38,8 +38,7 @@
                             <div class="valign-wrapper">
                                 <i class="material-icons">loyalty</i>
                                 <span class="tab1">Preferred Salary :</span>
-                                <?php $salary = Salaries::find($a->salaryid); ?>
-                                <strong class="tab1">{{ $salary->amount_range }}</strong>
+                                <strong class="tab1">{{ $a->salaryid }}</strong>
                             </div>
                             <div class="valign-wrapper">
                                 <i class="material-icons">offline_pin</i>
@@ -60,58 +59,6 @@
                             <div class="divider">
                             </div>
                             <br />
-                                <div class="row">
-                                    <div class="col s12 m12 l12">
-                                        <strong>Performed duties</strong>
-                                        <?php
-                                            $skills = ApplicantSkills::where('applicationid', '=', $a->applicationid)->first();
-                                            $duties = Duties::find($skills->dutyid);
-                                        ?>
-
-                                        @if(isset($duties))
-                                            @if($duties->cooking != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cooking }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->laundry != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->laundry }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->gardening != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->gardening }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->grocery != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->grocery }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->cleaning != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cleaning }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->tuturing != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->tuturing }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->driving != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->driving }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->pet != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->pet }}</strong>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    </div>
-                                </div>
                         </div>
                     @endif
                 @endforeach

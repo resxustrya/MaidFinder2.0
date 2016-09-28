@@ -15,11 +15,10 @@ class Application extends Migration {
 		Schema::create('application', function($table){
 			$table->increments('applicationid');
 			$table->integer('appid')->nullable();
-			$table->integer('position')->nullable();
-			$table->integer('salaryid')->nullable();
+			$table->string('salaryid')->nullable();
 			$table->integer('jobtypeid')->nullable();
 			$table->integer('capacity')->nullable();
-			$table->integer('dayof')->nullable();
+			$table->string('dayof')->nullable();
 			$table->integer('yearexp')->nullable();
 			$table->integer('edlevel')->nullable();
 			$table->integer('regionid')->nullable();

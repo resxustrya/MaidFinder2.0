@@ -20,63 +20,60 @@
             </div>
         </div>
     </div>
+    <br />
     <div class="container">
-        <ul class="collapsible" data-collapsible="accordion">
-            <li>
-                <div class="collapsible-header orange waves-effect btn center-align"><i class="material-icons center-align">search</i>Search Menu</div>
-                <div class="collapsible-body white" style="padding: 10px;">
-                    <h5>Search Criteria</h5>
-                    <h5 class="divider"></h5>
-                    <form action="{{ asset('/search/profiles') }}" method="GET">
-                        <div class="row">
-                            <div class="col s12 m12 l6">
-                                <select name="jobtypeid" class="browser-default">
-                                    <option value="" selected>Position</option>
-                                    @foreach($jobtypes as $job)
-                                        <option  value="{{ $job->jobtypeid }}">{{ $job->description }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col s12 m12 l6">
-                                <select name="salaryid" class="browser-default">
-                                    <option value="" selected>Salary (pesos)</option>
-                                    @foreach($salary as $sal)
-                                        <option value="{{ $sal->salaryid }}">{{ $sal->amount_range }}</option>
-                                    @endforeach
-                                </select>
+        <div class="row">
+            <div class="card-panel">
+                <strong style="font-size: 1.2em;">Search criteria</strong>
+                <form action="{{ asset('/search/profiles') }}" method="GET">
+                    <div class="row">
+                        <div class="col s12 m12 l6">
+                            <select name="jobtypeid" class="browser-default">
+                                <option value="" selected>Position</option>
+                                @foreach($jobtypes as $job)
+                                    <option  value="{{ $job->jobtypeid }}">{{ $job->description }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col s12 m12 l6">
+                            <select name="salaryid" class="browser-default">
+                                <option value="" selected>Salary (pesos)</option>
+                                @foreach($salary as $sal)
+                                    <option value="{{ $sal->salaryid }}">{{ $sal->amount_range }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m12 l6">
+                            <select name="location" class="browser-default">
+                                <option value="" selected>Preffered location</option>
+                                @foreach($locations as $loc)
+                                    <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col s12 m12 l6">
+                            <select name="capacity" class="browser-default">
+                                <option value="" selected>Capacity</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div class="row">
+                                <p>
+                                    <input type="submit" class="btn-large green col s12 m12 l12 center-align" name="search" value="Find your match" />
+                                </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col s12 m12 l6">
-                                <select name="location" class="browser-default">
-                                    <option value="" selected>Preffered location</option>
-                                    @foreach($locations as $loc)
-                                        <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col s12 m12 l6">
-                                <select name="capacity" class="browser-default">
-                                    <option value="" selected>Capacity</option>
-                                    <option value="Full Time">Full Time</option>
-                                    <option value="Part Time">Part Time</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="row">
-                            <div class="col s12 m12 l12">
-                                <div class="row">
-                                    <p>
-                                        <input type="submit" class="btn-large green col s12 m12 l12 center-align" name="search" value="Find your match" />
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </li>
-        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="container-fluid">
         <div class="row" style="padding: 20px;">

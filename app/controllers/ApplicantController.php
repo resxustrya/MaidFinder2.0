@@ -212,73 +212,67 @@ class ApplicantController extends BaseController {
                         ->with('jobtype', $type);
     }
     public function handle_application() {
-        Session::flash('url',2);    
+
         $temp = array (
             'location' => Input::get('location'),
-            'position' => Input::get('jobtype'),
+            'edlevel' => Input::get('edlevel'),
+            'yearexp' => Input::get('yearexp'),
             'salary' => Input::get('salary'),
             'capacity' => Input::get('capacity'),
-            'edlevel' => Input::get('edlevel'),
-            'dayof' => Input::get('dayof'),
-            'pitch' => Input::get('pitch')
+            'pitch' => Input::get('pitch'),
+            'off' => Input::get('off'),
+            'duty' => Input::get('duty')
         );
 
         $rules = array(
             'location' => 'required',
-            'position' => 'required',
+            'edlevel' => 'required',
+            'yearexp' => 'required',
             'salary' => 'required',
             'capacity' => 'required',
-            'edlevel' => 'required',
-            'dayof' => 'required',
-            'pitch' => 'required'
+            'pitch' => 'required',
+            'off' => 'required',
+            'duty' => 'required'
         );
         $messages = array(
-            'location.required' => 'Chose a location',
-            'position.required' => 'Chose a position',
-            'salary.required' => 'Chose a salary',
-            'capacity.required' => 'Chose acapacity',
-            'edlevel.required' => 'Chose a education level',
-            'dayof.required' => 'Chose a dayof',
-            'pitch.required' => 'Pitch must not be empty'
+            'location.required' => 'Select a location',
+            'edlevel.required' => 'Select education level',
+            'yearexp.required' => 'Select year experience',
+            'salary.required' => 'Enter your preferred salary',
+            'capacity.required' => 'Select employment type',
+            'pitch.required' => 'Enter your job description',
+            'off.required' => 'Chose your preferred dayoff',
+            'duty.required' => 'Chose your performed duties'
         );
         $validator = Validator::make($temp,$rules,$messages);
         if($validator->fails()) {
             $messages = $validator->messages();
-            return Redirect::to('/applicant/create/application')
+            return Redirect::to('/applicant/crate/job')
                 ->with('error', $messages)
+                ->with('jobtype', Input::get('jobtypeid'))
                 ->with('message','Your job application is not created');
         }
 
         $application = new Applications();
         $application->appid = $this->app->appid;
-        $application->regionid = Input::get('location');
+        $application->salaryid = Input::get('salary');
+        $application->jobtypeid = Input::get('jobtypeid');
         $application->capacity = Input::get('capacity');
-        $application->salaryid =Input::get('salary');
-        $application->dayof = Input::get('dayof');
+        $application->dayof = implode(',', Input::get('off'));
+        $application->yearexp = Input::get('yearexp');
         $application->edlevel = Input::get('edlevel');
-        $application->jobtypeid = Input::get('jobtype');
+        $application->regionid = Input::get('location');
         $application->pitch = Input::get('pitch');
         $application->save();
 
-        $duties = new Duties();
-        $duties->adid = $application->adid;
-        $duties->cooking = Input::has('cooking') ? Input::get('cooking') : null;
-        $duties->laundry = Input::has('laundry') ? Input::get('laundry') : null;
-        $duties->gardening = Input::has('gardening') ?Input::get('gardening') : null;
-        $duties->grocery = Input::has('grocery') ? Input::get('grocery') : null;
-        $duties->cleaning = Input::has('cleaning') ? Input::get('cleaning') : null;
-        $duties->tuturing = Input::has('tutoring') ? Input::get('tutoring') : null;
-        $duties->driving = Input::has('driving') ? Input::get('driving') : null;
-        $duties->pet = Input::has('pet') ? Input::get('pet') : null;
-        $duties->other = Input::has('other') ? Input::get('other') : null;
-        $duties->save();
+        foreach(Input::get('duty') as $duty) {
+            $d = new AppDuties();
+            $d->applicationid = $application->applicationid;
+            $d->duties = $duty;
+            $d->save();
+        }
 
-        $app_skill = new ApplicantSkills();
-        $app_skill->applicationid = $application->applicationid;
-        $app_skill->dutyid = $duties->dutyid;
-        $app_skill->save();
-
-        return Redirect::to('applicant/profile')
+        return Redirect::to('/applicant/applications/list')
                         ->with('message', 'Job application created. Your job application is now published into the employers helpers matching.');
     }
     public function employer_ads() {
