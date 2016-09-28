@@ -1,0 +1,239 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <span class="valign-wrapper">
+            <h4>Your hired list</h4>
+        </span>
+    </div>
+    <?php if($hirelist and count($hirelist)): ?>
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 10px;">
+                <div class="col s12 m12 l11">
+                   <?php foreach($hirelist as $hire): ?>
+                       <?php $applicant = Applicants::find($hire->appid); ?>
+                       <?php $applications = Applications::where('appid','=', $applicant->appid)->first(); ?>
+                        <?php if($applications and count($applications) > 0): ?>
+                        <div class="card-panel">
+                            <div class="row">
+                                <div class="col s12 m12 l6">
+                                    <div class="valign-wrapper">
+                                        <i class="material-icons">person_pin</i>
+                                        <h5><span class="tab1"><?php echo $applicant->fname ." ". $applicant->lname; ?></span> </h5>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <h6 class="right-align">
+                                        <a class="btn green recommend right-align" id="recomend">Recommend</a>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <br />
+                            <div class="row">
+                                <div class="valign-wrapper">
+                                    <i class="material-icons">work</i>
+                                    <?php $jobtype = JobTypes::find($applications->jobtypeid); ?>
+                                    <strong class="tab1">Position : </strong>
+                                    <strong class="tab2"> <?php echo $jobtype->description; ?></strong>
+                                </div>
+                                <div class="valign-wrapper">
+                                    <i class="material-icons">phone</i>
+                                    <strong class="tab1">Mobile no.</strong>
+                                    <strong class="tab1"><?php echo $applicant->contactno; ?></strong>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="divider"></div>
+                            <br />
+                            <div class="row">
+                                <div class="col s12 m12 l6">
+                           <span class="valign-wrapper">
+                               <i class="material-icons">location_on</i>
+                               <span>Preffred location :</span>
+                                <?php $loc = Regions::find($applications->regionid);?>
+                               <strong class="tab2"> <?php echo $loc->location; ?> </strong>
+                           </span>
+                            <span class="valign-wrapper">
+                               <i class="material-icons">label</i>
+                               <span>Capacity :</span>
+                                <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                <strong class="tab2"><?php echo $capacity[$applications->capacity]; ?></strong>
+                           </span>
+                           <span class="valign-wrapper">
+                               <i class="material-icons">label</i>
+                               <span>Preffered salary :</span>
+                                <?php $salary = Salaries::find($applications->salaryid);?>
+                               <strong class="tab2"><?php echo $salary->amount_range; ?> - pesos</strong>
+                           </span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="divider"></div>
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <div class="row">
+                                        <strong style="font-size: 1.2em;">Expected duties</strong>
+                                    </div>
+                                    <div class="row">
+                                        <?php
+                                            $app_skill = ApplicantSkills::find($applications->applicationid);
+                                            if(isset($app_skill) and count($app_skill) > 0) {
+                                                $duties = Duties::find($app_skill->dutyid);
+                                            }
+                                        ?>
+                                        <?php if(isset($duties) and count($duties) > 0): ?>
+                                            <?php if($duties->cooking != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->laundry != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->gardening != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->grocery != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->cleaning != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->tuturing != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->driving != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->pet != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <p>
+
+                                            </p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <br />
+                            <div class="row">
+                                <?php if($hire->accepted == 1): ?>
+                                    <div class="col s12 m12 l12">
+                                        <span class="valign-wrapper center card-panel">
+                                            <i class="material-icons">thumb_up</i>
+                                            <strong class="tab1">Job request accepted</strong>
+                                        </span>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <br />
+                            <div class="row center">
+                                <div class="valign-wrapper">
+                                    <?php if($hire->status == 1): ?>
+                                        <a class="btn green" href="<?php echo asset('/employer/cancel/request/'.$hire->id); ?>">Cancel Hire</a>
+                                        <a class="btn green tab3" href="<?php echo asset('/employer/hire/delete/'.$hire->id); ?>">Delete</a>
+                                   <?php else: ?>
+                                        <a class="btn green" href="<?php echo asset('/employer/resend/request/'.$hire->id); ?>">Resend Hire</a>
+                                        <a class="btn green tab3" href="<?php echo asset('/employer/hire/delete/'.$hire->id); ?>">Delete</a>
+                                   <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php else: ?>
+                            <div class="card-panel">
+                                <div class="valign-wrapper">
+                                    <i class="material-icons">new_releases</i>
+                                    <span class="tab2"><?php echo $applicant->fname; ?> job application is currently not available. <strong class="tab2"><a href="<?php echo asset('/employer/remove/hirelist/'.$hire->id); ?>">Remove</a></strong></span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                       <br />
+                   <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="pagination">
+                    <?php echo $hirelist->links(); ?>
+                </ul>
+            </div>
+        </div>
+    <?php else: ?>
+        <h6>Your hiredlist is empty.</h6>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col s12 m12 l10">
+                    <div class="card-panel">
+                        <div class="valign-wrapper">
+                            <i class="material-icons">new_releases</i>
+                            <strong>Your don't have any job request for a moment. <a href="<?php echo asset('/helpers'); ?>">Browse for helpers now.</a> </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <!--modal -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="row">
+            Recommend applicant to employer you know.
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">textsms</i>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                            <label for="autocomplete-input">Autocomplete</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+    @parent
+    <script>
+        $(document).ready(function() {
+            $('.recommend').click(function(){
+                $('#modal1').openModal();
+            });
+            $('#recomend').click(function() {
+                var url = <?php echo "'". asset('/recomend/auto') . "'"; ?>;
+                $.get(url,function(response){
+                    var res = JSON.parse(response);
+
+                    $('input.autocomplete').autocomplete({
+
+                    });
+                });
+            });
+        });
+    </script>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('employer.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,104 @@
+<?php $__env->startSection('css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <h4>Job request</h4>
+    </div>
+    <?php if($apply_ad != null and count($apply_ad) > 0): ?>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col s12 m12 l10">
+                    <?php foreach($apply_ad as $a): ?>
+                        <?php
+                            $application = Applications::where('appid', '=', $a->appid)->first();
+                        ?>
+
+                        <?php if(isset($application) and count($application) > 0): ?>
+                            <?php $applicant = Applicants::find($application->appid); ?>
+                            <a class="black-text" target="_blank" href="<?php echo asset('/application/view/'.$application->applicationid); ?>">
+                                <div class="card-panel">
+                                    <div class="row">
+                                        <h4><?php echo $applicant->fname; ?></h4>
+                                        <div class="divider"></div>
+                                        <?php $jobtype = JobTypes::find($application->jobtypeid); ?>
+                                        <span>Contract situation :</span><strong class="tab2"><?php echo ($applicant->isHiring == NULL) ? 'Available' : 'Already hired'; ?></strong>
+                                         <span class="valign-wrapper">
+                                            <i class="material-icons">location_on</i>
+                                            <span class="tab1">Location :</span>
+                                             <?php $region = Regions::find($applicant->regionid); ?>
+                                            <strong class="tab1"><?php echo $region->location; ?></strong>
+                                        </span>
+                                        <span class="valign-wrapper">
+                                            <i class="material-icons">work</i>
+                                            <span class="tab1">Applying for :</span>
+                                            <strong class="tab1"><?php echo $jobtype->description; ?></strong>
+                                        </span>
+                                        <span class="valign-wrapper">
+                                            <i class="material-icons">label</i>
+                                            <span class="tab1">Nationality :</span>
+                                            <?php $n = Nationalities::find($applicant->nationality); ?>
+                                            <strong class="tab1"><?php echo $n->nationality; ?> </strong>
+                                        </span> <span class="valign-wrapper">
+                                            <i class="material-icons">label</i>
+                                            <span class="tab1">Religion :</span>
+                                                <?php $n = Religions::find($applicant->religion); ?>
+                                                <strong class="tab1"> <?php echo $n->religion; ?></strong>
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                        <h5>Applicant message.</h5>
+                                        <blockquote class="flow-text" style="font-size: 1em;">
+                                            <?php echo $a->message; ?>
+
+                                        </blockquote>
+                                    </div>
+                                    <div class="row">
+                                        <div class="valign-wrapper">
+                                            <a href="<?php echo asset('/employer/remove/request/'. $a->id); ?>"> <strong class="tab2">Remove</strong></a>
+                                            <span class="tab1"> | </span>
+                                            <a class="tab1" target="_blank" href="<?php echo asset('/application/view/'.$application->applicationid); ?>">View profile</a>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                            </a>
+                            <br />
+                        <?php else: ?>
+                            <br />
+                            <div class="card-panel">
+                                <div class="valign-wrapper">
+                                    <i class="material-icons">new_releases</i>
+                                    <h6>Helpers job application is currently not available. The helper might deleted his/her job application request.</h6>
+                                    <a href="<?php echo asset('/employer/remove/request/'. $a->id); ?>"> <strong class="tab2">Remove</strong></a>
+                                </div>
+                            </div>
+                            <br />
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    <?php else: ?>
+        <div class="container-fluid">
+            <div class="row"><h6>Job request is empty.</h6></div>
+            <div class="row">
+                <div class="col s12 m12 10">
+                    <div class="card-panel">
+                        <div class="valign-wrapper">
+                            <i class="material-icons">new_releases</i>
+                            <strong>Your don't have any job request for a moment. <a href="<?php echo asset('/helpers'); ?>">Browse for helpers now.</a> </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('employer.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
