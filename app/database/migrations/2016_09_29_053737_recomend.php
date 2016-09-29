@@ -14,11 +14,9 @@ class Recomend extends Migration {
 	{
 		Schema::create('recomend', function($table){
 			$table->increments('id');
-			$table->integer('empid');
-			$table->integer('emp_recomend');
+			$table->integer('recommendto');
+			$table->integer('recommendby');
 			$table->integer('appid');
-			$table->string('message',500);
-			$table->boolean('accepted')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

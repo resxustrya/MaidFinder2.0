@@ -5,16 +5,19 @@
 @section('content')
     <div class="row">
         <span class="valign-wrapper">
-            <h4>Recommend</h4>
+            <h4>Recommendations</h4>
         </span>
+    </div>
+    <div class="row">
+        <h6>Choose who do you want to recommend your previous helper.</h6>
     </div>
     <div class="row">
         <div class="col s12 m12 l12">
             @if(isset($ads) and count($ads) >0)
                 @foreach($ads as $ad)
                     <?php $e = Employers::where('empid', '=', $ad->empid)->first(); ?>
-                    <div class="col s12 m6 l3" style="margin-top: 10px;">
-                        <a target="_blank" href="{{ asset('/recommned/'. $e->empid .'/' .$appid .'/'. $emp->empid) }}" class="black-text">
+                    <div class="col s12 m6 l4" style="margin-top: 10px;">
+                        <div class="card-panel">
                             <div class="row">
                                 <img class="image circle" src="{{ asset('public/uploads/profile/'.(($e->profilepic) != null ? $e->profilepic :'facebook.jpg' )) }}">
                             </div>
@@ -27,23 +30,31 @@
                                <i class="material-icons">work</i>
                                    <?php $ad = Ads::where('empid', '=',$e->empid)->first();?>
                                    <?php
-                                       $job = null;
-                                    if(isset($ad) and count($ad) > 0) {
-                                        $job = JobTypes::find($ad->jobtypeid);
-                                    }
+                                   $job = null;
+                                   if(isset($ad) and count($ad) > 0) {
+                                       $job = JobTypes::find($ad->jobtypeid);
+                                   }
                                    ?>
 
-                               <strong class="tab1">Looking for : {{ $job->description}}</strong>
+                                   <strong class="tab1">Looking for : {{ $job->description}}</strong>
                                 </span>
                             </div>
                             <div class="row">
-                                <a class="btn green" href="{{ asset('/recommned/'. $e->empid .'/' .$appid .'/'. $emp->empid) }}">Reccomend</a>
+
                             </div>
-                        </a>
+                            <div class="row">
+                                <button class="btn green" onclick="recommend()">Recommend</button>
+                            </div>
+                        </div>
                     </div>
                 @endforeach
             @endif
         </div>
+    </div>
+    <div class="row">
+        <ul class="paginate">
+            <?php echo $ads->links(); ?>
+        </ul>
     </div>
 @stop
 
@@ -68,6 +79,14 @@
             color: #333;
         }
     </style>
+@stop
+@section('js')
+    @parent
+    <script>
+        function recommend() {
+            alert("Hallow");
+        }
+    </script>
 
 
 @stop

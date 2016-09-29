@@ -89,7 +89,7 @@ Route::get('/employer/remove/hirelist/{id}', 'EmployerController@remove_hirelist
 Route::get('/employer/hire/delete/{id}', 'EmployerController@hire_delete');
 Route::get('/employer/hired/list', 'EmployerController@list_hired');
 Route::post('/employer/applicant/rating', 'EmployerController@create_rate');
-Route::get('/employer/recommend/{jobid}/{appid}', 'EmployerController@recomend');
+Route::get('/employer/recommend', 'EmployerController@recomend');
 Route::get('/recommned/{to}/{appid}/{by}', 'EmployerController@recomend_to');
 Route::get('employer/recommend','EmployerController@reco_view');
 Route::get('/employer/recomend/profile/{id}', 'EmployerController@reco_profile');

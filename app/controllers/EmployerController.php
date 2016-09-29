@@ -460,7 +460,7 @@ class EmployerController extends BaseController {
                     ->with('recommedations', $recommendations);
     }
     public function create_rate() {
-      return Input::all();  
+    
       $rate = Input::all();
       $sum = 0;
       $sum += $rate['r1'];
@@ -476,9 +476,17 @@ class EmployerController extends BaseController {
         $rating->partialrating = $sum;
         $rating->feedback = $rate['feedback'];
         $rating->save();
-        return Redirect::to('/employer/hired/liist')->with('message', 'Your applicant evaluation is created.');
+        $ads = Ads::where('jobtypeid', '=', $rate['jobtypeid'])->paginate(20);
+        if(isset($ads) and count($ads) > 0) {
+             return View::make('employer.recommendation')
+                        ->with('emp', $this->emp)
+                        ->with('ads', $ads);
+        }
+        return View::make('employer.recommendation')
+                        ->with('emp', $this->emp)
+                        ->with('ads', Ads::paginate(20));
     }
-    public function recomend($jobid,$appid) {
+    public function recomend() {
         $ads = Ads::where('jobtypeid', '=', $jobid)->paginate(10);
         return View::make('employer.recommendation')
                         ->with('emp', $this->emp)
