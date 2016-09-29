@@ -1,11 +1,8 @@
-
-@extends('employer.layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid">
-        @if(Session::has('error'))
+        <?php if(Session::has('error')): ?>
             <?php $error = Session::get('error'); ?>
-        @endif
+        <?php endif; ?>
         <div class="row">
             <div class="col s12 m12 l7 offset-l2">
                 <div class="row"><h6>&nbsp;</h6></div>
@@ -13,8 +10,8 @@
                 <div class="divider"></div>
                 <br />
                 <div class="card-panel">
-                    <form action="{{ asset('/create/ad') }}" method="POST">
-                        <input type="text" name="jobtypeid" value="{{ $ad->jobypied }}" />
+                    <form action="<?php echo asset('/create/ad'); ?>" method="POST">
+                        <input type="text" name="jobtypeid" value="<?php echo $ad->jobypied; ?>" />
                         <div class="row valign-wrapper">
 
                         </div>
@@ -27,11 +24,11 @@
                                 <?php $location = Regions::all(); ?>
                                 <select name="location" class="browser-default">
                                     <option value="" selected>Select</option>
-                                    @foreach($location as $loc)
-                                        <option value="{{ $loc->regionid }}" {{  $ad->regionid == $loc->regionid ? 'selected' : '' }}>{{ $loc->location }}</option>
-                                    @endforeach
+                                    <?php foreach($location as $loc): ?>
+                                        <option value="<?php echo $loc->regionid; ?>" <?php echo $ad->regionid == $loc->regionid ? 'selected' : ''; ?>><?php echo $loc->location; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
-                                <label class="red-text" for="location">{{ isset($error)? $error->first('location') : '' }}</label>
+                                <label class="red-text" for="location"><?php echo isset($error)? $error->first('location') : ''; ?></label>
                             </div>
                         </div>
                         <br />
@@ -43,11 +40,11 @@
                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
                                 <select name="capacity" class="browser-default">
                                     <option value="" selected>Select</option>
-                                    @foreach($capacity as $key => $value)
-                                        <option value="{{ $key }}" {{ $ad->capacity == $key ? 'selected' : '' }}>{{ $value }}</option>
-                                    @endforeach
+                                    <?php foreach($capacity as $key => $value): ?>
+                                        <option value="<?php echo $key; ?>" <?php echo $ad->capacity == $key ? 'selected' : ''; ?>><?php echo $value; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
-                                <label class="red-text" for="capacity">{{ isset($error)? $error->first('capacity') : '' }}</label>
+                                <label class="red-text" for="capacity"><?php echo isset($error)? $error->first('capacity') : ''; ?></label>
                             </div>
                         </div>
                         <br />
@@ -59,11 +56,11 @@
                                 <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
                                 <select name="yearexp" class="browser-default">
                                     <option value="" selected>Select</option>
-                                    @foreach($exp as $key => $value)
-                                        <option value="{{$key}}" {{ $ad->yearexp == $key ? 'selected' : '' }}>{{ $value }}</option>
-                                    @endforeach
+                                    <?php foreach($exp as $key => $value): ?>
+                                        <option value="<?php echo $key; ?>" <?php echo $ad->yearexp == $key ? 'selected' : ''; ?>><?php echo $value; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
-                                <label class="red-text" for="yearexp">{{ isset($error)? $error->first('yearexp') : '' }}</label>
+                                <label class="red-text" for="yearexp"><?php echo isset($error)? $error->first('yearexp') : ''; ?></label>
                             </div>
                         </div>
                         <br />
@@ -75,11 +72,11 @@
                                 <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
                                 <select name="edlevel" class="browser-default">
                                     <option value="" selected>Select</option>
-                                    @foreach($edlevel as $key => $value)
-                                        <option value="{{ $key }}" {{ $ad->edlevel == $key ? 'selected' : '' }}>{{ $value }}</option>
-                                    @endforeach
+                                    <?php foreach($edlevel as $key => $value): ?>
+                                        <option value="<?php echo $key; ?>" <?php echo $ad->edlevel == $key ? 'selected' : ''; ?>><?php echo $value; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
-                                <label class="red-text" for="edlevel">{{ isset($error)? $error->first('edlevel') : '' }}</label>
+                                <label class="red-text" for="edlevel"><?php echo isset($error)? $error->first('edlevel') : ''; ?></label>
                             </div>
                         </div>
                         <br />
@@ -91,11 +88,11 @@
                                 <?php $gender = array('Male', 'Female', 'Any'); ?>
                                 <select name="gender" class="browser-default">
                                     <option value="" selected="">Select</option>
-                                    @foreach($gender as $key => $value)
-                                        <option value="{{ $key }}" {{ $ad->gender == $key ? 'selected' : '' }}>{{ $value }}</option>
-                                    @endforeach
+                                    <?php foreach($gender as $key => $value): ?>
+                                        <option value="<?php echo $key; ?>" <?php echo $ad->gender == $key ? 'selected' : ''; ?>><?php echo $value; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
-                                <label class="red-text" for="edlevel">{{ isset($error)? $error->first('gender') : '' }}</label>
+                                <label class="red-text" for="edlevel"><?php echo isset($error)? $error->first('gender') : ''; ?></label>
                             </div>
                         </div>
                         <br />
@@ -110,30 +107,30 @@
                                             <?php $date = explode('-', $ad->startdate); ?>
                                             <option value="" selected disabled>Year</option>
                                             <?php $count = 1 ?>
-                                            @for($i = date('Y');20 > $count++; $i++)
-                                                <option value="{{ $i }}" {{ $date[0] == $i ? 'selected' : '' }}> {{ $i }}</option>
-                                            @endfor
+                                            <?php for($i = date('Y');20 > $count++; $i++): ?>
+                                                <option value="<?php echo $i; ?>" <?php echo $date[0] == $i ? 'selected' : ''; ?>> <?php echo $i; ?></option>
+                                            <?php endfor; ?>
                                         </select>
-                                        <label class="red-text" for="year">{{ isset($error)? $error->first('year') : '' }}</label>
+                                        <label class="red-text" for="year"><?php echo isset($error)? $error->first('year') : ''; ?></label>
                                     </div>
                                     <div class="col s12 m12 l4">
                                         <select class="browser-default" name="month">
                                             <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
                                             <option value="" selected disabled>Month</option>
-                                            @foreach($month as $key => $value)
-                                                <option value="{{ $key }}" {{ $date[1] == $key ? 'selected' : '' }}>{{ $value }}</option>
-                                            @endforeach
+                                            <?php foreach($month as $key => $value): ?>
+                                                <option value="<?php echo $key; ?>" <?php echo $date[1] == $key ? 'selected' : ''; ?>><?php echo $value; ?></option>
+                                            <?php endforeach; ?>
                                         </select>
-                                        <label class="red-text" for="month">{{ isset($error)? $error->first('month') : '' }}</label>
+                                        <label class="red-text" for="month"><?php echo isset($error)? $error->first('month') : ''; ?></label>
                                     </div>
                                     <div class="col s12 m12 l4">
                                         <select name="day"  class="browser-default">
                                             <option value="" selected disabled>Day</option>
-                                            @for($i = 1; $i <= 31; $i++)
-                                                <option value="{{ $i }}" {{ $date[2] == $i ? 'selected' : '' }}>{{ $i }}</option>
-                                            @endfor
+                                            <?php for($i = 1; $i <= 31; $i++): ?>
+                                                <option value="<?php echo $i; ?>" <?php echo $date[2] == $i ? 'selected' : ''; ?>><?php echo $i; ?></option>
+                                            <?php endfor; ?>
                                         </select>
-                                        <label class="red-text" for="day">{{ isset($error)? $error->first('day') : '' }}</label>
+                                        <label class="red-text" for="day"><?php echo isset($error)? $error->first('day') : ''; ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -145,29 +142,29 @@
                             </div>
                             <div class="col s12 m12 l8">
                                 <div class="row tab2">
-                                    <input type="checkbox" class="filled-in" id="d1" name="off[]" value="0" {{ isset($dayof[0]) and $dayof[0] == 0 ? 'checked' : ''  }}  />
+                                    <input type="checkbox" class="filled-in" id="d1" name="off[]" value="0" <?php echo isset($dayof[0]) and $dayof[0] == 0 ? 'checked' : ''; ?>  />
                                     <label for="d1">Sunday</label>
                                     <br />
-                                    <input type="checkbox" class="filled-in" id="d2" name="off[]" value="1" {{ isset($dayof[1]) and $dayof[1] == 1 ? 'checked' : ''  }} />
+                                    <input type="checkbox" class="filled-in" id="d2" name="off[]" value="1" <?php echo isset($dayof[1]) and $dayof[1] == 1 ? 'checked' : ''; ?> />
                                     <label for="d2">Monday</label>
                                     <br />
-                                    <input type="checkbox" class="filled-in" id="d3" name="off[]" value="2" {{ isset($dayof[2]) and $dayof[2] == 2 ? 'checked' : ''  }} />
+                                    <input type="checkbox" class="filled-in" id="d3" name="off[]" value="2" <?php echo isset($dayof[2]) and $dayof[2] == 2 ? 'checked' : ''; ?> />
                                     <label for="d3">Tuesday</label>
                                     <br />
-                                    <input type="checkbox" class="filled-in" id="d4" name="off[]" value="3" {{ isset($dayof[3]) and $dayof[3] == 3 ? 'checked' : ''  }} />
+                                    <input type="checkbox" class="filled-in" id="d4" name="off[]" value="3" <?php echo isset($dayof[3]) and $dayof[3] == 3 ? 'checked' : ''; ?> />
                                     <label for="d4">Wednesday</label>
                                     <br />
-                                    <input type="checkbox" class="filled-in" id="d5" name="off[]" value="4" {{ isset($dayof[4]) and $dayof[4] == 4 ? 'checked' : ''  }} />
+                                    <input type="checkbox" class="filled-in" id="d5" name="off[]" value="4" <?php echo isset($dayof[4]) and $dayof[4] == 4 ? 'checked' : ''; ?> />
                                     <label for="d5">Thursday</label>
                                     <br />
-                                    <input type="checkbox" class="filled-in" id="d6" name="off[]" value="5" {{ isset($dayof[5]) and $dayof[5] == 5 ? 'checked' : ''  }} />
+                                    <input type="checkbox" class="filled-in" id="d6" name="off[]" value="5" <?php echo isset($dayof[5]) and $dayof[5] == 5 ? 'checked' : ''; ?> />
                                     <label for="d6">Friday</label>
                                     <br />
-                                    <input type="checkbox" class="filled-in" id="d7" name="off[]" value="6" {{ isset($dayof[6]) and $dayof[6] == 6 ? 'checked' : ''  }} />
+                                    <input type="checkbox" class="filled-in" id="d7" name="off[]" value="6" <?php echo isset($dayof[6]) and $dayof[6] == 6 ? 'checked' : ''; ?> />
                                     <label for="d7">Saturday</label>
                                 </div>
                                 <div class="row">
-                                    <label class="red-text" for="day">{{ isset($error)? $error->first('off') : '' }}</label>
+                                    <label class="red-text" for="day"><?php echo isset($error)? $error->first('off') : ''; ?></label>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +175,7 @@
                             </div>
                             <div class="col s12 m12 l8">
                                 <input type="number" name="salary" placeholder="Amount" />
-                                <label class="red-text" for="day">{{ isset($error)? $error->first('salary') : '' }}</label>
+                                <label class="red-text" for="day"><?php echo isset($error)? $error->first('salary') : ''; ?></label>
                             </div>
                         </div>
                         <br />
@@ -188,7 +185,7 @@
                             </div>
                             <div class="col s12 m12 l8">
                                 <textarea name="pitch"  placeholder="Write your job description here" style="height: 300px;" cols="20"></textarea>
-                                <label class="red-text" for="day">{{ isset($error)? $error->first('pitch') : '' }}</label>
+                                <label class="red-text" for="day"><?php echo isset($error)? $error->first('pitch') : ''; ?></label>
                             </div>
                         </div>
                         <br/>
@@ -203,14 +200,14 @@
                                         $d = 1;
                                         $duties = Duties::where('jobtypeid', '=', $ad->jobtypeid)->get();
                                         ?>
-                                        @foreach($duties as $duty)
-                                            <input type="checkbox" class="filled-in" id="{{ $d }}" name="duty[]" value="{{ $duty->duties }}"/>
-                                            <label for="{{ $d }}">{{ $duty->description }}</label>
+                                        <?php foreach($duties as $duty): ?>
+                                            <input type="checkbox" class="filled-in" id="<?php echo $d; ?>" name="duty[]" value="<?php echo $duty->duties; ?>"/>
+                                            <label for="<?php echo $d; ?>"><?php echo $duty->description; ?></label>
                                             <br />
                                             <br />
                                             <?php $d++; ?>
-                                        @endforeach
-                                        <label class="red-text" for="location">{{ isset($error)? $error->first('duty') : '' }}</label>
+                                        <?php endforeach; ?>
+                                        <label class="red-text" for="location"><?php echo isset($error)? $error->first('duty') : ''; ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +217,7 @@
                         <br />
                         <div class="row center">
                             <input type="submit" name="submit" value="Create and post ad" class="btn-large blue offset-2"/>
-                            <a class="btn-large blue" href="{{ asset('/cancel-create') }}">Cancel</a>
+                            <a class="btn-large blue" href="<?php echo asset('/cancel-create'); ?>">Cancel</a>
                         </div>
                     </form>
                 </div>
@@ -228,9 +225,9 @@
         </div>
     </div>
 
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('js')
+<?php $__env->startSection('js'); ?>
     @parent
     <script>
         var input_count = 1;
@@ -244,4 +241,6 @@
             });
         });
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('employer.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
