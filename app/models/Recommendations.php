@@ -7,7 +7,7 @@
  * Time: 6:38 PM
  */
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
-class Recommedations extends Eloquent
+class Recommendations extends Eloquent
 {
     use SoftDeletingTrait;
     protected $table = 'recomend';

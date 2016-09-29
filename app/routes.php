@@ -89,9 +89,9 @@ Route::get('/employer/remove/hirelist/{id}', 'EmployerController@remove_hirelist
 Route::get('/employer/hire/delete/{id}', 'EmployerController@hire_delete');
 Route::get('/employer/hired/list', 'EmployerController@list_hired');
 Route::post('/employer/applicant/rating', 'EmployerController@create_rate');
-Route::get('/employer/recommend', 'EmployerController@recomend');
+Route::get('/employer/recommend/page', 'EmployerController@recomend');
 Route::get('/recommned/{to}/{appid}/{by}', 'EmployerController@recomend_to');
-Route::get('employer/recommend','EmployerController@reco_view');
+Route::get('/employer/recommend','EmployerController@reco_view');
 Route::get('/employer/recomend/profile/{id}', 'EmployerController@reco_profile');
 Route::get('/employer/ad/helper/type', 'EmployerController@jobtype');
 Route::get('/employer/create/ad', 'EmployerController@handle_jobtype');
@@ -100,6 +100,7 @@ Route::get('/cancel-create', function() {
 });
 Route::get('/employer/hire/applicant/{id}', 'EmployerController@hire_applicant');
 Route::get('/employer/hire/shortlist/applicant/{id}', 'EmployerController@shortlist_hire');
+Route::post('/employer/recommend/to', 'EmployerController@recommend_to');
 
 
 /*

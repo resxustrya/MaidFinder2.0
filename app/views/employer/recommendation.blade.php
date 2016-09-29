@@ -43,7 +43,7 @@
 
                             </div>
                             <div class="row">
-                                <button class="btn green" onclick="recommend()">Recommend</button>
+                                <button class="btn green" onclick="recommend({{ $e->empid }} ,{{ $emp->empid }} , {{ $appid }})">Recommend</button>
                             </div>
                         </div>
                     </div>
@@ -83,8 +83,23 @@
 @section('js')
     @parent
     <script>
-        function recommend() {
-            alert("Hallow");
+        function recommend(a,b,c) {
+            var url = {{"'". asset('/employer/recommend/to') ."'" }};
+            var data = {
+                'recomendto' : a,
+                'recomendby' : b,
+                'appid' : c
+            };
+            $.post(url,data, function(response){
+                var res = JSON.parse(response);
+                if(res.status == "ok") {
+                    var $toastContent = $('<h6 class="white-text">Recommendation sent</h6>');
+                    Materialize.toast($toastContent,5000);
+                } else {
+                    var $toastContent = $('<h6 class="white-text">Recommendation already sent.</h6>');
+                    Materialize.toast($toastContent,5000);
+                }
+            });
         }
     </script>
 

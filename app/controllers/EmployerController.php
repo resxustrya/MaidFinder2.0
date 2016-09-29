@@ -476,37 +476,45 @@ class EmployerController extends BaseController {
         $rating->partialrating = $sum;
         $rating->feedback = $rate['feedback'];
         $rating->save();
-        $ads = Ads::where('jobtypeid', '=', $rate['jobtypeid'])->paginate(20);
-        if(isset($ads) and count($ads) > 0) {
-             return View::make('employer.recommendation')
-                        ->with('emp', $this->emp)
-                        ->with('ads', $ads);
-        }
-        return View::make('employer.recommendation')
-                        ->with('emp', $this->emp)
-                        ->with('ads', Ads::paginate(20));
+        Session::put('appid', $rate['appid']);
+        Session::put('jobtypeid', $rate['jobtypeid']);
+        return Redirect::to('/employer/recommend/page')
+                        ->with('message', 'Applicant successfully evaluated');
+        
     }
     public function recomend() {
-        $ads = Ads::where('jobtypeid', '=', $jobid)->paginate(10);
+        $jobtypeid = Session::has('jobtypeid') ? Session::get('jobtypeid') : null;
+        $appid = Session::has('appid') ? Session::get('appid') : null;
+        $ads = Ads::where('jobtypeid', '=', $jobtypeid)->get();
+        if(isset($ads) and count($ads) > 0) {
+             return View::make('employer.recommendation')
+                    ->with('emp', $this->emp)
+                    ->with('ads', $ads)
+                    ->with('appid', $appid);
+        }
         return View::make('employer.recommendation')
-                        ->with('emp', $this->emp)
-                        ->with('ads', $ads)
-                        ->with('appid', $appid);
+                    ->with('emp', $this->emp)
+                    ->with('ads', Ads::paginate(20))
+                    ->with('appid', $appid);
     }
-    public function recomend_to($to,$appid,$by) {
-        $to_emp = Employers::find($to);
-        $to_app = Applicants::find($appid);
-        $to_by = Employers::find($by);
-        $rec = new Recommedations();
-        $rec->emp_recomend = $by;
-        $rec->empid = $to;
-        $rec->appid = $appid;
-        $rec->save();
-        return Redirect::to('employer/hired/liist')->with('message', 'Applicant recommended');
+    public function recommend_to() {
+        $input = Input::all();
+        $recomend = Recommendations::where('recommendto', '=', $input['recomendto'])
+                                    ->where('recommendby', '=', $input['recomendby'])
+                                    ->where('appid', '=', $input['appid'])->first();
+        if(isset($recomend) and count($recomend)) {
+            return json_encode(array('status' => true));
+        }
+        $newreco = new Recommendations();
+        $newreco->recommendto = $input['recomendto'];
+        $newreco->recommendby = $input['recomendby'];
+        $newreco->appid = $input['appid'];
+        $newreco->save();
+        return json_encode(array('status' => 'ok'));
     }
     public function reco_view() {
         Session::flash('url', 6);
-        $reco = Recommedations::where('empid','=', $this->emp->empid)->paginate(10);
+        $reco = Recommendations::where('recommendto','=', $this->emp->empid)->paginate(10);
         return View::make('employer.reco_view')
                         ->with('emp', $this->emp)
                         ->with('reco', $reco);

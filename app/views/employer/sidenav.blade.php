@@ -22,7 +22,7 @@
         <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 6) ? 'active white-text' : '' }}" href="{{ asset('/employer/recommend') }}">Recomend
             <?php
                 $count = 0;
-                $reco = Recommedations::where('empid','=', $emp->empid)->get();
+                $reco = Recommendations::where('recommendto','=', $emp->empid)->get();
                 if(isset($reco)) {
                     $count = count($reco);
                 }
