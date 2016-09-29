@@ -527,6 +527,25 @@ class EmployerController extends BaseController {
                     ->with('application',$application)
                     ->with('applicant', $applicant);
     }
+    public function hire_recomend($id) {
+        
+        $hirelist = new HireLists();
+        $hirelist->empid = $this->emp->empid;
+        $hirelist->appid = $id;
+        $hirelist->status = 1;
+        $hirelist->accepted = 1;
+        $hirelist->message = "";
+        $hirelist->save();
+
+        $reco = Recommendations::where('appid', '=', $id)->first();
+        $reco->delete();
+        return Redirect::to('/employer/hired/list')->with('messge', 'Applicant successfully hired');
+    }
+    public function remove_recomend($id) {
+        $reco = Recommendations::where('appid', '=', $id)->first();
+        $reco->delete();
+        return Redirect::to('/employer/recommend')->with('message', 'Recommendation successfully remove');
+    }
     public function employer_logout() {
 
       Session::forget('employer');

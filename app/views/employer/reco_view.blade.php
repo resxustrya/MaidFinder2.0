@@ -55,7 +55,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                @if($emp->subscribe == 1)
+                                @if($emp->subscribe == 0)
                                     <div class="row">
                                         <h5>Contact</h5>
                                     </div>
@@ -133,11 +133,13 @@
                         </div>
                         <br />
                         <div class="row center">
-                            @if($emp->subscribe == 1)
-                                <a class="btn btn-large blue" href="{{ asset('/employer/hire/applicant/'.$applicant->appid) }}">Hire applicant</a>
+                            @if($emp->subscribe == 0)
+                                <a class="btn btn-large green" href="{{ asset('/employer/recommend/hire/applicant/'.$applicant->appid) }}">Hire applicant</a>
+                                <a class="btn btn-large green" href="{{ asset('/employer/recommend/remove/'.$applicant->appid) }}">Remove</a>
                             @endif
                         </div>
                     </div>
+                    <br />
                 @endforeach
                 <div class="row">
                     <ul class="pagination">

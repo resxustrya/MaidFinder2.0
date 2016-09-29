@@ -99,6 +99,8 @@ Route::get('/cancel-create', function() {
     return Redirect::to('/employer/ad/helper/type');
 });
 Route::get('/employer/hire/applicant/{id}', 'EmployerController@hire_applicant');
+Route::get('/employer/recommend/hire/applicant/{id}', 'EmployerController@hire_recomend');
+Route::get('/employer/recommend/remove/{id}', 'EmployerController@remove_recomend');
 Route::get('/employer/hire/shortlist/applicant/{id}', 'EmployerController@shortlist_hire');
 Route::post('/employer/recommend/to', 'EmployerController@recommend_to');
 
