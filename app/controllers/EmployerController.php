@@ -207,13 +207,9 @@ class EmployerController extends BaseController {
     public function update_ads($id) {
         Session::flash('url', 4);
         $ad = Ads::where('adid','=', $id)->first();
-        $duties = Duties::where('adid', '=', $ad->adid)->first();
-        if($duties){
-            Session::put('duties', $duties);
-        }
+        return $ad;
         return View::make('employer.update-ad')
                     ->with('emp', $this->emp)
-                    ->with('location', Regions::all())
                     ->with('ad', $ad)
                     ->with('salary', Salaries::all())
                     ->with('jobtype', JobTypes::all())

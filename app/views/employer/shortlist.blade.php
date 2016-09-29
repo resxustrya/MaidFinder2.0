@@ -149,6 +149,7 @@
                         </div>
                         <br />
                     @else
+
                         <div class="card-panel">
                             <div class="valign-wrapper">
                                 <i class="material-icons">new_releases</i>

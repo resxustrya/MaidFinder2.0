@@ -21,13 +21,13 @@
         </div>
     </div>
     <br />
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="card-panel">
-                <strong style="font-size: 1.2em;">Search criteria</strong>
-                <form action="{{ asset('/search/profiles') }}" method="GET">
-                    <div class="row">
-                        <div class="col s12 m12 l6">
+            <div class="col s12 m12 l3">
+                <div class="card-panel">
+                    <strong style="font-size: 1.2em;">Search criteria</strong>
+                    <form action="{{ asset('/search/profiles') }}" method="GET">
+                        <div class="row">
                             <select name="jobtypeid" class="browser-default">
                                 <option value="" selected>Position</option>
                                 @foreach($jobtypes as $job)
@@ -35,17 +35,8 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col s12 m12 l6">
-                            <select name="salaryid" class="browser-default">
-                                <option value="" selected>Salary (pesos)</option>
-                                @foreach($salary as $sal)
-                                    <option value="{{ $sal->salaryid }}">{{ $sal->amount_range }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12 m12 l6">
+                        <br />
+                        <div class="row">
                             <select name="location" class="browser-default">
                                 <option value="" selected>Preffered location</option>
                                 @foreach($locations as $loc)
@@ -53,41 +44,48 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col s12 m12 l6">
+                        <br />
+                        <div class="row">
+                            <select name="salaryid" class="browser-default">
+                                <option value="" selected>Salary (pesos)</option>
+                                @foreach($salary as $sal)
+                                    <option value="{{ $sal->salaryid }}">{{ $sal->amount_range }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <br />
+                        <div class="row">
                             <select name="capacity" class="browser-default">
                                 <option value="" selected>Capacity</option>
                                 <option value="Full Time">Full Time</option>
                                 <option value="Part Time">Part Time</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="row">
-                        <div class="col s12 m12 l12">
-                            <div class="row">
-                                <p>
-                                    <input type="submit" class="btn-large green col s12 m12 l12 center-align" name="search" value="Find your match" />
-                                </p>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div class="row">
+                                    <p>
+                                        <input type="submit" class="btn-large green col s12 m12 l12 center-align" name="search" value="Find your match" />
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row" style="padding: 20px;">
-            <div class="col s12 m12 l12">
+            <div class="col s12 m12 l8">
+
                 <?php $count = 1; ?>
-                 @if(isset($application) and count($application) > 0)
+                @if(isset($application) and count($application) > 0)
                     <?php foreach($application as $app) : ?>
                     <?php
-                      $location = Regions::find($app->regionid);
-                      $applicant = Applicants::find($app->appid);
-                      $jobtype = JobTypes::find($app->jobtypeid);
+                    $location = Regions::find($app->regionid);
+                    $applicant = Applicants::find($app->appid);
+                    $jobtype = JobTypes::find($app->jobtypeid);
                     ?>
                     @if($applicant->isVerified)
-                        <div class="col s12 m6 l4 hoverable" style="margin-top: 10px;">
+                        <div class="col s12 m6 l6 tab1 hoverable" style="margin-top: 10px;">
                             <a target="_blank" href="{{ asset('application/view/'. $app->applicationid) }}" class="grey-text">
                                 <div class="card-panel" style="padding: 3px;">
                                     <div class="row">
@@ -118,10 +116,10 @@
                                                     <td></td>
                                                     <?php
 
-                                                        $id = $applicant->appid;
+                                                    $id = $applicant->appid;
 
-                                                        $rating = DB::table('app_rating')->where('appid', '=', $id)->sum('partialrating');
-                                                        $countEmp =  DB::table('app_rating')->where('appid', '=', $id)->count('empid');
+                                                    $rating = DB::table('app_rating')->where('appid', '=', $id)->sum('partialrating');
+                                                    $countEmp =  DB::table('app_rating')->where('appid', '=', $id)->count('empid');
 
                                                     ?>
                                                     <script>
@@ -149,8 +147,8 @@
                                             </table>
                                         </div>
                                     </div>
-                                <br>
-                                <div class="divider"></div>
+                                    <br>
+                                    <div class="divider"></div>
                                     <div class="row">
                                         <div class="col s12 m12 l5">
                                             <p>
@@ -158,20 +156,20 @@
                                             </p>
                                         </div>
                                         <div class="col s12 m12 l6 right">
-                                            <span style="font-size: 0.8em;">
-                                                 Posted :
-                                                <?php
-                                                $date = date('Y-m-d',strtotime($app->created_at));
-                                                $date = explode("-" ,$date);
+                                    <span style="font-size: 0.8em;">
+                                         Posted :
+                                        <?php
+                                        $date = date('Y-m-d',strtotime($app->created_at));
+                                        $date = explode("-" ,$date);
 
-                                                $months = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December");
-                                                $month = str_replace('0', '', $date[1]);
-                                                $month = $months[$month];
-                                                $year = $date[0];
-                                                $day = $date[2];
-                                                ?>
-                                                <span>{{ $month ."-" . $day ."-" .$year }}</span>
-                                            </span>
+                                        $months = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December");
+                                        $month = str_replace('0', '', $date[1]);
+                                        $month = $months[$month];
+                                        $year = $date[0];
+                                        $day = $date[2];
+                                        ?>
+                                        <span>{{ $month ."-" . $day ."-" .$year }}</span>
+                                    </span>
                                         </div>
                                     </div>
                                 </div>
@@ -225,11 +223,11 @@
                     </div>
                     <?php $count++ ?>
                     <?php endforeach; ?>
-                 @else
+                @else
                     <div class="row">
-                       <h5>No results found.</h5>
+                        <h5>No results found.</h5>
                     </div>
-                 @endif
+                @endif
             </div>
         </div>
     </div>

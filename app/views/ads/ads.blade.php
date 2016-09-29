@@ -19,10 +19,10 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <br />
+    <div class="container-fluid">
         <div class="row">
-            <div class="col s12 m12 l12">
-                <br />
+            <div class="col s12 ml12 l3">
                 <div class="card-panel">
                     <?php
                     $jobtypes = JobTypes::all();
@@ -33,53 +33,44 @@
                     <h5 class="divider"></h5>
                     <form action="{{ asset('/search/ads') }}" method="GET">
                         <div class="row">
-                            <div class="col s12 m12 l4">
-                                <select name="location" class="browser-default">
-                                    <option value="" selected>Preffered location</option>
-                                    @foreach($locations as $loc)
-                                        <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col s12 m12 l4">
-                                <select name="jobtype" class="browser-default">
-                                    <option value="" selected>Position</option>
-                                    @foreach($jobtypes as $job)
-                                        <option value="{{ $job->jobtypeid }}">{{ $job->description }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col s12 m12 l4">
-                                <select name="capacity" class="browser-default">
-                                    <option value="" selected>Capacity</option>
-                                    <option value="Full Time">Full Time</option>
-                                    <option value="Part Time">Part Time</option>
-                                </select>
-                            </div>
+                            <select name="location" class="browser-default">
+                                <option value="" selected>Preffered location</option>
+                                @foreach($locations as $loc)
+                                    <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
+                                @endforeach
+                            </select>
                         </div>
-
+                        <br />
+                        <div class="row">
+                            <select name="jobtype" class="browser-default">
+                                <option value="" selected>Position</option>
+                                @foreach($jobtypes as $job)
+                                    <option value="{{ $job->jobtypeid }}">{{ $job->description }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <select name="capacity" class="browser-default">
+                                <option value="" selected>Capacity</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                            </select>
+                        </div>
+                        <br />
                         <div class="row">
                             <p>
-                                <input type="submit" class="btn blue col s12 m12 l12 center-align" name="search" value="Find your match" />
+                                <input type="submit" class="btn btn-large green col s12 m12 l12 center-align" name="search" value="Find your match" />
                             </p>
                         </div>
                     </form>
                 </div>
             </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <br />
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col s12 m12 l1">&nbsp;</div>
-            <div class="col s12 m12 l10">
+            <div class="col s12 m12 l9">
                 @if(isset($ads) and count($ads) > 0)
                     @foreach($ads as $ad)
                         <?php
-                            $emp = Employers::find($ad->empid);
+                        $emp = Employers::find($ad->empid);
                         ?>
                         @if($emp->isVerified)
                             <br>
@@ -115,13 +106,13 @@
                                             </div>
                                             <br />
                                             <div class="valign-wrapper">
-                                                 <span>Experience :</span>
+                                                <span>Experience :</span>
                                                 <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
                                                 <strong class="col l10">{{ $exp[$ad->yearexp] }}</strong>
                                             </div>
-                                                <span>Education level :</span>
-                                                <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
-                                                <strong class="tab2"> {{ $edlevel[$ad->edlevel] }}</strong>
+                                            <span>Education level :</span>
+                                            <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
+                                            <strong class="tab2"> {{ $edlevel[$ad->edlevel] }}</strong>
                                             <br />
                                             <div class="valign-wrapper">
                                                 <span>Salary :</span>
@@ -166,9 +157,10 @@
                     </div>
                 @endif
             </div>
-            <div class="col s12 m12 l1">
-            </div>
         </div>
+    </div>
+    <div class="row">
+        <br />
     </div>
     <div class="row">
         <ul class="pagination">
