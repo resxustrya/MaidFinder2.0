@@ -223,7 +223,6 @@
     @parent
     <script>
         function recommend(a,b){
-            alert(a + "," + b);
             $('#rating_form').width('100%').openModal();
             $('#appid').val(a);
             $('#jobtypeid').val(b);

@@ -357,15 +357,29 @@ class EmployerController extends BaseController {
 
     public function shortlist() {
         Session::flash('url',2);
-        $shortlist = EmpShortLists::where('empid', '=', $this->emp->empid)->get();
+        $shortlist = EmpShortLists::where('empid', '=', $this->emp->empid)->paginate(10);
         return View::make('employer.shortlist')
                         ->with('emp',$this->emp)
                         ->with('shortlist',$shortlist);
     }
+    public function shortlist_hire($id) {
+
+        $hirelist = new HireLists();
+        $hirelist->empid = $this->emp->empid;
+        $hirelist->appid = $id;
+        $hirelist->status = 1;
+        $hirelist->accepted = 1;
+        $hirelist->message = "";
+        $hirelist->save();
+
+        $shortlist = EmpShortLists::where('appid', '=', $id);
+        $shortlist->delete();
+        return Redirect::to('/employer/hired/list')->with('message', 'Applicant successfully hired');
+    }
     public function remove_shortlist($id) {
         $list = EmpShortLists::find($id);
         $list->delete();
-        return Redirect::to('/employer/applicant/shortlist')->with('message','Successfully removed');
+        return Redirect::to('/employer/applicant/shortlist')->with('message','Successfully removed from shortlist');
     }
     public function add_shortlist() {
         $list = EmpShortlists::where('empid', '=', Input::get('empid'))
