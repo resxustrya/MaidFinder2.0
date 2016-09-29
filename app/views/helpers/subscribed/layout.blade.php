@@ -25,6 +25,11 @@
 <body class="grey lighten-3">
 
     @include('helpers.subscribed.header')
+    @if($emp->subscribe == 0)
+        <div class="card-panel green lighten-3" style="padding: 4px;">
+            <h6 class="blue-grey-text center-align"><span>You will need to <a href="{{ asset('/subscription') }}">subscribe</a> to a membership plan in order to contact applicants.</span></h6>
+        </div>
+    @endif
     <div class="container-fluid">
         @yield('content')
     </div>

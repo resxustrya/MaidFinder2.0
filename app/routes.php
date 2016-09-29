@@ -98,6 +98,7 @@ Route::get('/employer/create/ad', 'EmployerController@handle_jobtype');
 Route::get('/cancel-create', function() {
     return Redirect::to('/employer/ad/helper/type');
 });
+Route::get('/employer/hire/applicant/{id}', 'EmployerController@hire_applicant');
 
 
 /*

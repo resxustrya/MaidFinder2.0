@@ -99,12 +99,10 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
                         <?php else: ?>
-                            <div class="row center">
-                                <a class="btn blue" href="<?php echo asset('/subscription'); ?>"><strong>Hire applicant</strong></a>
-                            </div>
+                                    <h6 class="blue-grey-text center-align"><span>You will need to <a href="<?php echo asset('/subscription'); ?>">subscribe</a> to a membership plan in order to contact applicants.</span></h6>
                         <?php endif; ?>
+
                     </li>
                     <li class="collection-item">
                         <div class="row">
@@ -190,7 +188,7 @@
                             </div>
                         </div>
                     </li>
-                    <?php if($emp->subscribe == 0): ?>
+                    <?php if($emp->subscribe == 1): ?>
                         <li class="collection-item">
                             <div class="row">
                                 <div class="container">

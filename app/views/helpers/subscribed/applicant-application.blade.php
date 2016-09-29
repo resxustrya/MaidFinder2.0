@@ -100,12 +100,10 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
                         @else
-                            <div class="row center">
-                                <a class="btn blue" href="{{ asset('/subscription') }}"><strong>Hire applicant</strong></a>
-                            </div>
+                                    <h6 class="blue-grey-text center-align"><span>You will need to <a href="{{ asset('/subscription') }}">subscribe</a> to a membership plan in order to contact applicants.</span></h6>
                         @endif
+
                     </li>
                     <li class="collection-item">
                         <div class="row">
@@ -190,7 +188,7 @@
                             </div>
                         </div>
                     </li>
-                    @if($emp->subscribe == 0)
+                    @if($emp->subscribe == 1)
                         <li class="collection-item">
                             <div class="row">
                                 <div class="container">

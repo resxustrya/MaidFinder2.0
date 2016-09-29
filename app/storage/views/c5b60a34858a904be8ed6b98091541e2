@@ -56,8 +56,7 @@
                                    <span class="valign-wrapper">
                                        <i class="material-icons">label</i>
                                        <span class="tab1">Preffered salary :</span>
-                                       <?php $salary = Salaries::find($ads->salaryid);?>
-                                       <strong class="tab1"><?php echo $salary->amount_range; ?> - pesos</strong>
+                                       <strong class="tab1"><?php echo $ads->salaryid; ?> - pesos</strong>
                                    </span>
                                 </div>
                             </div>
@@ -69,103 +68,10 @@
                                         <strong style="font-size: 1.2em;">Expected duties</strong>
                                     </div>
                                     <div class="row">
-                                        <?php
-                                        $duties = Duties::where('adid', '=', $ads->adid)->first();
-                                        ?>
-                                        <?php if(isset($duties) and count($duties) > 0): ?>
-                                            <?php if($duties->cooking != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->laundry != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->gardening != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->grocery != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->cleaning != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->tuturing != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->driving != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <?php if($duties->pet != null): ?>
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
-                                                </div>
-                                            <?php endif; ?>
-                                            <p>
 
-                                            </p>
-                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="divider"></div>
-                            <div class="row">
-                                <div class="col s12 m12 l12">
-                                    <div class="row">
-                                        <strong style="font-size: 1.2em;">Employer's message</strong>
-                                    </div>
-                                    <div class="row">
-                                        <blockquote class="flow-text">
-                                            <?php echo $hire->message; ?>
-
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="divider"></div>
-                            <br />
-                            <?php if($hire->status == 1): ?>
-                                <div class="row">
-                                    <?php if($hire->accepted == 1): ?>
-                                        <div class="col s12 m12 l12">
-                                            <span class="valign-wrapper center">
-                                                <i class="material-icons">thumb_up</i>
-                                                <strong class="tab1">Job request accepted</strong>
-                                            </span>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
-                                <div class="row">
-                                    <div class="valign-wrapper">
-                                        <?php if($hire->accepted == 0): ?>
-                                            <a class="btn green" href="<?php echo asset('/applicant/accept/request/'.$hire->id); ?>">Accept request</a>
-                                        <?php else: ?>
-                                            <a class="btn green" href="<?php echo asset('/applicant/cancel/request/'.$hire->id); ?>">Cancel hire</a>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            <?php else: ?>
-                                <div class="row">
-                                    <div class="card-panel">
-                                        <div class="valign-wrapper">
-                                            <i class="material-icons">error_outline</i>
-                                            <strong class="tab1">Sorry but the employer currently cancel this job ad request.</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
                         </div>
                         <br />
                     <?php endforeach; ?>

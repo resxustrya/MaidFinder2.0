@@ -389,7 +389,7 @@
                         if(response == "ok") {
                             $('#modal1').closeModal();
                             isApplied = true;
-                            var $toastContent = $('<h5>Your application request was sent to employer.</h5>');
+                            var $toastContent = $('<h5 class="white-text">Your application request was sent to employer.</h5>');
                             Materialize.toast($toastContent,5000);
                         }
                     });

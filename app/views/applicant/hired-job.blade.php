@@ -62,8 +62,7 @@
                                    <span class="valign-wrapper">
                                        <i class="material-icons">label</i>
                                        <span class="tab1">Preffered salary :</span>
-                                       <?php $salary = Salaries::find($ads->salaryid);?>
-                                       <strong class="tab1">{{ $salary->amount_range }} - pesos</strong>
+                                       <strong class="tab1">{{ $ads->salaryid }} - pesos</strong>
                                    </span>
                                 </div>
                             </div>
@@ -75,102 +74,10 @@
                                         <strong style="font-size: 1.2em;">Expected duties</strong>
                                     </div>
                                     <div class="row">
-                                        <?php
-                                        $duties = Duties::where('adid', '=', $ads->adid)->first();
-                                        ?>
-                                        @if(isset($duties) and count($duties) > 0)
-                                            @if($duties->cooking != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cooking }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->laundry != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->laundry }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->gardening != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->gardening }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->grocery != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->grocery }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->cleaning != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cleaning }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->tuturing != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->tuturing }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->driving != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->driving }}</strong>
-                                                </div>
-                                            @endif
-                                            @if($duties->pet != null)
-                                                <div class="col s12 m12 l4">
-                                                    <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->pet }}</strong>
-                                                </div>
-                                            @endif
-                                            <p>
 
-                                            </p>
-                                        @endif
                                     </div>
                                 </div>
                             </div>
-                            <div class="divider"></div>
-                            <div class="row">
-                                <div class="col s12 m12 l12">
-                                    <div class="row">
-                                        <strong style="font-size: 1.2em;">Employer's message</strong>
-                                    </div>
-                                    <div class="row">
-                                        <blockquote class="flow-text">
-                                            {{ $hire->message }}
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="divider"></div>
-                            <br />
-                            @if($hire->status == 1)
-                                <div class="row">
-                                    @if($hire->accepted == 1)
-                                        <div class="col s12 m12 l12">
-                                            <span class="valign-wrapper center">
-                                                <i class="material-icons">thumb_up</i>
-                                                <strong class="tab1">Job request accepted</strong>
-                                            </span>
-                                        </div>
-                                    @endif
-                                </div>
-                                <div class="row">
-                                    <div class="valign-wrapper">
-                                        @if($hire->accepted == 0)
-                                            <a class="btn green" href="{{ asset('/applicant/accept/request/'.$hire->id) }}">Accept request</a>
-                                        @else
-                                            <a class="btn green" href="{{ asset('/applicant/cancel/request/'.$hire->id) }}">Cancel hire</a>
-                                        @endif
-                                    </div>
-                                </div>
-                            @else
-                                <div class="row">
-                                    <div class="card-panel">
-                                        <div class="valign-wrapper">
-                                            <i class="material-icons">error_outline</i>
-                                            <strong class="tab1">Sorry but the employer currently cancel this job ad request.</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
                         </div>
                         <br />
                     @endforeach

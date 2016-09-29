@@ -1,0 +1,26 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <h4>Employers subscription</h4>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l10">
+            <div class="card-panel">
+                <a href="<?php echo asset('/admin/subscriber/add'); ?>" class="btn blue">Add new subscriber</a>
+                <a href="<?php echo asset('/admin/subscriber'); ?>" class="btn blue tab2">View subscriber</a>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('css'); ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

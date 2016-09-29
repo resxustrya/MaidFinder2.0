@@ -382,26 +382,27 @@ class EmployerController extends BaseController {
 
         return json_encode(array('status' => 'ok'));
     }
-    public function hire() {
-        $hirelist = new HireLists();
-        $hirelist->appid = Input::get('appid');
-        $hirelist->empid = Input::get('empid');
-        $hirelist->message = Input::get('pitch');
-        $hirelist->status = 1;
-        $hirelist->save();
-        $apply_ad = ApplyAds::where('empid', '=', Input::get('empid'))
-                            ->where('appid', '=', Input::get('appid'))
-                            ->first();
-        if(isset($apply_ad)) {
-            $apply_ad->delete();
-        }
+    public function hire_applicant($id) {
+        
 
-        return json_encode(array('ok' => 'ok'));
+        $hirelist = new HireLists();
+        $hirelist->empid = $this->emp->empid;
+        $hirelist->appid = $id;
+        $hirelist->status = 1;
+        $hirelist->accepted = 1;
+        $hirelist->message = "";
+        $hirelist->save();
+
+        $apply_ad = ApplyAds::where('appid', '=', $id)->first();
+        $apply_ad->delete();
+        return Redirect::to('/employer/hired/list')
+                        ->with('message', 'Applicant succesfully hired.');
+
     }
     public function hired_list() {
         Session::flash('url', 1);
        $hirelist = HireLists::where('empid', '=', $this->emp->empid)
-                            ->where('accepted', '=', 0)
+                            ->where('status', '=', 1)
                             ->paginate(5);
         return View::make('employer.hired-list')
                         ->with('emp',$this->emp)
@@ -453,6 +454,7 @@ class EmployerController extends BaseController {
                     ->with('recommedations', $recommendations);
     }
     public function create_rate() {
+      return Input::all();  
       $rate = Input::all();
       $sum = 0;
       $sum += $rate['r1'];

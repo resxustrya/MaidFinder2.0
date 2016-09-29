@@ -83,7 +83,7 @@
                         ?>
                         @if($emp->isVerified)
                             <br>
-                            <a href="{{ asset('employer/ad/profile/'.$ad->adid)  }}" class="hoverable waves-green black-text">
+                            <a href="{{ asset('employer/ad/profile/'.$emp->empid)  }}" class="hoverable waves-green black-text">
                                 <?php
                                 $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
                                 $edlevel = array("Elementary", "High School", "College graduate");
@@ -92,7 +92,10 @@
                                 ?>
                                 <div class="card-panel">
                                     <div class="row">
-                                        <div class="col s12 m12 l10">
+                                        <div class="col s12 m12 l3">
+                                            <img id="editpicture" class="responsive-img right-align square" src="{{ asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )) }}" />
+                                        </div>
+                                        <div class="col s12 m12 l8">
                                             <span style="font-size: 1.2em;">{{ $emp->fname }} - {{ $jobtype->description }}</span>
                                             <br />
                                             <br />

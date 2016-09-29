@@ -23,14 +23,7 @@
                                     </div>
                                     <div class="col s12 m12 l6">
                                         <h6 class="right-align">
-                                            <a style="width: 150px;" class='dropdown-button btn blue' href='#' data-activates="action"><i class="material-icons">settings</i></a>
-
-                                            <!-- Dropdown Structure -->
-                                            <?php $jobtype = JobTypes::find($applications->jobtypeid); ?>
-                                            <ul id='action' class='dropdown-content'>
-                                                <li><a href="{{ asset('/employer/recommend/'. $jobtype->jobtypeid .'/'.$applicant->appid) }}">Recommend</a></li>
-                                                <li><a id='rating' onclick="rating({{ $applicant->appid }});">Evaluate</a></li>
-                                            </ul>
+                                            <button class="btn green" onclick="recommend({{$applicant->appid }},{{ $applications->jobtypeid }});">Recommend</button>
                                         </h6>
                                     </div>
                                 </div>
@@ -88,13 +81,14 @@
     @else
         <h5>No hired applicant yet.</h5>
     @endif
-    <div id="rating_form" class="modal modal-fixed-footer">
+    <div id="rating_form" class="modal">
         <div class="modal-content">
             <div class="row center">
-                <h5>Evaluate applicant</h5>
+                <h5>Evaluate applicant for recommendations</h5>
             </div>
            <form action="{{ asset('/employer/applicant/rating') }}" method="POST">
                <input type="hidden" name="appid" value="" id="appid"/>
+               <input type="hidden" name="jobtypeid" value="" id="jobtypeid" />
                 <div class="row">
                     <table>
                         <tr>
@@ -228,37 +222,11 @@
 @section('js')
     @parent
     <script>
-        $(document).ready(function() {
-            $('#reco').click(function(e) {
-                e.preventDefault();
-            });
-            $('#rating').click(function(e){
-                e.preventDefault();
-            });
-            $('#cancel').click(function(e){
-                e.preventDefault();
-            });
-        });
-        function recommend(id){
-            alert(id);
-        }
-        function rating(id) {
+        function recommend(a,b){
+            alert(a + "," + b);
             $('#rating_form').width('100%').openModal();
-            $('#appid').val(id);
-        }
-        function cancel_contract(id) {
-            if(confirm("End contract now?") == true) {
-                var data = {
-                    "appid" : id
-                };
-                var url = {{ "'" .asset('/employer/end/contract') ."'" }};
-                $.post(url, data, function(response){
-                    var res = JSON.parse(response);
-                    if(res.status == "ok") {
-                        $('#end').openModal();
-                    }
-                });
-            }
+            $('#appid').val(a);
+            $('#jobtypeid').val(b);
         }
     </script>
 @stop

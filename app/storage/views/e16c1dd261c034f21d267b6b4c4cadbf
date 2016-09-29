@@ -6,16 +6,6 @@
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 5) ? 'active white-text' : ''; ?>" href="<?php echo asset('employer/profile'); ?>">Your profile</a>
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 4) ? 'active white-text' : ''; ?>" href="<?php echo asset('/employer/ads'); ?>">Your job ad</a>      
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 2) ? 'active white-text' : ''; ?>" href="<?php echo asset('/employer/applicant/shortlist'); ?>">Shortlist
-           <?php
-                $shorlist = EmpShortLists::where('empid', '=', $emp->empid)->get();
-                $shorlist_count = 0;
-                if(isset($shorlist) and count($shorlist) >0) {
-                    $shorlist_count = count($shorlist);
-                }
-           ?>
-           <?php if($shorlist_count > 0): ?>
-                <span class="badge grey white-text"> <?php echo $shorlist_count; ?></span>
-           <?php endif; ?>
         </a>
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 3) ? 'active white-text' : ''; ?>" href="<?php echo asset('/employer/job/request'); ?>">Job request
             <?php

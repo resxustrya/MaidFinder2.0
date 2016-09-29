@@ -26,7 +26,7 @@
                 <span class="badge white-text grey">{{ $shortlist_count }}</span>
             @endif
         </a>
-        <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 6) ? 'active white-text' : '' }}" href="{{ asset('/applicant/employer/job/request') }}">Hire list
+        <a class="collection-item black-text {{ (Session::has('url') and Session::get('url') == 6) ? 'active white-text' : '' }}" href="{{ asset('/applicant/employer/job/request') }}">Job request
             <?php
                 $hirelist_count = 0;
                $hirelist = HireLists::where('appid', '=', $app->appid)

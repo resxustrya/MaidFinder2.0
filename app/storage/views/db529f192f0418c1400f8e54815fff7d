@@ -25,6 +25,11 @@
 <body class="grey lighten-3">
 
     <?php echo $__env->make('helpers.subscribed.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php if($emp->subscribe == 0): ?>
+        <div class="card-panel green lighten-3" style="padding: 4px;">
+            <h6 class="blue-grey-text center-align"><span>You will need to <a href="<?php echo asset('/subscription'); ?>">subscribe</a> to a membership plan in order to contact applicants.</span></h6>
+        </div>
+    <?php endif; ?>
     <div class="container-fluid">
         <?php echo $__env->yieldContent('content'); ?>
     </div>

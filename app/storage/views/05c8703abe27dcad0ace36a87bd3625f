@@ -1,0 +1,58 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <h4>Employer's Subscribed.</h4>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l10">
+            <div class="valign-wrapper">
+                <a href="<?php echo asset('/admin/subscriber/add'); ?>" class="btn blue">Add new subscriber</a>
+                <a href="<?php echo asset('/admin/subscriber'); ?>" class="btn blue tab2">View subscriber</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="divider"></div>
+    <br />
+    <?php if(isset($emp) and count($emp) > 0): ?>
+        <div class="row">
+            <div class="card-panel">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                    </tr>
+                    <?php foreach($emp as $e): ?>
+                        <tr>
+                            <td><?php echo $e->fname ." " .$e->lname; ?></td>
+                            <td>
+                                <?php if($e->subscribe == 0): ?>
+                                    <strong>Not paid</strong>
+                                <?php else: ?>
+                                    <strong>Subscription paid</strong>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="pagination">
+                <?php echo $emp->links(); ?>
+            </ul>
+        </div>
+    <?php else: ?>
+        <h5>No subscriber</h5>
+    <?php endif; ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('css'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

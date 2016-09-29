@@ -1,0 +1,41 @@
+<?php $__env->startSection('content'); ?>
+    <div class="card-panel">
+        <div class="row">
+            <div class="col s12 m12 l6 center-align">
+                <h4>Applicants</h4>
+                <?php $not_verified_count = Applicants::where('isVerified', '=', 0)->count(); ?>
+                <?php $verified_count = Applicants::where('isVerified', '=', 1)->count(); ?>
+                <p>
+                    <a href="<?php echo asset('/admin/applicant/accounts-pending'); ?>">Pending accounts - (<?php echo $not_verified_count; ?>)</a>
+                </p>
+                <p>
+                    <a href="<?php echo asset('/admin/applicant/accounts/'); ?>">Applicant accounts - (<?php echo $verified_count; ?>)</a>
+                </p>
+            </div>
+            <div class="col s12 m12 l6 center-align">
+                <h4>Employers</h4>
+                <?php $not_verified_count = Employers::where('isVerified', '=', 0)->count(); ?>
+                <?php $verified_count = Employers::where('isVerified', '=', 1)->count(); ?>
+                <p>
+                    <a href="<?php echo asset('admin/employer/accounts-pending'); ?>">Pending accounts - (<?php echo $not_verified_count; ?>) </a>
+                </p>
+                <p>
+                    <a href="<?php echo asset('/admin/employer/accounts'); ?>">Employer accounts - (<?php echo $verified_count; ?>)</a>
+                </p>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('js'); ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('css'); ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

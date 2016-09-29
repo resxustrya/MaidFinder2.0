@@ -14,8 +14,8 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <a href="{{asset('/')}}" class="brand-logo offset-s10 white-text"><img height="55" style="padding-left:70px; padding-top: 10px;" src="{{ asset('public/images/header.png') }}" /></a>
             <ul class="right hide-on-med-and-down">
-                <li><a class="white-text" href="{{ asset('applicant/home') }}"><strong><i class="material-icons">home</i> </strong></a></li>
-                <li><a class="white-text" href="{{ asset('employer/job/ads') }}">Search Ads</a></li>
+                <li><a class="white-text" href="{{ asset('applicant/home') }}"><strong>Home</strong></a></li>
+                <li><a class="white-text" href="{{ asset('employer/job/ads') }}"><i class="material-icons left">search</i> Employer ads</a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-button white-text" data-hover="true" data-beloworigin="true" href="{{ asset('applicant/profile') }}" data-activates="dropdown1">{{ $app['fname'] }}<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>

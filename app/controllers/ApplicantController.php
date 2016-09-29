@@ -272,7 +272,7 @@ class ApplicantController extends BaseController {
             $d->save();
         }
 
-        return Redirect::to('/applicant/applications/list')
+        return Redirect::to('/applicant/job/preference')
                         ->with('message', 'Job application created. Your job application is now published into the employers helpers matching.');
     }
     public function employer_ads() {
@@ -280,8 +280,8 @@ class ApplicantController extends BaseController {
         $match = DB::table('ad')
             ->join('application', function($join){
                 $join->on('ad.jobtypeid', '=', 'application.jobtypeid')
-                    ->where('application.appid', '=', 3);
-            })->paginate(2);
+                    ->where('application.appid', '=', $this->app->appid);
+            })->paginate(20);
 
         return View::make('ads.ads')
                     ->with('ads', $match)
@@ -298,7 +298,7 @@ class ApplicantController extends BaseController {
                 ->where('regionid', '=', $input['location'] )
                 ->where('capacity', '=', $input['capacity'])
                 ->orderBy('created_at', 'DESC')
-                ->paginate(2);
+                ->paginate(20);
             return View::make('ads.ads')
                 ->with('app', $this->app)
                 ->with('ads', $ads)
@@ -310,7 +310,7 @@ class ApplicantController extends BaseController {
             ->where('jobtypeid', 'LIKE', "%". $input['jobtype'] ."%")
             ->where('regionid', 'LIKE', "%" . $input['location'] ."%")
             ->orderBy('created_at', 'DESC')
-            ->paginate(2);
+            ->paginate(20);
         return View::make('ads.ads')
             ->with('app', $this->app)
             ->with('ads', $ads)
@@ -320,10 +320,10 @@ class ApplicantController extends BaseController {
     public function emp_ad_profile($id) {
         $application = Applications::where('appid', '=', $this->app->appid)->get();
         if(isset($application) and count($application) > 0) {
-            $ad = Ads::find($id);
+            $profile = Employers::find($id);
+            $ad = Ads::where('empid', '=', $profile->empid)->first();
             $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
             $edlevel = array("Elementary", "High School", "College graduate");
-            $profile = Employers::find($ad->adid);
             $bdate = explode('-', $profile->bdate);
             $age = date('Y') - $bdate[0];
             return View::make('ads.employer-ads-profile')
