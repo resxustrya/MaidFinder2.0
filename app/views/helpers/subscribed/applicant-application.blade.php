@@ -190,17 +190,8 @@
                     </li>
                     @if($emp->subscribe == 1)
                         <li class="collection-item">
-                            <div class="row">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col s12 m12 l6">
-                                            <a href="#modal1" class="hire_btn btn light-blue darken-4 col s12 m12 l12">Hire applicant</a>
-                                        </div>
-                                        <div class="col s12 m12 l6">
-                                            <a href="#" onclick="addShortlist()" class="btn light-blue darken-4 col s12 m12 l12 card-panel">Add to shortlist</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row center">
+                                <a href="#" onclick="addShortlist()" class="btn light-blue darken-4 card-panel">Add to shortlist</a>
                             </div>
                         </li>
                     @endif

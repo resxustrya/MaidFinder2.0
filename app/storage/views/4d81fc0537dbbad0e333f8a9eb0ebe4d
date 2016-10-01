@@ -6,13 +6,6 @@
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 1) ? 'active white-text' : ''; ?>" href="<?php echo asset('/applicant/profile'); ?>">Profile</a>
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 2) ? 'active white-text' : ''; ?>" href="<?php echo asset('/applicant/job/preference'); ?>">Job application</a>
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 3) ? 'active white-text' : ''; ?>" href="<?php echo asset('/applicant/applications/list'); ?>">Applied jobs
-            <?php
-                $count = 0;
-                $count = ApplyAds::where('appid', '=', $app->appid)->count();
-            ?>
-            <?php if($count > 0): ?>
-                <span class="badge white-text grey"><?php echo $count; ?> </span>
-            <?php endif; ?>
         </a>
         <a class="collection-item black-text <?php echo (Session::has('url') and Session::get('url') == 5) ? 'active white-text' : ''; ?>" href="<?php echo asset('/applicant/shortlist'); ?>">Shortlist
             <?php

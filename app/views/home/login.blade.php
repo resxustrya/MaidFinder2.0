@@ -14,12 +14,12 @@
                 <div class="row ">
                     <ul class="collection with-header z-depth-4">
                         <li class="collection-header">
-                            <div class="center  white-text">
+                            <div class="center  white-text animated flipInX">
                                 <img style="height: 100px;" id="img" src={{ asset('public/images/icon2.png')}} />
                             </div>
 
                             <h6 class="center-align"><strong class="white-text">Login</strong></h6>
-                           <div class="container">
+                           <div class="container animated bounceInRight">
                                 <div class="row">
                                     @if(Session::has('msg'))
                                         <h5 class="center-align orange-text">{{ Session::get('msg') }}</h5>

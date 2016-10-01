@@ -9,14 +9,15 @@
     <li><a class="black-text" href="#!">Subscription</a></li>
     <li><a class="black-text" href="{{ asset('employer/logout') }}">Logout</a></li>
 </ul>
+
 <div class="navbar-fixed">
     <nav class="indigo darken-2">
         <div class="nav-wrapper navbar-fixed container-fluid">
             <a href="#" data-activates="mobile-demo" class="grey-text button-collapse"><i class="material-icons">menu</i></a>
-            <a href="{{asset('/')}}" class="brand-logo offset-s10 grey-text"><img height="55" style="padding-left:70px; padding-top: 10px;" src="{{ asset('public/images/header.png') }}" /></a>
-            <ul class="right hide-on-med-and-down ">
-                <li class="white-text"><a class="white-text" href="{{ asset('employer/home') }}"><strong><i class="material-icons">home</i> </strong></a></li>
-                <li><a class="white-text" href="{{ asset('helpers') }}"><strong><i class="material-icons left">search</i> Find Helpers</strong></a></li>
+            <a href="{{asset('/')}}" class="brand-logo offset-s10 grey-text"><img class="animated bounceInLeft" height="55" style="padding-left:70px; padding-top: 10px;" src="{{ asset('public/images/header.png') }}" /></a>
+            <ul class="right hide-on-med-and-down animated bounceInRight">
+                <li class="white-text"><a class="white-text" href="{{ asset('employer/home') }}"><strong class=" tooltipped" data-position="bottom" data-delay="20" data-tooltip="Home">Home</strong> </a></li>
+                <li><a class="white-text" href="{{ asset('helpers') }}"><strong class=" tooltipped" data-position="bottom" data-delay="20" data-tooltip="Find Applicant">Find helper</strong></a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="white-text dropdown-button" data-hover="true" data-beloworigin="true" href="{{ asset('/employer/profile') }}" data-activates="dropdown1"><strong>{{ $emp['fname'] }}<i class="material-icons right">arrow_drop_down</i></strong></a></li>
             </ul>

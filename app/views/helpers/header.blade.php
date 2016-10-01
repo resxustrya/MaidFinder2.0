@@ -15,7 +15,7 @@
             <a href="#" data-activates="mobile-demo" class="grey-text button-collapse"><i class="material-icons">menu</i></a>
             <a href="{{asset('/')}}" class="brand-logo offset-s10 grey-text"><img height="55" style="padding-left:70px; padding-top: 10px;" src="{{ asset('public/images/header.png') }}" /></a>
             <ul class="right hide-on-med-and-down ">
-                <li><a class="black-text" href="{{ asset('employer/home') }}">Home</a></li>
+                <li><a class="black-text" href="{{ asset('employer/home') }}">Home </a></li>
                 <li><a class="black-text" href="{{ asset('/employer/recommend')}}">Recomendations</a></li>
                 <!-- Dropdown Trigger -->
                 @if(Session::has('employer'))

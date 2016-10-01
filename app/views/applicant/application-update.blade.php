@@ -53,9 +53,9 @@
                         <div class="row">
                             <div class="col s12 m12 l4">
                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                <label for="capacity">Capacity</label>
+                                <label for="capacity">Status</label>
                                 <select name="capacity" class="browser-default">
-                                    <option value="" selected>Capacity</option>
+                                    <option value="" selected>Status</option>
                                     @foreach($capacity as $key => $value)
                                         <option value="{{ $key }}" {{ $application->capacity == $key ? 'selected' : '' }}>{{ $value }}</option>
                                     @endforeach

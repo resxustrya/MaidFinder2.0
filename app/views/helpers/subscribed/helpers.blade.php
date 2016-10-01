@@ -25,7 +25,7 @@
                     <form action="{{ asset('/search/profiles') }}" method="GET">
                         <div class="row">
                             <div class="col s12 m12 l6">
-                                <select name="location" class="browser-default">
+                                <select name="location" class="icons">
                                     <option value="" selected>Preffered location</option>
                                     @foreach($locations as $loc)
                                         <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>

@@ -140,58 +140,6 @@
                         <div class="row">
                             <div class="col s12 m12 l6">
                                 <h5 class="grey-text">Performed Duties</h5>
-                                @if(isset($duties))
-                                    <div class="row">
-                                        <div class="col s12 m12 l12">
-                                            @if(isset($duties))
-                                                @if($duties->cooking != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <i class="material-icons">done_all</i>
-                                                        <span>{{ $duties->cooking }}</span>
-                                                    </div>
-                                                @endif
-                                                @if($duties->laundry != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->laundry }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->gardening != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->gardening }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->grocery != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->grocery }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->cleaning != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cleaning }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->tuturing != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->tuturing }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->driving != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->driving }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->pet != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->pet }}</strong>
-                                                    </div>
-                                                @endif
-                                                <p>
-                                                    {{ $duties->other }}
-                                                </p>
-                                            @endif
-                                        </div>
-                                    </div>
-                                @endif
                             </div>
                         </div>
                     </li>

@@ -364,6 +364,12 @@ class EmployerController extends BaseController {
         $hirelist->message = "";
         $hirelist->save();
 
+        $app = Applicants::find($id);
+        if(isset($app) and count($app) >0) {
+            $app->ishiring = false;
+            $app->save();
+        }
+
         $shortlist = EmpShortLists::where('appid', '=', $id);
         $shortlist->delete();
         return Redirect::to('/employer/hired/list')->with('message', 'Applicant successfully hired');
@@ -399,8 +405,15 @@ class EmployerController extends BaseController {
         $hirelist->message = "";
         $hirelist->save();
 
+        $app = Applicants::find($id);
+        if(isset($app) and count($app) >0) {
+            $app->ishiring = false;
+            $app->save();
+        }
         $apply_ad = ApplyAds::where('appid', '=', $id)->first();
         $apply_ad->delete();
+
+       
         return Redirect::to('/employer/hired/list')
                         ->with('message', 'Applicant succesfully hired.');
 
@@ -460,32 +473,36 @@ class EmployerController extends BaseController {
                     ->with('recommedations', $recommendations);
     }
     public function create_rate() {
-    
-      $rate = Input::all();
-      $sum = 0;
-      $sum += $rate['r1'];
-        $sum += $rate['r2'];
-        $sum += $rate['r3'];
-        $sum += $rate['r4'];
-        $sum += $rate['r5'];
 
-        $sum = ($sum / 25 ) * 5;
-        $rating = new AppRatings();
-        $rating->empid = $this->emp->empid;
-        $rating->appid = $rate['appid'];
-        $rating->partialrating = $sum;
-        $rating->feedback = $rate['feedback'];
-        $rating->save();
-        Session::put('appid', $rate['appid']);
-        Session::put('jobtypeid', $rate['jobtypeid']);
-        return Redirect::to('/employer/recommend/page')
-                        ->with('message', 'Applicant successfully evaluated');
+        if((Input::has('r1') and Input::has('r2') and Input::has('r3') and Input::has('r4') and Input::has('r5') and Input::has('feedback'))) {
+            $rate = Input::all();
+
+            $sum = 0;
+            $sum += $rate['r1'];
+            $sum += $rate['r2'];
+            $sum += $rate['r3'];
+            $sum += $rate['r4'];
+            $sum += $rate['r5'];
+
+            $sum = $sum / 5;
+            $rating = new AppRatings();
+            $rating->empid = $this->emp->empid;
+            $rating->appid = $rate['appid'];
+            $rating->partialrating = sprintf("%.2f", $sum);
+            $rating->feedback = $rate['feedback'];
+            $rating->save();
+            Session::put('appid', $rate['appid']);
+            Session::put('jobtypeid', $rate['jobtypeid']);
+            return Redirect::to('/employer/recommend/page')
+                ->with('message', 'Applicant successfully evaluated');
+        }
+        return Redirect::to('/employer/hired/list')->with('message','Your evaluation was not created. Fill up your evaluation form correctly.');
         
     }
     public function recomend() {
         $jobtypeid = Session::has('jobtypeid') ? Session::get('jobtypeid') : null;
         $appid = Session::has('appid') ? Session::get('appid') : null;
-        $ads = Ads::where('jobtypeid', '=', $jobtypeid)->get();
+        $ads = Ads::where('jobtypeid', '=', $jobtypeid)->paginate(20);
         if(isset($ads) and count($ads) > 0) {
              return View::make('employer.recommendation')
                     ->with('emp', $this->emp)
@@ -537,9 +554,12 @@ class EmployerController extends BaseController {
         $hirelist->message = "";
         $hirelist->save();
 
+        $app = Applicants::find($hirelist->appid);
+        $app->ishiring = false;
+        $app->save();
         $reco = Recommendations::where('appid', '=', $id)->first();
         $reco->delete();
-        return Redirect::to('/employer/hired/list')->with('messge', 'Applicant successfully hired');
+        return Redirect::to('/employer/hired/list')->with('message', 'Applicant successfully hired');
     }
     public function remove_recomend($id) {
         $reco = Recommendations::where('appid', '=', $id)->first();

@@ -155,7 +155,7 @@ class AdminController extends BaseController
         if(isset($emp) and count($emp) > 0) {
             $emp->subscribe = true;
             $message = "MaidFinder PH : Thank you ". $emp->fname ." ". $emp->lname ." for trusting us.";
-            $ok = $this->itexmo($emp->contactno, $message ,'LOURE663075_FSNZ8');
+           // $ok = $this->itexmo($emp->contactno, $message ,'LOURE663075_FSNZ8');
             $emp->save();
             return json_encode(array('status' => 'ok'));
         }

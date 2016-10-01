@@ -28,7 +28,7 @@
                     <strong style="font-size: 1.2em;">Search criteria</strong>
                     <form action="{{ asset('/search/profiles') }}" method="GET">
                         <div class="row">
-                            <select name="jobtypeid" class="browser-default">
+                            <select name="jobtypeid" class="icons">
                                 <option value="" selected>Position</option>
                                 @foreach($jobtypes as $job)
                                     <option  value="{{ $job->jobtypeid }}">{{ $job->description }}</option>
@@ -37,7 +37,7 @@
                         </div>
                         <br />
                         <div class="row">
-                            <select name="location" class="browser-default">
+                            <select name="location" class="icons">
                                 <option value="" selected>Preffered location</option>
                                 @foreach($locations as $loc)
                                     <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
@@ -46,7 +46,7 @@
                         </div>
                         <br />
                         <div class="row">
-                            <select name="salaryid" class="browser-default">
+                            <select name="salaryid" class="icons">
                                 <option value="" selected>Salary (pesos)</option>
                                 @foreach($salary as $sal)
                                     <option value="{{ $sal->salaryid }}">{{ $sal->amount_range }}</option>
@@ -55,8 +55,8 @@
                         </div>
                         <br />
                         <div class="row">
-                            <select name="capacity" class="browser-default">
-                                <option value="" selected>Capacity</option>
+                            <select name="capacity" class="icons">
+                                <option value="" disabled selected>Status</option>
                                 <option value="Full Time">Full Time</option>
                                 <option value="Part Time">Part Time</option>
                             </select>
@@ -84,7 +84,7 @@
                     $applicant = Applicants::find($app->appid);
                     $jobtype = JobTypes::find($app->jobtypeid);
                     ?>
-                    @if($applicant->isVerified)
+                    @if($applicant->isVerified and $applicant->ishiring == 0)
                         <div class="col s12 m6 l6 tab1 hoverable" style="margin-top: 10px;">
                             <a target="_blank" href="{{ asset('application/view/'. $app->applicationid) }}" class="grey-text">
                                 <div class="card-panel" style="padding: 3px;">

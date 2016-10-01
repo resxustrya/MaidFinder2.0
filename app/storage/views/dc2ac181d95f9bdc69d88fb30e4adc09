@@ -78,7 +78,7 @@
         </div>
     <?php endif; ?>
     <div class="row" style="padding: 20px;">
-        <div class="col s12 m12 l12" style="margin-left: 20px;">
+        <div class="col s12 m12 l12 animated bounceInUp" style="margin-left: 20px;">
             <?php
             if(isset($applications) and count($applications) > 0) {
 

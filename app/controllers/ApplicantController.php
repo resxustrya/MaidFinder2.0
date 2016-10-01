@@ -318,6 +318,9 @@ class ApplicantController extends BaseController {
     }
 
     public function emp_ad_profile($id) {
+        if($this->app->ishiring == 1) {
+            return Redirect::to('/applicant/home')->with('message','You cannot apply to any job yet because you already have an employer');
+        }
         $application = Applications::where('appid', '=', $this->app->appid)->get();
         if(isset($application) and count($application) > 0) {
             $profile = Employers::find($id);
@@ -330,11 +333,9 @@ class ApplicantController extends BaseController {
                 ->with('app', $this->app)
                 ->with('emp', $profile)
                 ->with('ads',$ad)
-                ->with('age', $age)
-                ->with('dayof', $dayof[$ad['dayof']])
-                ->with('edlevel' ,$edlevel[$ad['edlevel']]);
+                ->with('age', $age);
         }
-        return Redirect::to('/applicant/create/application')
+        return Redirect::to('/applicant/job/type')
                             ->with('message', 'You haven\'t created your job availability yet.');
 
     }
@@ -372,9 +373,9 @@ class ApplicantController extends BaseController {
     public function hired_job() {
         Session::flash('url',4);
         $hirelist =   $hirelist = HireLists::where('appid', '=', $this->app->appid)
-                                    ->where('accepted', '=', 1)
-                                    ->paginate(5);
-
+                                            ->where('accepted', '=', 1)
+                                            ->paginate(10);
+        
         return View::make('applicant.hired-job')
                         ->with('app', $this->app)
                         ->with('hirelist' ,$hirelist);
@@ -393,6 +394,19 @@ class ApplicantController extends BaseController {
         return View::make('applicant.shortlist')
                     ->with('app', $this->app)
                     ->with('shortlist', $shortlist);
+    }
+    public function shortlist_apply() {
+
+        $apply = new ApplyAds();
+        $apply->adid = Input::get('adid');
+        $apply->message = Input::get('pitch-msg');
+        $apply->empid = Input::get('empid');
+        $apply->appid = $this->app->appid;
+        $apply->save();
+        
+        $list = AppShortList::find(Input::get('listid'));
+        $list->delete();
+        return Redirect::to('/applicant/applications/list')->with('message', 'Job application successfully sent');
     }
     public function job_request() {
         Session::flash('url',6);

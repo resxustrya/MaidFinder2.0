@@ -10,13 +10,12 @@
             @foreach($shortlist as $list)
                 <?php $ad = Ads::where('empid', '=', $list->empid)->first(); ?>
                 @if(isset($ad) and count($ad) > 0)
-                    <?php $emp = Employers::find($ad->adid); ?>
-                    <a href="{{ asset('employer/ad/profile/'.$ad->adid)  }}" class="hoverable waves-green black-text">
+                    <?php $emp = Employers::find($ad->empid); ?>
                         <div class="col s12 m12 l11" style="margin-top: 20px;">
                             <div class="card-panel">
                                 <div class="valign-wrapper">
                                     <?php $job = JobTypes::find($ad->jobtypeid); ?>
-                                    <h5>Position :<span class="tab1">{{ $job->description }}</span> </h5>
+                                    <h5>{{ $emp->fname ." ".$emp->lname }}<span class="tab1">{{ $job->description }}</span> </h5>
                                 </div>
                                 <div class="divider"></div>
                                 <div class="row">
@@ -44,8 +43,7 @@
                                <span class="valign-wrapper">
                                    <i class="material-icons">label</i>
                                    <span>Salary :</span>
-                                   <?php $salary = Salaries::find($ad->salaryid); ?>
-                                   <strong class="tab2">{{ $salary->amount_range }} - Pesos</strong>
+                                   <strong class="tab2">{{ $ad->salaryid }} - Pesos</strong>
                                </span>
                                <span class="valign-wrapper">
                                    <i class="material-icons">label</i>
@@ -64,51 +62,16 @@
                                             <strong style="font-size: 1.2em;">Expected duties</strong>
                                         </div>
                                         <div class="row">
-                                            <?php $duties = Duties::where('adid', '=', $ad->adid)->first(); ?>
-                                            @if($duties and count($duties) > 0)
-                                                @if($duties->cooking != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cooking }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->laundry != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->laundry }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->gardening != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->gardening }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->grocery != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->grocery }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->cleaning != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->cleaning }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->tuturing != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->tuturing }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->driving != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->driving }}</strong>
-                                                    </div>
-                                                @endif
-                                                @if($duties->pet != null)
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong>{{ $duties->pet }}</strong>
-                                                    </div>
-                                                @endif
-                                                <p>
-                                                    {{ $duties->other }}
-                                                </p>
+                                            <?php $duty = ExpDuties::where('adid' , '=', $ad->adid)->get(); ?>
+                                            @if(isset($duty) and count($duty) > 0)
+                                                <ul>
+                                                    @foreach($duty as $d)
+                                                        <li class="valign-wrapper">
+                                                            <i class="material-icons">label</i>
+                                                            <?php $a = Duties::find($d->duties); ?>
+                                                            <span class="tab1"> {{ $a->description }}</span>
+                                                        </li>
+                                                @endforeach
                                             @endif
                                         </div>
                                     </div>
@@ -131,14 +94,13 @@
                                         <strong class="tab1">{{ $month ."-" . $day ."-" .$year }}</strong>
                                     </div>
                                     <br />
-                                    <div class="row">
-
+                                    <div class="row center">
+                                        <button class="btn green" onclick="apply_add({{ $ad->adid }}, {{ $emp->empid }},{{ $list->listid }});">Apply job</button>
                                         <a href="{{ asset('/applicant/shortlist/remove/'.$list->listid) }}" class="btn green">Remove</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
                 @else
                     <div class="row">
                         <div class="col s12 m12 l10">
@@ -161,6 +123,38 @@
     @else
         <h6>Your shorlist is empty.</h6>
     @endif
+    <!--MODAL -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <div class="message container-fluid">
+                    <h5 class="center-align grey-text">Make a short story for your job application</h5>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="cols 12 m12 l20">
+                            <form action="{{ asset('/applicant/shortlist/apply') }}" class="pitch" method="POST">
+                                <input type="hidden" name="adid" value="" id="addid" />
+                                <input type="hidden" name="empid" value="" id="empid" />
+                                <input type="hidden" name="listid" value="" id="listid" />
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea pitch-msg" rows="20" name="pitch-msg"></textarea>
+                                    <label for="textarea1" class="grey-text">Tell your employer about yourself and why should they hire you.</label>
+                                </div>
+                                <label for="textarea1" class="error red-text"></label>
+                                <div class="row center-align">
+                                    <div class="col s12 m12 l12">
+                                        <input type="submit" class="btn green" name="submit" value="Submit application" />
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="btn yellow darken-1 modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+            </div>
+        </div>
 @stop
 
 @section('css')
@@ -168,5 +162,13 @@
 @stop
 
 @section('js')
-
+    @parent
+    <script>
+        function apply_add(a, b,c) {
+            $('#modal1').openModal();
+            $('#addid').val(a);
+            $('#empid').val(b);
+            $('#listid').val(c);
+        }
+    </script>
 @stop

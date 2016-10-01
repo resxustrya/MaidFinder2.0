@@ -232,7 +232,8 @@
                 @if(isset($auto_ads) and count($auto_ads) > 0)
                     <?php $capacity = array('Full Time','Par Time'); ?>
                     @foreach($auto_ads as $aud)
-                        <a href="{{ asset('employer/ad/profile/'.$aud->adid)  }}" class="hoverable waves-green black-text">
+                        <?php $auto_emp = Employers::find($aud->empid); ?>
+                        <a href="{{ asset('employer/ad/profile/'.$auto_emp->empid)  }}" class="hoverable waves-green black-text">
                             <div class="col s12 m12 l11" style="margin-top: 20px;">
                                 <div class="card-panel">
                                     <div class="row">
@@ -287,17 +288,18 @@
                                                 <strong style="font-size: 1.2em;">Expected duties</strong>
                                             </div>
                                             <div class="row">
-                                                <?php $duties = ExpDuties::where('adid', '=', $aud->adid)->get(); ?>
-                                                @if(isset($duties) and count($duties) >0)
-                                                    <ul>
-                                                        @foreach($duties as $duty)
+                                                <ul>
+                                                    <?php $duty = ExpDuties::where('adid' , '=', $aud->adid)->get(); ?>
+                                                    @if(isset($duty) and count($duty) > 0)
+                                                        @foreach($duty as $d)
                                                             <li class="valign-wrapper">
-                                                                <i class="material-icons">done_all</i>
-                                                                <span class="tab1">{{ $duty->description }}</span>
+                                                                <i class="material-icons">label</i>
+                                                                <?php $a = Duties::find($d->duties); ?>
+                                                                <span class="tab1"> {{ $a->description }}</span>
                                                             </li>
                                                         @endforeach
-                                                    </ul>
-                                                @endif
+                                                    @endif
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -411,8 +413,8 @@
                     }
                 });
             } else {
-                var $toastContent = $('<h5>Job ad is already short listed.</h5>');
-                Materialize.toast($toastContent,5000);
+                var $toastContent = $('<h5 class="white-text bounceOut">Job ad is already short listed.</h5>');
+                Materialize.toast($toastContent,1000);
             }
         }
 

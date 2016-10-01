@@ -2,14 +2,14 @@
  <div class="row"> 
     <div class="col s12 m12 l6 offset-l2">
         <h4>Create Job</h4>
-        <div class="card-panel">
+        <div class="card-panel animated bounce">
             <form action="<?php echo asset('/applicant/crate/job'); ?>" method="GET" id="job-form">
                 <div class="row">
                     <h6 style="font-size: 1.3em;">What job do you need ?</h6>
                 </div>
                 <br />
                 <div class="row">
-                    <select class="browser-default" name="jobtype" id="jobtype">
+                    <select class="icons" name="jobtype" id="jobtype">
                         <?php $jobtype = JobTypes::all(); ?>
                         <option value="" selected disabled="">Select helper type</option>
                         <?php foreach($jobtype as $type): ?>

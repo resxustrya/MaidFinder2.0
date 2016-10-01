@@ -6,10 +6,10 @@
       <i class="large material-icons">share</i>
     </a>
     <ul>
-      <li><a class="btn-floating indigo darken-2"><i class="mdi mdi-facebook"></i></a></li>
-      <li><a class="btn-floating light-blue "><i class="mdi mdi-twitter"></i></a></li>
-      <li><a class="btn-floating  light-blue darken-4"><i class="mdi mdi-linkedin"></i></a></li>
-      <li><a class="btn-floating red"><i class="mdi mdi-instagram"></i></a></li>
+      <li><a class="btn-floating indigo darken-2"><img class="img-responsive" width="100%" src="{{ asset('public/images/facebook.png') }}"></img></a></li>
+      <li><a class="btn-floating light-blue "><i class="material-icons">twitter</i></a></li>
+      <li><a class="btn-floating  light-blue darken-4"><i class="material-icons"></i></a></li>
+      <li><a class="btn-floating red"><i class="material-icons"></i></a></li>
     </ul>
   </div>
   <div id="index-banner" class="parallax-container landing">

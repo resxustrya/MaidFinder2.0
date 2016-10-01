@@ -15,7 +15,7 @@
                         <div class="col s12 m12 l3">
                             <div class="row">
                                 <div class="left-align">
-                                    <img class="profile-pic circle image responsive-img" src="{{ asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )) }}" />
+                                    <img class="profile-pic circle image responsive-img animated bounceInUp" src="{{ asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )) }}" />
                                 </div>
                             </div>
                             <div class="row">

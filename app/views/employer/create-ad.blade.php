@@ -34,8 +34,8 @@
                             <h6 class="right-align">Preferred location</h6>
                         </div>
                         <div class="col s12 m12 l8 ">
-                             <select name="location" class="browser-default">
-                                <option value="" selected>Select</option>
+                             <select name="location" class="icons">
+                                <option value="" disabled selected>Select</option>
                                 @foreach($location as $loc)
                                     <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
                                 @endforeach
@@ -50,8 +50,8 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $capacity = array('Full Time', 'Part Time'); ?>
-                            <select name="capacity" class="browser-default">
-                                <option value="" selected>Select</option>
+                            <select name="capacity" class="icons">
+                                <option value="" disabled selected>Select</option>
                                 @foreach($capacity as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
                                 @endforeach
@@ -66,8 +66,8 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
-                            <select name="yearexp" class="browser-default">
-                                <option value="" selected>Select</option>
+                            <select name="yearexp" class="icons">
+                                <option value="" disabled selected>Select</option>
                                 @foreach($exp as $key => $value)
                                     <option value="{{$key}}">{{ $value }}</option>
                                 @endforeach
@@ -82,8 +82,8 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
-                            <select name="edlevel" class="browser-default">
-                                <option value="" selected>Select</option>
+                            <select name="edlevel" class="icons">
+                                <option value="" disabled selected>Select</option>
                                 @foreach($edlevel as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
                                 @endforeach
@@ -98,8 +98,8 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $gender = array('Male', 'Female', 'Any'); ?>
-                            <select name="gender" class="browser-default">
-                                <option value="" selected="">Select</option>
+                            <select name="gender" class="icons">
+                                <option value="" disabled selected="">Select</option>
                                 @foreach($gender as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
                                 @endforeach    
@@ -115,8 +115,8 @@
                         <div class="col s12 m12 l8">
                             <div class="row">
                                 <div class="col s12 m12 l4">
-                                    <select class="browser-default" name="year">
-                                        <option value="" selected disabled>Year</option>
+                                    <select class="icons" name="year">
+                                        <option value="" disabled selected >Year</option>
                                         <?php $count = 1 ?>
                                         @for($i = date('Y');20 > $count++; $i++)
                                             <option value="{{ $i }}"> {{ $i }}</option>
@@ -125,9 +125,9 @@
                                     <label class="red-text" for="year">{{ isset($error)? $error->first('year') : '' }}</label>
                                 </div>
                                 <div class="col s12 m12 l4">
-                                    <select class="browser-default" name="month">
+                                    <select class="icons" name="month" >
                                         <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
-                                        <option value="" selected disabled>Month</option>
+                                        <option value="" disabled selected >Month</option>
                                         @foreach($month as $key => $value)
                                             <option value="{{ $key }}">{{ $value }}</option>
                                         @endforeach
@@ -135,8 +135,8 @@
                                     <label class="red-text" for="month">{{ isset($error)? $error->first('month') : '' }}</label>
                                 </div>
                                 <div class="col s12 m12 l4">
-                                    <select name="day"  class="browser-default">
-                                        <option value="" selected disabled>Day</option>
+                                    <select name="day"  class="icons">
+                                        <option value="" disabled selected >Day</option>
                                         @for($i = 1; $i <= 31; $i++)
                                             <option value="{{ $i }}">{{ $i }}</option>
                                         @endfor

@@ -16,7 +16,7 @@
                         <div class="card-panel">
                             <div class="row">
                                 <div class="col s12 m12 l3">
-                                    <img id="editpicture" class="responsive-img right-align circle" src="{{ asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )) }}" />
+                                    <img id="editpicture" class="responsive-img right-align circle animated bounceInDown" src="{{ asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )) }}" />
                                 </div>
                                 <div class="col s12 m12 l9">
                                     <div class="row">
@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col s12 m12 l5">
-                                            <table>
+                                            <table >
                                                 <tr>
                                                     <td>Name: </td>
                                                     <td> {{ $applicant->fname }}</td>
@@ -61,7 +61,7 @@
                                         <div class="row">
                                             <h5>Contact</h5>
                                         </div>
-                                        <div class="row">
+                                        <div class="col l6">
                                             <table>
                                                 <tr>
                                                     <td>Full name:</td>
@@ -86,7 +86,7 @@
                                     @endif
                                     <?php $ab = Applications::where('appid', '=', $applicant->appid)->first(); ?>
                                     @if(isset($ab) and count($ab) > 0)
-                                        <div class="row">
+                                        <div class="row col l9">
                                             <h5>Applicant job preferrence</h5>
                                         </div>
                                         <div class="row">
@@ -129,7 +129,7 @@
                                                     @foreach($duties as $duty)
                                                         <li>
                                                             <?php $d = Duties::find($duty->duties); ?>
-                                                            <i class="material-icons">done_all</i>
+                                                            <i class="material-icons">label</i>
                                                             <strong>{{ $d->description }}</strong>
                                                         </li>
                                                     @endforeach

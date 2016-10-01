@@ -90,7 +90,6 @@ Route::get('/employer/hire/delete/{id}', 'EmployerController@hire_delete');
 Route::get('/employer/hired/list', 'EmployerController@list_hired');
 Route::post('/employer/applicant/rating', 'EmployerController@create_rate');
 Route::get('/employer/recommend/page', 'EmployerController@recomend');
-Route::get('/recommned/{to}/{appid}/{by}', 'EmployerController@recomend_to');
 Route::get('/employer/recommend','EmployerController@reco_view');
 Route::get('/employer/recomend/profile/{id}', 'EmployerController@reco_profile');
 Route::get('/employer/ad/helper/type', 'EmployerController@jobtype');
@@ -103,6 +102,7 @@ Route::get('/employer/recommend/hire/applicant/{id}', 'EmployerController@hire_r
 Route::get('/employer/recommend/remove/{id}', 'EmployerController@remove_recomend');
 Route::get('/employer/hire/shortlist/applicant/{id}', 'EmployerController@shortlist_hire');
 Route::post('/employer/recommend/to', 'EmployerController@recommend_to');
+
 
 
 /*
@@ -142,6 +142,7 @@ Route::get('/applicant/shortlist/remove/{id}', 'ApplicantController@remove_short
 Route::get('/hired/job', 'ApplicantController@hired_job');
 Route::get('/applicant/job/type/', 'ApplicantController@jobtype');
 Route::get('/applicant/crate/job', 'ApplicantController@create_job');
+Route::post('/applicant/shortlist/apply', 'ApplicantController@shortlist_apply');
 
 
 /*

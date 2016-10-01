@@ -13,7 +13,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <select class="browser-default" name="jobtype" id="jobtype">
+                    <select class="icons" name="jobtype" id="jobtype">
                         <option value="" selected disabled="">Select helper type</option>
                         @foreach($jobtype as $type)
                             <option value="{{ $type->jobtypeid}}">{{ $type->description }} </option>

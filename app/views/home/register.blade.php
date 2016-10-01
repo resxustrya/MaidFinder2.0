@@ -15,11 +15,11 @@ if(Session::has('input')) {
                 <div class="row">
                     <ul class="collection with-header ">
                         <li class="collection-header logHeader2 ">
-                            <div class="center white-text">
+                            <div class="center white-text animated flipInX">
                                 <img id="img" src={{ asset('public/images/icon2.png')}} />
                             </div>
                             <h6 class="center-align"><strong class="white-text">Register</strong></h6>
-                           <div class="container">
+                           <div class="container animated bounceInRight">
                                 <div class="row">
                                     @if(Session::has('message'))
                                         <div class="card-panel orange">

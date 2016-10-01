@@ -7,6 +7,9 @@
         <h4>Recomendations</h4>
     </div>
     <div class="row">
+        <h6>You have {{ count($reco) }} applicant recommendation.</h6>
+    </div>
+    <div class="row">
         <div class="col s12 m12 l11">
             @if(isset($reco) and count($reco) > 0)
                 @foreach($reco as $r)
@@ -55,7 +58,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                @if($emp->subscribe == 0)
+                                @if($emp->subscribe == 1)
                                     <div class="row">
                                         <h5>Contact</h5>
                                     </div>
@@ -133,7 +136,7 @@
                         </div>
                         <br />
                         <div class="row center">
-                            @if($emp->subscribe == 0)
+                            @if($emp->subscribe == 1)
                                 <a class="btn btn-large green" href="{{ asset('/employer/recommend/hire/applicant/'.$applicant->appid) }}">Hire applicant</a>
                                 <a class="btn btn-large green" href="{{ asset('/employer/recommend/remove/'.$applicant->appid) }}">Remove</a>
                             @endif

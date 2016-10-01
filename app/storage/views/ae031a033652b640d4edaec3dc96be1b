@@ -10,7 +10,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <select class="browser-default" name="jobtype" id="jobtype">
+                    <select class="icons" name="jobtype" id="jobtype">
                         <option value="" selected disabled="">Select helper type</option>
                         <?php foreach($jobtype as $type): ?>
                             <option value="<?php echo $type->jobtypeid; ?>"><?php echo $type->description; ?> </option>

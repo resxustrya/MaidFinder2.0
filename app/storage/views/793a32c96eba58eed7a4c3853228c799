@@ -7,13 +7,12 @@
             <?php foreach($shortlist as $list): ?>
                 <?php $ad = Ads::where('empid', '=', $list->empid)->first(); ?>
                 <?php if(isset($ad) and count($ad) > 0): ?>
-                    <?php $emp = Employers::find($ad->adid); ?>
-                    <a href="<?php echo asset('employer/ad/profile/'.$ad->adid); ?>" class="hoverable waves-green black-text">
+                    <?php $emp = Employers::find($ad->empid); ?>
                         <div class="col s12 m12 l11" style="margin-top: 20px;">
                             <div class="card-panel">
                                 <div class="valign-wrapper">
                                     <?php $job = JobTypes::find($ad->jobtypeid); ?>
-                                    <h5>Position :<span class="tab1"><?php echo $job->description; ?></span> </h5>
+                                    <h5><?php echo $emp->fname ." ".$emp->lname; ?><span class="tab1"><?php echo $job->description; ?></span> </h5>
                                 </div>
                                 <div class="divider"></div>
                                 <div class="row">
@@ -41,8 +40,7 @@
                                <span class="valign-wrapper">
                                    <i class="material-icons">label</i>
                                    <span>Salary :</span>
-                                   <?php $salary = Salaries::find($ad->salaryid); ?>
-                                   <strong class="tab2"><?php echo $salary->amount_range; ?> - Pesos</strong>
+                                   <strong class="tab2"><?php echo $ad->salaryid; ?> - Pesos</strong>
                                </span>
                                <span class="valign-wrapper">
                                    <i class="material-icons">label</i>
@@ -61,52 +59,16 @@
                                             <strong style="font-size: 1.2em;">Expected duties</strong>
                                         </div>
                                         <div class="row">
-                                            <?php $duties = Duties::where('adid', '=', $ad->adid)->first(); ?>
-                                            <?php if($duties and count($duties) > 0): ?>
-                                                <?php if($duties->cooking != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->laundry != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->gardening != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->grocery != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->cleaning != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->tuturing != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->driving != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if($duties->pet != null): ?>
-                                                    <div class="col s12 m12 l4">
-                                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <p>
-                                                    <?php echo $duties->other; ?>
-
-                                                </p>
+                                            <?php $duty = ExpDuties::where('adid' , '=', $ad->adid)->get(); ?>
+                                            <?php if(isset($duty) and count($duty) > 0): ?>
+                                                <ul>
+                                                    <?php foreach($duty as $d): ?>
+                                                        <li class="valign-wrapper">
+                                                            <i class="material-icons">label</i>
+                                                            <?php $a = Duties::find($d->duties); ?>
+                                                            <span class="tab1"> <?php echo $a->description; ?></span>
+                                                        </li>
+                                                <?php endforeach; ?>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -129,14 +91,13 @@
                                         <strong class="tab1"><?php echo $month ."-" . $day ."-" .$year; ?></strong>
                                     </div>
                                     <br />
-                                    <div class="row">
-
+                                    <div class="row center">
+                                        <button class="btn green" onclick="apply_add(<?php echo $ad->adid; ?>, <?php echo $emp->empid; ?>,<?php echo $list->listid; ?>);">Apply job</button>
                                         <a href="<?php echo asset('/applicant/shortlist/remove/'.$list->listid); ?>" class="btn green">Remove</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
                 <?php else: ?>
                     <div class="row">
                         <div class="col s12 m12 l10">
@@ -159,6 +120,38 @@
     <?php else: ?>
         <h6>Your shorlist is empty.</h6>
     <?php endif; ?>
+    <!--MODAL -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <div class="message container-fluid">
+                    <h5 class="center-align grey-text">Make a short story for your job application</h5>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="cols 12 m12 l20">
+                            <form action="<?php echo asset('/applicant/shortlist/apply'); ?>" class="pitch" method="POST">
+                                <input type="hidden" name="adid" value="" id="addid" />
+                                <input type="hidden" name="empid" value="" id="empid" />
+                                <input type="hidden" name="listid" value="" id="listid" />
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea pitch-msg" rows="20" name="pitch-msg"></textarea>
+                                    <label for="textarea1" class="grey-text">Tell your employer about yourself and why should they hire you.</label>
+                                </div>
+                                <label for="textarea1" class="error red-text"></label>
+                                <div class="row center-align">
+                                    <div class="col s12 m12 l12">
+                                        <input type="submit" class="btn green" name="submit" value="Submit application" />
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="btn yellow darken-1 modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+            </div>
+        </div>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('css'); ?>
@@ -166,6 +159,14 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('js'); ?>
-
+    @parent
+    <script>
+        function apply_add(a, b,c) {
+            $('#modal1').openModal();
+            $('#addid').val(a);
+            $('#empid').val(b);
+            $('#listid').val(c);
+        }
+    </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('applicant.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

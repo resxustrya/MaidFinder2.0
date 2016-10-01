@@ -2,11 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f02bf455-3d4d-4457-8041-84b0fc4becea" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/header.png" afterPath="$PROJECT_DIR$/public/images/header.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicantController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicantController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/EmployerController.php" afterPath="$PROJECT_DIR$/app/controllers/EmployerController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/0606087a8a96297465dca1cd9dc6ed58" afterPath="$PROJECT_DIR$/app/storage/views/0606087a8a96297465dca1cd9dc6ed58" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/1742b6ab01c2f9c635bf6f0a3690a64d" afterPath="$PROJECT_DIR$/app/storage/views/1742b6ab01c2f9c635bf6f0a3690a64d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/1db5cd32fc8a5c91e334ea3174158607" afterPath="$PROJECT_DIR$/app/storage/views/1db5cd32fc8a5c91e334ea3174158607" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/207ee565b5edee02769bd9117d892edb" afterPath="$PROJECT_DIR$/app/storage/views/207ee565b5edee02769bd9117d892edb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/2ab21cbbe78129598ce888cd4c30c25d" afterPath="$PROJECT_DIR$/app/storage/views/2ab21cbbe78129598ce888cd4c30c25d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/2da5f50993e9954985774044fa893e92" afterPath="$PROJECT_DIR$/app/storage/views/2da5f50993e9954985774044fa893e92" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/3b8cbb4da243d75491875c0a1ae2e7e8" afterPath="$PROJECT_DIR$/app/storage/views/3b8cbb4da243d75491875c0a1ae2e7e8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/421a22e33764b6f7d1f5647ee21b2995" afterPath="$PROJECT_DIR$/app/storage/views/421a22e33764b6f7d1f5647ee21b2995" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/4d04895e066f9b715be36f97a05eac3b" afterPath="$PROJECT_DIR$/app/storage/views/4d04895e066f9b715be36f97a05eac3b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/4d81fc0537dbbad0e333f8a9eb0ebe4d" afterPath="$PROJECT_DIR$/app/storage/views/4d81fc0537dbbad0e333f8a9eb0ebe4d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/5f68382b7ed197edd604a5ab808b6ebd" afterPath="$PROJECT_DIR$/app/storage/views/5f68382b7ed197edd604a5ab808b6ebd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/68a534af516c073aded161fb3868e88f" afterPath="$PROJECT_DIR$/app/storage/views/68a534af516c073aded161fb3868e88f" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/705a46d690575cde3570bd7ffccd5f11" afterPath="$PROJECT_DIR$/app/storage/views/705a46d690575cde3570bd7ffccd5f11" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/793a32c96eba58eed7a4c3853228c799" afterPath="$PROJECT_DIR$/app/storage/views/793a32c96eba58eed7a4c3853228c799" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/ae031a033652b640d4edaec3dc96be1b" afterPath="$PROJECT_DIR$/app/storage/views/ae031a033652b640d4edaec3dc96be1b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/b1702ff1916369b6337947ec1ff8b426" afterPath="$PROJECT_DIR$/app/storage/views/b1702ff1916369b6337947ec1ff8b426" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/b4b779638a4ee25fe1a6ebf2664ecd39" afterPath="$PROJECT_DIR$/app/storage/views/b4b779638a4ee25fe1a6ebf2664ecd39" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/bed6866550aadc8f3ac53ed6ba1af80b" afterPath="$PROJECT_DIR$/app/storage/views/bed6866550aadc8f3ac53ed6ba1af80b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/c0ddcda2afffcf83229a551a2c5ba1fe" afterPath="$PROJECT_DIR$/app/storage/views/c0ddcda2afffcf83229a551a2c5ba1fe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/c5edb2537e4f26577151efd4e84c2e68" afterPath="$PROJECT_DIR$/app/storage/views/c5edb2537e4f26577151efd4e84c2e68" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/cad3b10338edaf34401d8feb21cd80e2" afterPath="$PROJECT_DIR$/app/storage/views/cad3b10338edaf34401d8feb21cd80e2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/cdd12e9aa0179567104a4bb54760dca0" afterPath="$PROJECT_DIR$/app/storage/views/cdd12e9aa0179567104a4bb54760dca0" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/ce7bff4a87385d9d01bbf59ade6dbc0b" afterPath="$PROJECT_DIR$/app/storage/views/ce7bff4a87385d9d01bbf59ade6dbc0b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/d962eac2cc76ef789d663e7d52afd9e7" afterPath="$PROJECT_DIR$/app/storage/views/d962eac2cc76ef789d663e7d52afd9e7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/db529f192f0418c1400f8e54815fff7d" afterPath="$PROJECT_DIR$/app/storage/views/db529f192f0418c1400f8e54815fff7d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/dc2ac181d95f9bdc69d88fb30e4adc09" afterPath="$PROJECT_DIR$/app/storage/views/dc2ac181d95f9bdc69d88fb30e4adc09" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/dce9b92b00a0c4a8ecb09e6e18ba55a2" afterPath="$PROJECT_DIR$/app/storage/views/dce9b92b00a0c4a8ecb09e6e18ba55a2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/e30f960a37da00b8dab091bdc6b39ed5" afterPath="$PROJECT_DIR$/app/storage/views/e30f960a37da00b8dab091bdc6b39ed5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/e8828d9a378a6f6a2733999bf5d3b933" afterPath="$PROJECT_DIR$/app/storage/views/e8828d9a378a6f6a2733999bf5d3b933" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/f001b16aa163411f5437dda6f33a2d41" afterPath="$PROJECT_DIR$/app/storage/views/f001b16aa163411f5437dda6f33a2d41" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/f6eeb8ef456c45b08ca63abc7c7326c1" afterPath="$PROJECT_DIR$/app/storage/views/f6eeb8ef456c45b08ca63abc7c7326c1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ads/ads.blade.php" afterPath="$PROJECT_DIR$/app/views/ads/ads.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php" afterPath="$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ads/header.blade.php" afterPath="$PROJECT_DIR$/app/views/ads/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ads/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/ads/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/application-update.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/application-update.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/apply_ads.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/apply_ads.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/create-application.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/create-application.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/header.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/home.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/job-application.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/job-application.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/jobtype.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/jobtype.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/shortlist.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/shortlist.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/create-ad.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/create-ad.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/header.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/home.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/jobtype.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/jobtype.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/reco_profile.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/reco_profile.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/reco_view.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/reco_view.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/shortlist.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/shortlist.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/update-ad.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/update-ad.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/header.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/helpers.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/helpers.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/subscribed/applicant-application.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/subscribed/applicant-application.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/subscribed/header.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/subscribed/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/subscribed/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/subscribed/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/header.blade.php" afterPath="$PROJECT_DIR$/app/views/home/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.blade.php" afterPath="$PROJECT_DIR$/app/views/home/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/login.blade.php" afterPath="$PROJECT_DIR$/app/views/home/login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/register.blade.php" afterPath="$PROJECT_DIR$/app/views/home/register.blade.php" />
     </list>
     <ignored path="MaidFinder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,24 +100,6 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - maidfinder@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - maidfinder@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="recomend" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -62,40 +111,78 @@
       <file leaf-file-name="EmployerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/EmployerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="538" column="0" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+            <state vertical-scroll-proportion="-197.8077">
+              <caret line="551" column="30" selection-start-line="551" selection-start-column="30" selection-end-line="551" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list-hired.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employer/list-hired.blade.php">
+      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+            <state vertical-scroll-proportion="69.57692">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="job-request.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employer/job-request.blade.php">
+      <file leaf-file-name="AdminAccountController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/AdminAccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="38" selection-start-line="19" selection-start-column="32" selection-end-line="157" selection-end-column="38" />
-              <folding>
-                <marker date="1475108158388" expanded="true" signature="2948:2979" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-3.6538463">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recommendation.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employer/recommendation.blade.php">
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11111111">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admins.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Admins.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="94" selection-start-line="98" selection-start-column="94" selection-end-line="98" selection-end-column="94" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminStaffs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/AdminStaffs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdReq.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/AdReq.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Applicants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Applicants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,96 +191,56 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6153846">
-              <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
-                <marker date="1475138638918" expanded="true" signature="21655:21731" placeholder="INSERT INTO app_feedback... " />
-                <marker date="1475138638918" expanded="true" signature="21911:22039" placeholder="SELECT * FRO... app_feedback" />
-                <marker date="1475138638918" expanded="true" signature="22253:22306" placeholder="UPDATE app_f... " />
-                <marker date="1475138638918" expanded="true" signature="22480:22525" placeholder="DELETE FROM " />
-                <marker date="1475138638918" expanded="true" signature="22680:22737" placeholder="update emplo... " />
-                <marker date="1475138638918" expanded="true" signature="22885:22921" placeholder="select * fro... employer" />
-                <marker date="1475138638918" expanded="true" signature="23115:23167" placeholder="select * fro... applicant" />
-                <marker date="1475138638918" expanded="true" signature="23351:23367" placeholder="select * fro... ad" />
-                <marker date="1475138638918" expanded="true" signature="27456:27714" placeholder="SELECT * FRO... application" />
-                <marker date="1475138638918" expanded="true" signature="27880:28082" placeholder="SELECT * FRO... ad" />
-                <marker date="1475138638918" expanded="true" signature="28253:28470" placeholder="SELECT * FRO... ad" />
-                <marker date="1475138638918" expanded="true" signature="28654:28936" placeholder="SELECT * FRO... application" />
-                <marker date="1475138638918" expanded="true" signature="29125:29267" placeholder="SELECT * FRO... emp_shortlist" />
-                <marker date="1475138638918" expanded="true" signature="29456:29596" placeholder="SELECT * FRO... app_shortlist" />
-                <marker date="1475138638918" expanded="true" signature="29792:29914" placeholder="SELECT * FRO... apply_ad" />
-                <marker date="1475138638918" expanded="true" signature="30109:30229" placeholder="SELECT * FRO... hirelist" />
-                <marker date="1475138638918" expanded="true" signature="30436:30494" placeholder="INSERT INTO emp_shortlist... " />
-                <marker date="1475138638918" expanded="true" signature="30670:30728" placeholder="INSERT INTO app_shortlist... " />
-                <marker date="1475138638918" expanded="true" signature="30899:30952" placeholder="INSERT INTO emp_hire... " />
-                <marker date="1475138638918" expanded="true" signature="31124:31178" placeholder="INSERT INTO app_apply... " />
-                <marker date="1475138638918" expanded="true" signature="31348:31400" placeholder="INSERT INTO request... " />
-                <marker date="1475138638918" expanded="true" signature="31557:31703" placeholder="SELECT * FRO... hirelist" />
-                <marker date="1475138638918" expanded="true" signature="31892:32018" placeholder="SELECT * FRO... app_apply" />
-                <marker date="1475138638918" expanded="true" signature="32206:32350" placeholder="SELECT * FRO... hirelist" />
-                <marker date="1475138638918" expanded="true" signature="32542:32679" placeholder="SELECT * FRO... emp_request" />
-                <marker date="1475138638918" expanded="true" signature="32867:33014" placeholder="SELECT * FRO... hirelist" />
-                <marker date="1475138638918" expanded="true" signature="33201:33340" placeholder="SELECT * FRO... emp_request" />
-                <marker date="1475138638918" expanded="true" signature="33527:33661" placeholder="SELECT * FRO... emp_request" />
-                <marker date="1475138638918" expanded="true" signature="33863:33910" placeholder="DELETE FROM " />
-                <marker date="1475138638918" expanded="true" signature="34073:34120" placeholder="DELETE FROM " />
-                <marker date="1475138638918" expanded="true" signature="34273:34310" placeholder="DELETE FROM " />
-                <marker date="1475138638918" expanded="true" signature="34460:34499" placeholder="DELETE FROM " />
-                <marker date="1475138638918" expanded="true" signature="34654:34697" placeholder="DELETE FROM " />
-                <marker date="1475138638918" expanded="true" signature="34850:35136" placeholder="SELECT * FRO... application" />
-                <marker date="1475138638918" expanded="true" signature="35337:35558" placeholder="SELECT * FRO... ad" />
-                <marker date="1475138638918" expanded="true" signature="35748:36063" placeholder="SELECT * FRO... ad" />
-                <marker date="1475138638918" expanded="true" signature="36250:36527" placeholder="SELECT * FRO... application" />
+                <marker date="1475298946482" expanded="true" signature="21660:21736" placeholder="INSERT INTO app_feedback... " />
+                <marker date="1475298946482" expanded="true" signature="21916:22044" placeholder="SELECT * FRO... app_feedback" />
+                <marker date="1475298946482" expanded="true" signature="22258:22311" placeholder="UPDATE app_f... " />
+                <marker date="1475298946482" expanded="true" signature="22485:22530" placeholder="DELETE FROM " />
+                <marker date="1475298946482" expanded="true" signature="22685:22742" placeholder="update emplo... " />
+                <marker date="1475298946482" expanded="true" signature="22890:22926" placeholder="select * fro... employer" />
+                <marker date="1475298946482" expanded="true" signature="23120:23172" placeholder="select * fro... applicant" />
+                <marker date="1475298946482" expanded="true" signature="23356:23372" placeholder="select * fro... ad" />
+                <marker date="1475298946482" expanded="true" signature="27461:27719" placeholder="SELECT * FRO... application" />
+                <marker date="1475298946482" expanded="true" signature="27885:28087" placeholder="SELECT * FRO... ad" />
+                <marker date="1475298946482" expanded="true" signature="28258:28475" placeholder="SELECT * FRO... ad" />
+                <marker date="1475298946482" expanded="true" signature="28659:28941" placeholder="SELECT * FRO... application" />
+                <marker date="1475298946482" expanded="true" signature="29130:29272" placeholder="SELECT * FRO... emp_shortlist" />
+                <marker date="1475298946482" expanded="true" signature="29461:29601" placeholder="SELECT * FRO... app_shortlist" />
+                <marker date="1475298946482" expanded="true" signature="29797:29919" placeholder="SELECT * FRO... apply_ad" />
+                <marker date="1475298946482" expanded="true" signature="30114:30234" placeholder="SELECT * FRO... hirelist" />
+                <marker date="1475298946482" expanded="true" signature="30441:30499" placeholder="INSERT INTO emp_shortlist... " />
+                <marker date="1475298946482" expanded="true" signature="30675:30733" placeholder="INSERT INTO app_shortlist... " />
+                <marker date="1475298946482" expanded="true" signature="30904:30957" placeholder="INSERT INTO emp_hire... " />
+                <marker date="1475298946482" expanded="true" signature="31129:31183" placeholder="INSERT INTO app_apply... " />
+                <marker date="1475298946482" expanded="true" signature="31353:31405" placeholder="INSERT INTO request... " />
+                <marker date="1475298946482" expanded="true" signature="31562:31708" placeholder="SELECT * FRO... hirelist" />
+                <marker date="1475298946482" expanded="true" signature="31897:32023" placeholder="SELECT * FRO... app_apply" />
+                <marker date="1475298946482" expanded="true" signature="32211:32355" placeholder="SELECT * FRO... hirelist" />
+                <marker date="1475298946482" expanded="true" signature="32547:32684" placeholder="SELECT * FRO... emp_request" />
+                <marker date="1475298946482" expanded="true" signature="32872:33019" placeholder="SELECT * FRO... hirelist" />
+                <marker date="1475298946482" expanded="true" signature="33206:33345" placeholder="SELECT * FRO... emp_request" />
+                <marker date="1475298946482" expanded="true" signature="33532:33666" placeholder="SELECT * FRO... emp_request" />
+                <marker date="1475298946482" expanded="true" signature="33868:33915" placeholder="DELETE FROM " />
+                <marker date="1475298946482" expanded="true" signature="34078:34125" placeholder="DELETE FROM " />
+                <marker date="1475298946482" expanded="true" signature="34278:34315" placeholder="DELETE FROM " />
+                <marker date="1475298946482" expanded="true" signature="34465:34504" placeholder="DELETE FROM " />
+                <marker date="1475298946482" expanded="true" signature="34659:34702" placeholder="DELETE FROM " />
+                <marker date="1475298946482" expanded="true" signature="34855:35141" placeholder="SELECT * FRO... application" />
+                <marker date="1475298946482" expanded="true" signature="35342:35563" placeholder="SELECT * FRO... ad" />
+                <marker date="1475298946482" expanded="true" signature="35753:36068" placeholder="SELECT * FRO... ad" />
+                <marker date="1475298946482" expanded="true" signature="36255:36532" placeholder="SELECT * FRO... application" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/layout.blade.php">
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/applicant/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.0">
-              <caret line="13" column="67" selection-start-line="3" selection-start-column="3" selection-end-line="13" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/layout.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4814815">
-              <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reco_view.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employer/reco_view.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0">
-              <caret line="137" column="125" selection-start-line="137" selection-start-column="125" selection-end-line="137" selection-end-column="125" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reco_profile.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employer/reco_profile.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employer/layout.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state vertical-scroll-proportion="-114.11539">
+              <caret line="175" column="62" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -207,57 +254,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="dbtable:/b49529cd/0fb11a10-b65e-44ce-873e-567b904ba5fd/maidfinder.jobtype" />
-        <option value="dbtable:/b49529cd/0fb11a10-b65e-44ce-873e-567b904ba5fd/maidfinder.duty" />
-        <option value="$PROJECT_DIR$/app/database/seeds/DutiesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/jobtype.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2016_09_27_080538_exp_duties.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2016_09_27_081528_exp_duty.php" />
-        <option value="$PROJECT_DIR$/app/models/ExpDuties.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0fb11a10-b65e-44ce-873e-567b904ba5fd/console.sql" />
-        <option value="$PROJECT_DIR$/public/material/css/materialize.css" />
-        <option value="$PROJECT_DIR$/app/views/applicant/create-application.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2016_09_28_053959_app_duties.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2016_09_28_054502_application.php" />
         <option value="$PROJECT_DIR$/app/models/App_Duties.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2016_09_28_061639_appduty.php" />
         <option value="$PROJECT_DIR$/app/models/AppDuties.php" />
         <option value="$PROJECT_DIR$/app/views/applicant/application.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/job-application.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/create-ad.blade.php" />
         <option value="$PROJECT_DIR$/app/views/helpers/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/ads.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/jobtype.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/apply_ads.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/helpers/subscribed/applicant-application.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/job-request.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/hired-job.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ApplicantController.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/ads/header.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/list-hired.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/shortlist.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/helpers/subscribed/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/helpers/helpers.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/ads/ads.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/update-ad.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2016_09_29_053737_recomend.php" />
         <option value="$PROJECT_DIR$/app/models/Recommedations.php" />
         <option value="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/recommendation.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/EmployerController.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/reco_view.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/ads/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/home/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/home/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/application-update.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/jobtype.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/create-application.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/jobtype.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/create-ad.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/ads/ads.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/helpers/subscribed/applicant-application.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/hired-job.blade.php" />
         <option value="$PROJECT_DIR$/app/views/helpers/subscribed/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/shortlist.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/update-ad.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/apply_ads.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/shortlist.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/helpers/helpers.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ApplicantController.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/job-application.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/ads/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/helpers/subscribed/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/helpers/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/home/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/home/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/reco_profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/reco_view.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/EmployerController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
   </component>
@@ -329,60 +376,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="material" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="material" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -423,7 +416,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="applicant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -441,81 +434,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="subscribed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="employer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="email" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,15 +525,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24232633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24071082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3379845" sideWeight="0.50646204" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15508886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19628432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32093024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31993818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -664,300 +583,295 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/application.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/home/upload.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5185185">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5185185">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5185185">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11111111">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/application-update.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/apply.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/create-application.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/home/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11111111">
-          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/job-request.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3703704">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/message.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/rightsection.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/shortlist.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/update.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/warnings.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/home/about.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.185185">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+    <entry file="dbDummy://dbtable:/b49529cd/0fb11a10-b65e-44ce-873e-567b904ba5fd/maidfinder.app_shortlist">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/job-application.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.615385">
-          <caret line="95" column="199" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="199" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/employer/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077">
-          <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+        <state vertical-scroll-proportion="46.615383">
+          <caret line="17" column="107" selection-start-line="17" selection-start-column="107" selection-end-line="17" selection-end-column="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3076925">
-          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/employer/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/apply_ads.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/jobtype.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ads/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/ads.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3846154">
-          <caret line="43" column="126" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/sidenav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3846154">
-          <caret line="28" column="195" selection-start-line="28" selection-start-column="195" selection-end-line="28" selection-end-column="195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/hired-list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.653846">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="393" column="25" selection-start-line="393" selection-start-column="25" selection-end-line="393" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="323" column="69" selection-start-line="323" selection-start-column="69" selection-end-line="323" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ads/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="91" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/shortlist.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.076923">
-          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="17" column="144" selection-start-line="17" selection-start-column="144" selection-end-line="17" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/applicant/hired-job.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state vertical-scroll-proportion="-2.7692308">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/employer/jobtype.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/applicant-application.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
+        <state vertical-scroll-proportion="-0.84615386">
+          <caret line="193" column="132" selection-start-line="193" selection-start-column="132" selection-end-line="193" selection-end-column="132" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/helpers.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state vertical-scroll-proportion="-9.307693">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/update-ad.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.153847">
+          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+          <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+          <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
+          <caret line="75" column="67" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
+          <caret line="91" column="66" selection-start-line="91" selection-start-column="66" selection-end-line="91" selection-end-column="66" />
+          <caret line="108" column="60" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
+          <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
+          <caret line="129" column="72" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/helpers/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.84615386">
+          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/shortlist.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.846154">
+          <caret line="144" column="63" selection-start-line="144" selection-start-column="63" selection-end-line="144" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.846154">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/sidenav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.923077">
+          <caret line="7" column="192" selection-start-line="7" selection-start-column="192" selection-end-line="7" selection-end-column="192" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/apply_ads.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.230769">
+          <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/shortlist.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.153846">
+          <caret line="133" column="70" selection-start-line="133" selection-start-column="70" selection-end-line="133" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/helpers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.076923">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-31.25926">
+          <caret line="403" column="42" selection-start-line="403" selection-start-column="42" selection-end-line="403" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/apply.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.769231">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/application.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="157" selection-start-line="18" selection-start-column="157" selection-end-line="18" selection-end-column="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/ads/ads.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/create-ad.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/ads/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="237" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="237" selection-end-column="10" />
+          <caret line="14" column="179" selection-start-line="14" selection-start-column="179" selection-end-line="14" selection-end-column="179" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/update-ad.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.23077">
-          <caret line="151" column="50" selection-start-line="151" selection-start-column="50" selection-end-line="151" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2016_09_29_053737_recomend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.269231">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Recommendations.php">
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
+          <caret line="15" column="179" selection-start-line="15" selection-start-column="179" selection-end-line="15" selection-end-column="179" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/sidenav.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
+          <caret line="15" column="179" selection-start-line="15" selection-start-column="179" selection-end-line="15" selection-end-column="179" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/applicant-application.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicantController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="472" column="55" selection-start-line="472" selection-start-column="27" selection-end-line="473" selection-end-column="66" />
-          <folding />
+          <caret line="96" column="35" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="209" selection-start-line="16" selection-start-column="209" selection-end-line="16" selection-end-column="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/job-application.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="210" selection-start-line="14" selection-start-column="210" selection-end-line="14" selection-end-column="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.076923">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/reco_profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-119.30769">
+          <caret line="141" column="75" selection-start-line="141" selection-start-column="75" selection-end-line="141" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/employer/recommendation.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-82.92308">
           <caret line="98" column="94" selection-start-line="98" selection-start-column="94" selection-end-line="98" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/reco_view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.461538">
+          <caret line="138" column="52" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/rightsection.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -965,111 +879,125 @@
     <entry file="file://$PROJECT_DIR$/app/views/employer/list-hired.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/job-request.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="38" selection-start-line="19" selection-start-column="32" selection-end-line="157" selection-end-column="38" />
-          <folding>
-            <marker date="1475108158388" expanded="true" signature="2948:2979" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/reco_profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/EmployerController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Admins.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="538" column="0" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/reco_view.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/models/AdminStaffs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0">
-          <caret line="137" column="125" selection-start-line="137" selection-start-column="125" selection-end-line="137" selection-end-column="125" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/AdReq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Applicants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6153846">
-          <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
-            <marker date="1475138638918" expanded="true" signature="21655:21731" placeholder="INSERT INTO app_feedback... " />
-            <marker date="1475138638918" expanded="true" signature="21911:22039" placeholder="SELECT * FRO... app_feedback" />
-            <marker date="1475138638918" expanded="true" signature="22253:22306" placeholder="UPDATE app_f... " />
-            <marker date="1475138638918" expanded="true" signature="22480:22525" placeholder="DELETE FROM " />
-            <marker date="1475138638918" expanded="true" signature="22680:22737" placeholder="update emplo... " />
-            <marker date="1475138638918" expanded="true" signature="22885:22921" placeholder="select * fro... employer" />
-            <marker date="1475138638918" expanded="true" signature="23115:23167" placeholder="select * fro... applicant" />
-            <marker date="1475138638918" expanded="true" signature="23351:23367" placeholder="select * fro... ad" />
-            <marker date="1475138638918" expanded="true" signature="27456:27714" placeholder="SELECT * FRO... application" />
-            <marker date="1475138638918" expanded="true" signature="27880:28082" placeholder="SELECT * FRO... ad" />
-            <marker date="1475138638918" expanded="true" signature="28253:28470" placeholder="SELECT * FRO... ad" />
-            <marker date="1475138638918" expanded="true" signature="28654:28936" placeholder="SELECT * FRO... application" />
-            <marker date="1475138638918" expanded="true" signature="29125:29267" placeholder="SELECT * FRO... emp_shortlist" />
-            <marker date="1475138638918" expanded="true" signature="29456:29596" placeholder="SELECT * FRO... app_shortlist" />
-            <marker date="1475138638918" expanded="true" signature="29792:29914" placeholder="SELECT * FRO... apply_ad" />
-            <marker date="1475138638918" expanded="true" signature="30109:30229" placeholder="SELECT * FRO... hirelist" />
-            <marker date="1475138638918" expanded="true" signature="30436:30494" placeholder="INSERT INTO emp_shortlist... " />
-            <marker date="1475138638918" expanded="true" signature="30670:30728" placeholder="INSERT INTO app_shortlist... " />
-            <marker date="1475138638918" expanded="true" signature="30899:30952" placeholder="INSERT INTO emp_hire... " />
-            <marker date="1475138638918" expanded="true" signature="31124:31178" placeholder="INSERT INTO app_apply... " />
-            <marker date="1475138638918" expanded="true" signature="31348:31400" placeholder="INSERT INTO request... " />
-            <marker date="1475138638918" expanded="true" signature="31557:31703" placeholder="SELECT * FRO... hirelist" />
-            <marker date="1475138638918" expanded="true" signature="31892:32018" placeholder="SELECT * FRO... app_apply" />
-            <marker date="1475138638918" expanded="true" signature="32206:32350" placeholder="SELECT * FRO... hirelist" />
-            <marker date="1475138638918" expanded="true" signature="32542:32679" placeholder="SELECT * FRO... emp_request" />
-            <marker date="1475138638918" expanded="true" signature="32867:33014" placeholder="SELECT * FRO... hirelist" />
-            <marker date="1475138638918" expanded="true" signature="33201:33340" placeholder="SELECT * FRO... emp_request" />
-            <marker date="1475138638918" expanded="true" signature="33527:33661" placeholder="SELECT * FRO... emp_request" />
-            <marker date="1475138638918" expanded="true" signature="33863:33910" placeholder="DELETE FROM " />
-            <marker date="1475138638918" expanded="true" signature="34073:34120" placeholder="DELETE FROM " />
-            <marker date="1475138638918" expanded="true" signature="34273:34310" placeholder="DELETE FROM " />
-            <marker date="1475138638918" expanded="true" signature="34460:34499" placeholder="DELETE FROM " />
-            <marker date="1475138638918" expanded="true" signature="34654:34697" placeholder="DELETE FROM " />
-            <marker date="1475138638918" expanded="true" signature="34850:35136" placeholder="SELECT * FRO... application" />
-            <marker date="1475138638918" expanded="true" signature="35337:35558" placeholder="SELECT * FRO... ad" />
-            <marker date="1475138638918" expanded="true" signature="35748:36063" placeholder="SELECT * FRO... ad" />
-            <marker date="1475138638918" expanded="true" signature="36250:36527" placeholder="SELECT * FRO... application" />
+            <marker date="1475298946482" expanded="true" signature="21660:21736" placeholder="INSERT INTO app_feedback... " />
+            <marker date="1475298946482" expanded="true" signature="21916:22044" placeholder="SELECT * FRO... app_feedback" />
+            <marker date="1475298946482" expanded="true" signature="22258:22311" placeholder="UPDATE app_f... " />
+            <marker date="1475298946482" expanded="true" signature="22485:22530" placeholder="DELETE FROM " />
+            <marker date="1475298946482" expanded="true" signature="22685:22742" placeholder="update emplo... " />
+            <marker date="1475298946482" expanded="true" signature="22890:22926" placeholder="select * fro... employer" />
+            <marker date="1475298946482" expanded="true" signature="23120:23172" placeholder="select * fro... applicant" />
+            <marker date="1475298946482" expanded="true" signature="23356:23372" placeholder="select * fro... ad" />
+            <marker date="1475298946482" expanded="true" signature="27461:27719" placeholder="SELECT * FRO... application" />
+            <marker date="1475298946482" expanded="true" signature="27885:28087" placeholder="SELECT * FRO... ad" />
+            <marker date="1475298946482" expanded="true" signature="28258:28475" placeholder="SELECT * FRO... ad" />
+            <marker date="1475298946482" expanded="true" signature="28659:28941" placeholder="SELECT * FRO... application" />
+            <marker date="1475298946482" expanded="true" signature="29130:29272" placeholder="SELECT * FRO... emp_shortlist" />
+            <marker date="1475298946482" expanded="true" signature="29461:29601" placeholder="SELECT * FRO... app_shortlist" />
+            <marker date="1475298946482" expanded="true" signature="29797:29919" placeholder="SELECT * FRO... apply_ad" />
+            <marker date="1475298946482" expanded="true" signature="30114:30234" placeholder="SELECT * FRO... hirelist" />
+            <marker date="1475298946482" expanded="true" signature="30441:30499" placeholder="INSERT INTO emp_shortlist... " />
+            <marker date="1475298946482" expanded="true" signature="30675:30733" placeholder="INSERT INTO app_shortlist... " />
+            <marker date="1475298946482" expanded="true" signature="30904:30957" placeholder="INSERT INTO emp_hire... " />
+            <marker date="1475298946482" expanded="true" signature="31129:31183" placeholder="INSERT INTO app_apply... " />
+            <marker date="1475298946482" expanded="true" signature="31353:31405" placeholder="INSERT INTO request... " />
+            <marker date="1475298946482" expanded="true" signature="31562:31708" placeholder="SELECT * FRO... hirelist" />
+            <marker date="1475298946482" expanded="true" signature="31897:32023" placeholder="SELECT * FRO... app_apply" />
+            <marker date="1475298946482" expanded="true" signature="32211:32355" placeholder="SELECT * FRO... hirelist" />
+            <marker date="1475298946482" expanded="true" signature="32547:32684" placeholder="SELECT * FRO... emp_request" />
+            <marker date="1475298946482" expanded="true" signature="32872:33019" placeholder="SELECT * FRO... hirelist" />
+            <marker date="1475298946482" expanded="true" signature="33206:33345" placeholder="SELECT * FRO... emp_request" />
+            <marker date="1475298946482" expanded="true" signature="33532:33666" placeholder="SELECT * FRO... emp_request" />
+            <marker date="1475298946482" expanded="true" signature="33868:33915" placeholder="DELETE FROM " />
+            <marker date="1475298946482" expanded="true" signature="34078:34125" placeholder="DELETE FROM " />
+            <marker date="1475298946482" expanded="true" signature="34278:34315" placeholder="DELETE FROM " />
+            <marker date="1475298946482" expanded="true" signature="34465:34504" placeholder="DELETE FROM " />
+            <marker date="1475298946482" expanded="true" signature="34659:34702" placeholder="DELETE FROM " />
+            <marker date="1475298946482" expanded="true" signature="34855:35141" placeholder="SELECT * FRO... application" />
+            <marker date="1475298946482" expanded="true" signature="35342:35563" placeholder="SELECT * FRO... ad" />
+            <marker date="1475298946482" expanded="true" signature="35753:36068" placeholder="SELECT * FRO... ad" />
+            <marker date="1475298946482" expanded="true" signature="36255:36532" placeholder="SELECT * FRO... application" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/layout.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0">
-          <caret line="13" column="67" selection-start-line="3" selection-start-column="3" selection-end-line="13" selection-end-column="67" />
+        <state vertical-scroll-proportion="-114.11539">
+          <caret line="175" column="62" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/subscribed/layout.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/EmployerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4814815">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+        <state vertical-scroll-proportion="-197.8077">
+          <caret line="551" column="30" selection-start-line="551" selection-start-column="30" selection-end-line="551" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="69.57692">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminAccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6538463">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11111111">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>

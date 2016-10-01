@@ -12,7 +12,7 @@
             <strong>Latest job application</strong>
         </div>
         <div class="row">
-            <div class="col s12 m12 l12">
+            <div class="col s12 m12 l12 animated bounceInDown">
                 @foreach($application as $a)
                     @if(isset($a))
                         <div class="card-panel">
@@ -31,7 +31,7 @@
                             </div>
                             <div class="valign-wrapper">
                                 <i class="material-icons">view_stream</i>
-                                <span class="tab1">Capacity :</span>
+                                <span class="tab1">Status :</span>
                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
                                 <strong class="col l9">{{ $capacity[$a->capacity] }}</strong>
                             </div>
@@ -43,7 +43,7 @@
                             <div class="valign-wrapper">
                                 <i class="material-icons">offline_pin</i>
                                 <?php $days = array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday'); ?>
-                                <span class="tab1">Preferred dayoff :</span>
+                                <span class="tab1">Preferred day/s off :</span>
                                 <?php
                                 $dayoffs = explode(',', $a->dayof);
                                 ?>
@@ -99,7 +99,7 @@
         <h5>Auto suggested job ads</h5>
     </div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row animated bounceIn">
             <?php
             if(isset($application) and count($application) >0) {
 

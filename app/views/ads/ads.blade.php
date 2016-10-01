@@ -33,7 +33,7 @@
                     <h5 class="divider"></h5>
                     <form action="{{ asset('/search/ads') }}" method="GET">
                         <div class="row">
-                            <select name="location" class="browser-default">
+                            <select name="location" class="icons">
                                 <option value="" selected>Preffered location</option>
                                 @foreach($locations as $loc)
                                     <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
@@ -42,7 +42,7 @@
                         </div>
                         <br />
                         <div class="row">
-                            <select name="jobtype" class="browser-default">
+                            <select name="jobtype" class="icons">
                                 <option value="" selected>Position</option>
                                 @foreach($jobtypes as $job)
                                     <option value="{{ $job->jobtypeid }}">{{ $job->description }}</option>
@@ -51,8 +51,8 @@
                         </div>
                         <br />
                         <div class="row">
-                            <select name="capacity" class="browser-default">
-                                <option value="" selected>Capacity</option>
+                            <select name="capacity" class="icons">
+                                <option value="" selected>Status</option>
                                 <option value="Full Time">Full Time</option>
                                 <option value="Part Time">Part Time</option>
                             </select>
@@ -92,7 +92,7 @@
                                             <br />
                                             <div class="valign-wrapper">
                                                 <span class="">Preferred location :</span>
-                                                <strong class="col l10">{{ $location->location }}</strong>
+                                                <strong class="col l9">{{ $location->location }}</strong>
                                             </div>
                                             <div class="valign=wrapper">
                                                 <span class="">Employment type :</span>
@@ -136,6 +136,7 @@
                                             <ul>
                                                 <?php $duty = ExpDuties::where('adid' , '=', $ad->adid)->get(); ?>
                                                 @if(isset($duty) and count($duty) > 0)
+                                                        <ul>
                                                     @foreach($duty as $d)
                                                         <li class="valign-wrapper">
                                                             <i class="material-icons">label</i>

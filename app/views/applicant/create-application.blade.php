@@ -21,7 +21,7 @@
             <h4>Create job availability</h4>
             <div class="divider"></div>
             <br />
-            <div class="card-panel">
+            <div class="card-panel animated bounceIn">
                 <form action="{{ asset('/applicant/create/application')}}" method="POST">
                     <input type="hidden" name="jobtypeid" value="{{ $jobtype }}" />
                     <div class="row">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $location = Regions::all(); ?>
-                            <select name="location" class="browser-default">
+                            <select name="location" class="icons">
                                 <option value="" selected>Select</option>
                                 @foreach($location as $loc)
                                     <option value="{{ $loc->regionid }}">{{ $loc->location }}</option>
@@ -40,13 +40,13 @@
                         </div>
                     </div>
                     <br />
-                    <div class="row">
+                    <div class="row animated">
                         <div class="col s12 m12 l4">
                             <h6 class="right-align">Employment type</h6>
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $capacity = array('Full Time', 'Part Time'); ?>
-                            <select name="capacity" class="browser-default">
+                            <select name="capacity" class="icons">
                                 <option value="" disabled selected>Select</option>
                                 @foreach($capacity as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $edlevel = array("Elementary", "High School", "College graduate"); ?>
-                            <select name="edlevel" class="browser-default">
+                            <select name="edlevel" class="icons">
                                 <option value="" selected>Select</option>
                                 @foreach($edlevel as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="col s12 m12 l8">
                             <?php $exp = array('Less than one year', 'One year', 'Two years', 'Three years above'); ?>
-                            <select name="yearexp" class="browser-default">
+                            <select name="yearexp" class="icons">
                                 <option value="" selected>Select</option>
                                 @foreach($exp as $key => $value)
                                     <option value="{{$key}}">{{ $value }}</option>

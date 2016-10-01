@@ -1,10 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/material/css/mycss.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('public/material/css/materialize.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('public/material/css/page.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/material/css/style.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/material/css/animate.css')}}" />
+    <link rel="stylesheet" href="{{asset('public/material/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/material/css/home-style.css')}}" />
+    <link rel="icon" href="{{ asset('public/images/icon2.png') }}">
     @section('css')
 
     @show
@@ -25,8 +32,8 @@
 
 @include('employer.header')
 @if($emp->subscribe == 0)
-    <div class="card-panel green lighten-3" style="padding: 4px;">
-        <h6 class="blue-grey-text center-align"><span>You will need to <a href="{{ asset('/subscription') }}">subscribe</a> to a membership plan in order to hire and contact applicants.</span></h6>
+    <div class="card-panel green lighten-3" style="padding: 5px; margin-top: -0px;">
+        <h6 class="blue-grey-text center-align"><span>You will need to <a href="{{ asset('/subscription') }}"><img style="width:120px; height: 14px;" src="{{ asset('public/images/k.gif') }}"></a> to a membership plan in order to hire and contact applicants.</span></h6>
     </div>
 @endif
 <div class="container-fluid">

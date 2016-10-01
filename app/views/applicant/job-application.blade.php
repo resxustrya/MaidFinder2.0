@@ -6,9 +6,11 @@
     <div class="row">
         <div class="row valign-wrapper">
             <h4>Your job application</h4>
-            <a class="add_new btn green tab3" href="{{ asset('/applicant/job/type/') }}">
-                <b>Create new</b>
-            </a>
+            @if(count($application) > 0)
+                <a class="add_new btn green tab3" href="{{ asset('/applicant/job/type/') }}">
+                    <b>Create new</b>
+                </a>
+            @endif
         </div>
     </div>
     @if($application and count($application) > 0)
@@ -27,8 +29,8 @@
                            <div class="col s12 m12 l2">
                                <span>Create at : {{ $a->created_at }}</span>
                            </div>
-                           <div class="col s12 m12 l8">
-                               <div class="row">
+                           <div class="col s12 m12 l8 animated bounce">
+                               <div class="row  ">
                                    <div class="valign-wrapper">
                                        <strong class="material-icons">work</strong>
                                        <strong class="tab1">Job application preferences</strong>
@@ -116,7 +118,7 @@
                     <h5 class="center-align">Over {{ $ad_count }} job ads are now available</h5>
                     <h6 class="center-align">Create and post your job availavibility now and find your match employer that matches your job preference.</h6>
                     <div class="center-align">
-                        <a class="btn blue" href="{{ asset('/applicant/create/application') }}">Create Job</a>
+                        <a class="btn blue" href="{{ asset('/applicant/job/type') }}">Create Job</a>
                     </div>
                 </div>
             </div>
